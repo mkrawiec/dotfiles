@@ -1,0 +1,9 @@
+neovim/.nvim/bundle/*
+neovim/.nvim/backups/*
+
+systemd/.config/systemd/user/*.target.wants
+
+fish/.config/fish/fish_history
+fish/.config/fish/fishd*
+
+.directory

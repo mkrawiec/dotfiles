@@ -1,0 +1,21 @@
+user "maciek"
+
+# Directories
+music_directory "/home/maciek/music"
+playlist_directory "~/.mpd/playlists"
+db_file "~/.mpd/mpd.db"
+log_file "~/.mpd/mpd.log"
+pid_file "~/.mpd/mpd.pid"
+state_file "~/.mpd/mpdstate"
+
+# Pulseaudio outpu
+audio_output {
+    type "pulse"
+    name "pulse audio"
+}
+
+# Networking settings
+zeroconf_enabled "yes"
+zeroconf_name "szwalnia-jukebox"
+bind_to_address "localhost"
+port "6600"
