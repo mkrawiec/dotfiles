@@ -27,6 +27,10 @@ alias dse 'dnf -C search'
 alias dsi 'dnf -C list installed | grep -i'
 alias dwp 'dnf -C provides'
 
+# Docker
+alias dockrm 'docker rm -f (docker ps -qa)'
+alias dockrmi 'docker rmi (docker images -f "dangling=true" -q)'
+
 # Creating nspawn containers
 function dnfstrap
     sudo dnf --releasever=(rpm -E %fedora) --nogpg --installroot=$argv[1] --disablerepo='*' --enablerepo=fedora install systemd passwd dnf fedora-release vim-minimal
