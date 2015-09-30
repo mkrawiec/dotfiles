@@ -54,9 +54,3 @@ function splaylq; splay $argv[1] worst; end
 # Download YouTube mp3
 alias ytmp3 'youtube-dl --extract-audio --audio-format mp3 --audio-quality 0'
 
-
-function postactivate --on-event virtualenv_will_activate
-    if test -f $VIRTUAL_ENV/postactivate.fish
-        source $VIRTUAL_ENV/postactivate.fish
-    end
-end
