@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'christoomey/vim-tmux-navigator'
     " IDE plugins
     Plug 'scrooloose/nerdtree'
-    Plug 'Valloric/YouCompleteMe'
+"    Plug 'Valloric/YouCompleteMe'
     Plug 'scrooloose/syntastic'
     Plug 'tpope/vim-fugitive'
     Plug 'Shougo/unite.vim'
