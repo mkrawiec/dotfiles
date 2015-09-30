@@ -1,9 +1,6 @@
 # Remove greeting text
 set --erase fish_greeting
 
-# Add sbins to PATH
-set --universal fish_user_paths /sbin /usr/sbin
-
 # DIRCOLORS for ls
 eval (dircolors -c $HOME/.dircolors)
 
@@ -22,24 +19,17 @@ alias cl 'clear'
 function fif; grep -rinw $argv[1] -e $argv[2]; end
 alias fifh 'fif .'
 
-# Zypper
-alias zup 'sudo zypper dup'
-alias zin 'sudo zypper in'
-alias zrm 'sudo zypper rm'
-alias zse 'zypper se'
-alias zsi 'zypper se -i'
-function zwp
-    set -lx cmd_path (command -v $argv[1])
-    if [ $cmd_path ]
-        zypper se -i --provides --match-exact $cmd_path
-    else
-        zypper se -u --provides $argv[1]
-    end
-end
+# DNF
+alias dup 'sudo dnf --refresh distro-sync'
+alias din 'sudo dnf install'
+alias drm 'sudo dnf -C erase'
+alias dse 'dnf -C search'
+alias dsi 'dnf -C list installed | grep -i'
+alias dwp 'dnf -C provides'
 
 # Creating nspawn containers
-function susestrap
-    sudo zypper --root $argv[1] -D /etc/zypp/repos.d in aaa_base zypper systemd
+function dnfstrap
+    sudo dnf --releasever=(rpm -E %fedora) --nogpg --installroot=$argv[1] --disablerepo='*' --enablerepo=fedora install systemd passwd dnf fedora-release vim-minimal
 end
 
 # Shortcuts for copy/paste
