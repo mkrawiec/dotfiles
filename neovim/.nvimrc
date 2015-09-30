@@ -18,7 +18,6 @@ call plug#end()
 "
 " Indentation
 "
-set textwidth=79        " Brake lines longer then 79 characters
 set expandtab           " Use spaces instead of tabs
 set softtabstop=4       " Indentation with TAB uses 4 spaces
 set shiftwidth=4        " Indentation with >> uses 4 spaces
@@ -34,7 +33,7 @@ set relativenumber      " Make numbering relative to current line
 set numberwidth=5       " Little wider
 set cursorline          " Indicate current line
 set ruler               " Enable cursor position indicator
-set colorcolumn=+1      " Show vertical line at line break
+set colorcolumn=80      " Show vertical line at line break
 syntax enable           " Enable syntax highlighting
 
 " Colorscheme
