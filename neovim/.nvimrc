@@ -39,6 +39,7 @@ syntax enable           " Enable syntax highlighting
 
 " Colorscheme
 let g:hybrid_use_Xresources = 1
+set background=dark
 colorscheme hybrid
 
 "
