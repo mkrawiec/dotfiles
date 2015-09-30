@@ -16,7 +16,27 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 "
-" Indentation
+" Interface
+"
+set virtualedit=onemore " Allow for cursor beyond last character
+set number              " Enable line numbers
+set relativenumber      " Make numbering relative to current line
+set showmatch           " Show matching brackets/parenthesis
+set numberwidth=5       " Little wider
+set cursorline          " Indicate current line
+set ruler               " Enable cursor position indicator
+set colorcolumn=80      " Show vertical line at line break
+syntax enable           " Enable syntax highlighting
+
+"
+" Colorscheme
+"
+let g:hybrid_use_Xresources = 1
+set background=dark
+colorscheme hybrid
+
+"
+" Indentation & formatting
 "
 set expandtab           " Use spaces instead of tabs
 set softtabstop=4       " Indentation with TAB uses 4 spaces
@@ -26,26 +46,30 @@ set tabstop=4           " Show hard TAB as 4 columns wide
 set autoindent          " Align new line to the previous one
 
 "
-" Interface
+" Windows & buffers
 "
-set number              " Enable line numbers
-set relativenumber      " Make numbering relative to current line
-set numberwidth=5       " Little wider
-set cursorline          " Indicate current line
-set ruler               " Enable cursor position indicator
-set colorcolumn=80      " Show vertical line at line break
-syntax enable           " Enable syntax highlighting
-
-" Colorscheme
-let g:hybrid_use_Xresources = 1
-set background=dark
-colorscheme hybrid
+set splitright          " Puts new vsplit windows to the right of the current
+set splitbelow          " Puts new split windows to the bottom of the current
+set hidden              " Allow
 
 "
-" Search
+" Misc settings
 "
-set ignorecase
-set smartcase
+set ignorecase          " Case insensitive search
+set smartcase           " Case sensitive when uc present
+
+set noswapfile
+set nobackup
+set nowb
+
+set clipboard+=unnamedplus  " Always use system clipboard
+
+"
+" Persistent undo
+"
+silent !mkdir ~/.vim/backups > /dev/null 2>&1
+set undodir=~/.vim/backups
+set undofile
 
 "
 " Plugin options
