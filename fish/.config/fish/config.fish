@@ -41,7 +41,7 @@ alias xcopy 'xsel --clipboard --input'
 alias xpaste 'xsel --clipboard --output'
 
 # Stream laggy Twitch stream flawlessly ;)
-alias splay 'livestreamer -p bomi --player-continuous-http --hls-segment-threads 4'
+alias splay 'livestreamer -p baka-mplayer --player-continuous-http --hls-segment-threads 4'
 function splayhq; splay $argv[1] best; end
 function splaylq; splay $argv[1] worst; end
 
