@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/site/plugged')
     " General
     Plug 'w0ng/vim-hybrid'
     Plug 'bling/vim-airline'
@@ -84,6 +84,10 @@ let g:syntastic_python_checkers = ['flake8']
 
 let g:airline_powerline_fonts=1
 let g:airline_theme = 'hybrid'
+"
+" Don't display these kinds of files
+let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
+      \ '__pycache__']
 
 "
 " Keyboard shotrcuts
