@@ -20,7 +20,7 @@ function fif; grep -rinw $argv[1] -e $argv[2]; end
 alias fifh 'fif .'
 
 # DNF
-alias dup 'sudo dnf --refresh distro-sync'
+alias dup 'sudo dnf -x kmod\* --refresh distro-sync'
 alias din 'sudo dnf install'
 alias drm 'sudo dnf -C erase'
 alias dse 'dnf -C search'
