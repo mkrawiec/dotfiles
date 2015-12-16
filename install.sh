@@ -38,7 +38,7 @@ main()
     fi
 
     stow-all
-    setup-services
+    #setup-services
     setup-vim
 }
 
