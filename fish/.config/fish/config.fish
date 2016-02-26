@@ -20,7 +20,7 @@ function fif; grep -rinw $argv[1] -e $argv[2]; end
 alias fifh 'fif .'
 
 # DNF
-alias dup 'sudo dnf -x kmod\* --refresh distro-sync'
+alias dup 'sudo dnf -x kmod-nvidia\* --refresh distro-sync'
 alias din 'sudo dnf install'
 alias drm 'sudo dnf -C erase'
 alias dse 'dnf -C search'
@@ -30,6 +30,7 @@ alias dwp 'dnf -C provides'
 # Docker
 alias dockrm 'docker rm -f (docker ps -qa)'
 alias dockrmi 'docker rmi (docker images -f "dangling=true" -q)'
+alias dockip 'docker inspect --format "{{ .NetworkSettings.IPAddress }}"'
 
 # Creating nspawn containers
 function dnfstrap
