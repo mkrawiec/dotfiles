@@ -2,6 +2,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     " General
     Plug 'w0ng/vim-hybrid'
     Plug 'bling/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
     Plug 'christoomey/vim-tmux-navigator'
     " IDE plugins
     Plug 'scrooloose/nerdtree'
@@ -31,7 +32,7 @@ syntax enable           " Enable syntax highlighting
 "
 " Colorscheme
 "
-let g:hybrid_use_Xresources = 1
+let g:hybrid_custom_term_colors = 1
 set background=dark
 colorscheme hybrid
 
