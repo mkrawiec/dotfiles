@@ -4,9 +4,6 @@ set --erase fish_greeting
 # DIRCOLORS for ls
 eval (dircolors -c $HOME/.dircolors)
 
-# Init Virtualfish
-eval (python3 -m virtualfish)
-
 # Load system defaults for bash
 bash /etc/profile
 
