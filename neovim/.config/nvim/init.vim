@@ -1,19 +1,27 @@
 call plug#begin('~/.local/share/nvim/site/plugged')
-    " General
+
+" General
     Plug 'w0ng/vim-hybrid'
     Plug 'bling/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'christoomey/vim-tmux-navigator'
-    " IDE plugins
+
+" IDE plugins
     Plug 'scrooloose/nerdtree'
-"    Plug 'Valloric/YouCompleteMe'
     Plug 'scrooloose/syntastic'
+    Plug 'ervandew/supertab'
     Plug 'tpope/vim-fugitive'
     Plug 'Shougo/unite.vim'
     Plug 'bronson/vim-trailing-whitespace'
     Plug 'janko-m/vim-test'
-    " Python specific
-    Plug 'hdima/python-syntax'
+
+" Python
+    Plug 'hdima/python-syntax', {'for': 'python'}
+
+" Java
+    Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
+    Plug 'tfnico/vim-gradle'
+
 call plug#end()
 
 "
@@ -89,6 +97,7 @@ let g:airline_theme = 'hybrid'
 " Don't display these kinds of files
 let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
       \ '__pycache__']
+
 
 "
 " Keyboard shotrcuts
