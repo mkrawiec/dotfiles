@@ -8,47 +8,47 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-font = Iosevka 12
+font = Iosevka Medium 12
 scrollback_lines = 10000
 search_wrap = true
 
 ## Hybrid colorscheme
 [colors]
-foreground      = #c5c8c6
-foreground_bold = #c5c8c6
-cursor          = #c5c8c6
-background      = rgba(29, 31, 33, 0.95)
+foreground      = #C5C8C6
+foreground_bold = #C5C8C6
+cursor          = #C5C8C6
+background      = #232C31
 
 # black
-color0  = #282a2e
-color8  = #373b41
+color0  = #2D3C46
+color8  = #425059
 
 # red
-color1  = #a54242
-color9  = #cc6666
+color1  = #A54242
+color9  = #CC6666
 
 # green
-color2  = #8c9440
-color10 = #b5bd68
+color2  = #8C9440
+color10 = #B5BD68
 
 # yellow
-color3  = #de935f
-color11 = #f0c674
+color3  = #DE935F
+color11 = #F0C674
 
 # blue
-color4  = #5f819d
-color12 = #81a2be
+color4  = #5F819D
+color12 = #81A2BE
 
 # magenta
-color5  = #85678f
-color13 = #b294bb
+color5  = #85678F
+color13 = #B294BB
 
 # cyan
-color6  = #5e8d87
-color14 = #8abeb7
+color6  = #5E8D87
+color14 = #8ABEB7
 
 # white
-color7  = #707880
-color15 = #c5c8c6
+color7  = #6C7A80
+color15 = #C5C8C6
 
 # vim: ft=dosini cms=#%s
