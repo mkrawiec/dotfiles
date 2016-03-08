@@ -7,7 +7,7 @@ set $mod Mod4
 set $exe exec --no-startup-id
 
 # font
-font pango: Iosevka 12
+font pango: Iosevka Medium 11
 
 # gaps
 gaps outer 5
@@ -162,11 +162,11 @@ bindsym $mod+Shift+e mode $logout
 ###############################
 
 # Hybrid colors
-set $back               #1D1F21
-set $black              #282A2E
-set $grey               #373B41
-set $lightgrey          #707880
-set $white              #c5c8c6
+set $back               #232C31
+set $black              #2D3C46
+set $grey               #425059
+set $lightgrey          #6C7A80
+set $white              #C5C8C6
 set $red                #CC6666
 set $darkred            #A54242
 set $green              #B5BD68
@@ -187,7 +187,7 @@ client.background       $back
 bar {
     status_command i3blocks
     position top
-    font pango:Iosevka, FontAwesome 11
+    font pango:Iosevka Medium, FontAwesome 11
     strip_workspace_numbers yes
     separator_symbol "■"
     bindsym button4 nop
@@ -198,7 +198,7 @@ bar {
     height 24
 
     colors {
-        background  #161719
+        background  #151b1e
         statusline  $white
         separator   $lightgrey
 
