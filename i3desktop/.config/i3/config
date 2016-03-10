@@ -29,11 +29,8 @@ new_float pixel 3
 # focus doesn't follow mouse
 focus_follows_mouse no
 
-###############################
-#         AUTOSTART           #
-###############################
-
-$exe compton
+# autostart *.desktop files
+$exe dex-xdg -ae i3
 
 
 ###############################
