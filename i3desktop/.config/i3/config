@@ -10,8 +10,7 @@ set $exe exec --no-startup-id
 font pango: Iosevka Medium 11
 
 # gaps
-gaps outer 5
-gaps inner 5
+gaps inner 10
 smart_gaps on
 smart_borders on
 
@@ -189,9 +188,7 @@ bar {
     separator_symbol "■"
     bindsym button4 nop
     bindsym button5 nop
-    tray_output eDP1
-    tray_output LVDS-0
-    tray_padding 0
+    tray_padding 4
     height 24
 
     colors {
