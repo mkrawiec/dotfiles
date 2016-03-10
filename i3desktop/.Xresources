@@ -13,12 +13,12 @@ Xft.rgba: rgb
 ! ------------------------------------------------------------------------------
 ! ROFI configuration
 ! ------------------------------------------------------------------------------
-rofi.font: Iosevka Medium 11
+rofi.font: Iosevka Medium 12
 rofi.bw: 3
 
 ! Colorscheme
 rofi.color-enabled: true
 rofi.color-window: #5e8d87, #8abeb7, #8abeb7
-rofi.color-normal: #5e8d87, #8abeb7, #425059, #8abeb7, #5e8d87
-rofi.color-active: #5f819d, #c5c8c6, #8c9440, #81a2be, #5f819d
-rofi.color-urgent: #a54242, #c5c8c6, #85678f, #cc6666, #a54242
+rofi.color-normal: #5e8d87, #8abeb7, argb:e000000, #8abeb7, #ffffff
+rofi.color-active: #5f819d, #81a2be, argb:e000000, #81a2be, #ffffff
+rofi.color-urgent: #a54242, #cc6666, argb:e000000, #cc6666, #ffffff
