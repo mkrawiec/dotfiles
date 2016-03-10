@@ -14,7 +14,12 @@ Xft.rgba: rgb
 ! ROFI configuration
 ! ------------------------------------------------------------------------------
 rofi.font: Iosevka Medium 12
+rofi.width: 30
 rofi.bw: 3
+
+! Keybindings
+rofi.key-run: SuperL+d
+rofi.key-window: SuperL+p
 
 ! Colorscheme
 rofi.color-enabled: true
