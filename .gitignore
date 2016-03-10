@@ -1,5 +1,4 @@
-neovim/.nvim/bundle/*
-neovim/.nvim/backups/*
+neovim/.config/nvim/autoload/
 
 systemd/.config/systemd/user/*.target.wants
 
