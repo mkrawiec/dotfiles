@@ -1,0 +1,13 @@
+#!/bin/bash
+# exit session
+
+cmd=$(echo -e "logout\nreboot\npoweroff\nsuspend\nlock" | rofi -width 350 -dmenu -p exit:)
+
+case $cmd in
+    'logout') i3-msg exit ;;
+    'reboot') systemctl reboot ;;
+    'poweroff') systemctl poweroff ;;
+    'suspend') systemctl suspend ;;
+    'lock') start-i3lock ;;
+esac
+
