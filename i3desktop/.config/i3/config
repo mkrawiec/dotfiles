@@ -50,6 +50,9 @@ bindsym $mod+Return $exe termite
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# go to the previous workspace
+bindsym $mod+Tab workspace back_and_forth
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -135,23 +138,12 @@ mode "  " {
         bindsym Escape mode "default"
 }
 
+# Exit menu
+bindsym $mod+Escape $exe rofi-exit
 
-# exit mode
-set $logout "Exit >> (L)ogout (R)eboot (P)oweroff (S)uspend L(o)ck"
-mode $logout {
-    bindsym l exit
-    bindsym r exec systemctl reboot, mode "default"
-    bindsym p exec systemctl poweroff, mode "default"
-    bindsym s exec systemctl suspend, mode "default"
-    bindsym o exec slock, mode "default"
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-bindsym $mod+Shift+e mode $logout
-
+# Screenshots
+bindsym Print $exe mkscreenshot screen
+bindsym --release $mod+Print $exe mkscreenshot select
 
 ###############################
 #           COLORS            #
