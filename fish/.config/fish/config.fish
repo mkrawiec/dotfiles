@@ -7,6 +7,9 @@ eval (dircolors -c $HOME/.dircolors)
 # Load system defaults for bash
 bash /etc/profile
 
+# Additional PATH locations
+set -U fish_user_paths ~/bin/
+
 ###########
 # ALIASES #
 ###########
