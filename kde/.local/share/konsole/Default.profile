@@ -1,7 +1,7 @@
 [Appearance]
 AntiAliasFonts=true
 BoldIntense=false
-ColorScheme=Hybrid (reduced contrast)
+ColorScheme=Hybrid
 Font=Iosevka,14,-1,5,57,0,0,0,0,0
 
 [General]
