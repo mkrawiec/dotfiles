@@ -106,6 +106,9 @@ let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
 "
 let mapleader=','
 
+" Sudo trick
+command! -nargs=0 SudoWrite w !sudo tee % > /dev/null
+
 " Toggle NERDTree
 nnoremap <silent> <C-n> :NERDTreeToggle<CR>
 
