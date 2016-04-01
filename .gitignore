@@ -6,3 +6,6 @@ fish/.config/fish/fish_history
 fish/.config/fish/fishd*
 
 .directory
+
+# systemd
+*.target.wants
