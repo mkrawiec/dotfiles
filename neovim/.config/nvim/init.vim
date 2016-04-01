@@ -15,6 +15,11 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'bronson/vim-trailing-whitespace'
     Plug 'janko-m/vim-test'
 
+" C/C++
+    Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp']}
+    Plug 'xolox/vim-misc' | Plug 'xolox/vim-easytags', {'for': ['c', 'cpp']}
+    Plug 'vim-scripts/a.vim', {'for': ['c', 'cpp']}
+
 " Python
     Plug 'hdima/python-syntax', {'for': 'python'}
 
@@ -88,8 +93,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 5
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_python_exec = 'python3'
-let g:syntastic_python_checkers = ['flake8']
 
 let g:airline_powerline_fonts=1
 let g:airline_theme = 'hybrid'
@@ -97,7 +100,6 @@ let g:airline_theme = 'hybrid'
 " Don't display these kinds of files
 let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
       \ '__pycache__']
-
 
 "
 " Keyboard shotrcuts
