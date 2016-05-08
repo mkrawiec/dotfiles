@@ -4,11 +4,14 @@ set --erase fish_greeting
 # DIRCOLORS for ls
 eval (dircolors -c $HOME/.dircolors)
 
+# Virtualfish support
+eval (python3 -m virtualfish)
+
 # Load system defaults for bash
 bash /etc/profile
 
 # Additional PATH locations
-set -U fish_user_paths ~/bin/
+set -U fish_user_paths ~/bin/ ~/opt/android_sdk/{platform-tools,tools}/
 
 ###########
 # ALIASES #
