@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
 konsole                              \
-    --fullscreen                     \
     --separate                       \
-    --fullscreen                     \
     --workdir ~/code                 \
     -p LocalTabTitleFormat=devenv    \
     -e tmux
