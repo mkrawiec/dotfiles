@@ -96,12 +96,12 @@ let g:syntastic_check_on_wq = 0
 
 let g:airline_powerline_fonts=1
 let g:airline_theme = 'hybrid'
-"
+
 " Don't display these kinds of files
 let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
       \ '__pycache__']
 
-" Android SDK
+" Android SDK path
 let g:android_sdk_path = '/home/maciek/opt/android_sdk'
 
 "
