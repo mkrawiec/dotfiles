@@ -28,3 +28,16 @@ let g:clang_format#style_options = {
 
 setlocal omnifunc=javacomplete#Complete
 
+"
+" vim-android
+"
+
+" Display status line
+call airline#parts#define_function('vim-gradle-status', 'gradle#statusLine')
+let g:airline_section_x= airline#section#create_right(['tagbar', 'filetype', 'vim-gradle-status'])
+
+" Run gradle in daemon mode
+let g:gradle_daemon=1
+
+" Show gradle quickfix window automatically
+"let g:gradle_quickfix_show=1
