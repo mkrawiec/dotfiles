@@ -104,6 +104,9 @@ let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
 " Android SDK path
 let g:android_sdk_path = '/home/maciek/opt/android_sdk'
 
+" Use context aware completion in SuperTab
+let g:SuperTabDefaultCompletionType = "context"
+
 "
 " Keyboard shotrcuts
 "
