@@ -7,12 +7,14 @@ let g:clang_format#auto_format = 1
 let g:clang_format#auto_format_on_insert_leave = 1
 
 " Code formatting conventions
-let g:clang_format#code_style = 'webkit'
+let g:clang_format#code_style = 'chromium'
 let g:clang_format#style_options = {
-            \ "IndentCaseLabels" : "true",
-            \ "ColumnLimit" : "80",
-            \ "SpaceBeforeParens" : "Never",
-            \ "PointerAlignment" : "Right"}
+    \ "BreakBeforeBraces": "Linux",
+    \ "IndentCaseLabels" : "true",
+    \ "ColumnLimit" : "80",
+    \ "SpaceBeforeParens" : "Never",
+    \ "PointerAlignment" : "Right"
+    \ }
 
 
 " Use only make syntax checker
