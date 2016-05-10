@@ -14,9 +14,9 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'Shougo/unite.vim'
     Plug 'bronson/vim-trailing-whitespace'
     Plug 'janko-m/vim-test'
+    Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp', 'java', 'javascript']}
 
 " C/C++
-    Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp']}
     Plug 'xolox/vim-misc' | Plug 'xolox/vim-easytags', {'for': ['c', 'cpp']}
     Plug 'vim-scripts/a.vim', {'for': ['c', 'cpp']}
 
@@ -25,7 +25,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 
 " Java
     Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
-    Plug 'tfnico/vim-gradle'
+    Plug 'hsanson/vim-android'
 
 call plug#end()
 
@@ -101,6 +101,10 @@ let g:airline_theme = 'hybrid'
 let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
       \ '__pycache__']
 
+" Android SDK
+let g:android_sdk_path = '/home/maciek/opt/android_sdk'
+let g:gradle_path = '/home/maciek/opt/gradle-2.13'
+
 "
 " Keyboard shotrcuts
 "
@@ -132,4 +136,3 @@ nnoremap <silent> <leader>g :TestVisit<CR>
 " Unite.vim dialogs
 nnoremap <silent> <C-p> :Unite -start-insert file<CR>
 nnoremap <silent> <C-o> :Unite buffer<CR>
-
