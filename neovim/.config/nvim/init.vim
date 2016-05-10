@@ -95,7 +95,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:airline_powerline_fonts=1
-let g:airline_theme = 'hybrid'
+let g:airline_theme = 'hybridline'
 
 " Don't display these kinds of files
 let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
