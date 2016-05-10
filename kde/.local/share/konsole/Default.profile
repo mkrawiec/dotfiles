@@ -1,8 +1,8 @@
 [Appearance]
 AntiAliasFonts=true
 BoldIntense=false
-ColorScheme=Hybrid
-Font=Iosevka,14,-1,5,57,0,0,0,0,0
+ColorScheme=Hybrid (reduced contrast)
+Font=Iosevka,12,-1,5,50,0,0,0,0,0
 
 [General]
 Command=/usr/bin/fish
