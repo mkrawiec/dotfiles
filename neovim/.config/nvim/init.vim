@@ -8,12 +8,12 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 
 " IDE plugins
     Plug 'scrooloose/nerdtree'
-    Plug 'scrooloose/syntastic'
     Plug 'ervandew/supertab'
     Plug 'tpope/vim-fugitive'
     Plug 'Shougo/unite.vim'
     Plug 'bronson/vim-trailing-whitespace'
     Plug 'janko-m/vim-test'
+    Plug 'scrooloose/syntastic'
     Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp', 'java', 'javascript']}
 
 " C/C++
@@ -25,7 +25,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 
 " Java
     Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
-    Plug 'hsanson/vim-android'
+    Plug 'hsanson/vim-android', {'for': ['java', 'xml']}
 
 call plug#end()
 
