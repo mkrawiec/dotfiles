@@ -103,7 +103,6 @@ let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
 
 " Android SDK
 let g:android_sdk_path = '/home/maciek/opt/android_sdk'
-let g:gradle_path = '/home/maciek/opt/gradle-2.13'
 
 "
 " Keyboard shotrcuts
