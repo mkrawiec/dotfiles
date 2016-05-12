@@ -39,5 +39,11 @@ let g:airline_section_x= airline#section#create_right(['tagbar', 'filetype', 'vi
 " Run gradle in daemon mode
 let g:gradle_daemon=1
 
+" Set glyph symbols
+let g:gradle_glyph_android = ''
+let g:gradle_glyph_gradle = ''
+let g:gradle_glyph_error = ''
+let g:gradle_glyph_warning = ''
+
 " Show gradle quickfix window automatically
 "let g:gradle_quickfix_show=1
