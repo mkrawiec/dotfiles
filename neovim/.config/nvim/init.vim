@@ -8,12 +8,14 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 
 " IDE plugins
     Plug 'scrooloose/nerdtree'
-    Plug 'ervandew/supertab'
+    Plug 'scrooloose/nerdcommenter'
     Plug 'tpope/vim-fugitive'
     Plug 'Shougo/unite.vim'
     Plug 'bronson/vim-trailing-whitespace'
     Plug 'janko-m/vim-test'
+    Plug 'majutsushi/tagbar'
     Plug 'scrooloose/syntastic'
+    Plug 'ajh17/VimCompletesMe'
     Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp', 'java', 'javascript']}
 
 " C/C++
@@ -26,6 +28,9 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 " Java
     Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
     Plug 'hsanson/vim-android', {'for': ['java', 'xml']}
+
+" Other
+    Plug 'sukima/xmledit'
 
 call plug#end()
 
@@ -104,8 +109,8 @@ let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
 " Android SDK path
 let g:android_sdk_path = '/home/maciek/opt/android_sdk'
 
-" Use context aware completion in SuperTab
-let g:SuperTabDefaultCompletionType = "context"
+" Use omnicompletion by default for certain filetype
+autocmd FileType xml let b:vcm_tab_complete = 'omni'
 
 "
 " Keyboard shotrcuts
