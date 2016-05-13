@@ -28,6 +28,21 @@ let g:clang_format#style_options = {
 
 setlocal omnifunc=javacomplete#Complete
 
+" Keybindings
+nmap <buffer> <leader>jA <Plug>(JavaComplete-Generate-Accessors)
+nmap <buffer> <leader>js <Plug>(JavaComplete-Generate-AccessorSetter)
+nmap <buffer> <leader>jg <Plug>(JavaComplete-Generate-AccessorGetter)
+nmap <buffer> <leader>ja <Plug>(JavaComplete-Generate-AccessorSetterGetter)
+
+imap <buffer> <C-j>s <Plug>(JavaComplete-Generate-AccessorSetter)
+imap <buffer> <C-j>g <Plug>(JavaComplete-Generate-AccessorGetter)
+imap <buffer> <C-j>a <Plug>(JavaComplete-Generate-AccessorSetterGetter)
+
+nmap <C-M-i> <Plug>(JavaComplete-Imports-AddMissing)
+imap <C-M-i> <Plug>(JavaComplete-Imports-AddMissing)
+nmap <C-M-o> <Plug>(JavaComplete-Imports-RemoveUnused)
+imap <C-M-o> <Plug>(JavaComplete-Imports-RemoveUnused)
+
 "
 " vim-android
 "
