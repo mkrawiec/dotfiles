@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-export SSH_ASKPASS=/bin/ksshaskpass
-ssh-add $HOME/.ssh/id_rsa $HOME/.ssh/id_rsa.1 </dev/null
+export SSH_ASKPASS=$(which ksshaskpass)
+
+find ~/.ssh/ \
+    -type f ! -name "*.*" \
+    -name "id_rsa*" \
+    -exec ssh-add '{}' \; > /dev/null
