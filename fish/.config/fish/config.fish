@@ -4,14 +4,11 @@ set --erase fish_greeting
 # DIRCOLORS for ls
 eval (dircolors -c $HOME/.dircolors)
 
-# Virtualfish support
-eval (python3 -m virtualfish)
-
 # Load system defaults for bash
 bash /etc/profile
 
 # Additional PATH locations
-set -U fish_user_paths ~/bin/ ~/opt/android_sdk/{platform-tools,tools}/
+set -U fish_user_paths ~/bin/
 
 ###########
 # ALIASES #
@@ -52,3 +49,5 @@ function splaylq; splay $argv[1] worst; end
 # Download YouTube mp3
 alias ytmp3 'youtube-dl --extract-audio --audio-format mp3 --audio-quality 0'
 
+# Import host-specific settings
+source ~/.config/fish/hosts/(hostname).fish
