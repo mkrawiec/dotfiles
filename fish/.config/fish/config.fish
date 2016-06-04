@@ -18,11 +18,13 @@ set -U fish_user_paths ~/bin/
 alias cl 'clear'
 function fif; grep -rinw $argv[1] -e $argv[2]; end
 alias fifh 'fif .'
+alias nident 'curl -s http://ip-api.com/json | python3 -m json.tool'
 
 # DNF
-alias dup 'sudo dnf -x kmod-nvidia\* --refresh distro-sync'
+alias dup 'sudo dnf --refresh upgrade'
 alias din 'sudo dnf install'
 alias drm 'sudo dnf -C erase'
+alias di 'dnf -C info'
 alias dse 'dnf -C search'
 alias dsi 'dnf -C list installed | grep -i'
 alias dwp 'dnf -C provides'
