@@ -23,16 +23,11 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'vim-scripts/a.vim', {'for': ['c', 'cpp']}
 
 " Python
-    Plug 'hdima/python-syntax', {'for': 'python'}
-
-" Java
-    Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
-    Plug 'hsanson/vim-android', {'for': ['java', 'xml']}
+    Plug 'hdima/python-syntax'
 
 " JavaScript
     Plug 'pangloss/vim-javascript'
     Plug 'mxw/vim-jsx'
-
 
 " Other
     Plug 'sukima/xmledit'
