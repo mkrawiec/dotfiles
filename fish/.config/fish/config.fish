@@ -52,4 +52,5 @@ function splaylq; splay $argv[1] worst; end
 alias ytmp3 'youtube-dl --extract-audio --audio-format mp3 --audio-quality 0'
 
 # Import host-specific settings
-source ~/.config/fish/hosts/(hostname).fish
+set host_config ~/.config/fish/hosts/(hostname).fish
+test -f $host_config; and source $host_config
