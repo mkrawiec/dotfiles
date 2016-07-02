@@ -29,6 +29,11 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
     Plug 'hsanson/vim-android', {'for': ['java', 'xml']}
 
+" JavaScript
+    Plug 'pangloss/vim-javascript'
+    Plug 'mxw/vim-jsx'
+
+
 " Other
     Plug 'sukima/xmledit'
 
