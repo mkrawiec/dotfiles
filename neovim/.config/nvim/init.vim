@@ -115,13 +115,15 @@ let g:android_sdk_path = '~/opt/android_sdk'
 " Use omnicompletion by default for certain filetype
 autocmd FileType xml let b:vcm_tab_complete = 'omni'
 
+" SudoWrite command
+command! -nargs=0 SudoWrite w !sudo tee % > /dev/null
+
+
 "
 " Keyboard shotrcuts
 "
 let mapleader=','
 
-" Sudo trick
-command! -nargs=0 SudoWrite w !sudo tee % > /dev/null
 
 " Toggle NERDTree
 nnoremap <silent> <C-n> :NERDTreeToggle<CR>
