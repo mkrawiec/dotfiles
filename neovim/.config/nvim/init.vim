@@ -109,9 +109,6 @@ let g:airline_theme = 'hybridline'
 let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
       \ '__pycache__']
 
-" Android SDK path
-let g:android_sdk_path = '~/opt/android_sdk'
-
 " Use omnicompletion by default for certain filetype
 autocmd FileType xml let b:vcm_tab_complete = 'omni'
 
