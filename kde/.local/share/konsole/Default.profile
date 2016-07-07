@@ -2,7 +2,7 @@
 AntiAliasFonts=true
 BoldIntense=false
 ColorScheme=Hybrid (reduced contrast)
-Font=Iosevka,12,-1,5,50,0,0,0,0,0
+Font=Iosevka,14,-1,5,50,0,0,0,0,0
 
 [General]
 Command=/usr/bin/fish
