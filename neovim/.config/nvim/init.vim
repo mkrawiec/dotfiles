@@ -16,9 +16,9 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'majutsushi/tagbar'
     Plug 'scrooloose/syntastic'
     Plug 'ajh17/VimCompletesMe'
-    Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp', 'java', 'javascript']}
 
 " C/C++
+    Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp']}
     Plug 'xolox/vim-misc' | Plug 'xolox/vim-easytags', {'for': ['c', 'cpp']}
     Plug 'vim-scripts/a.vim', {'for': ['c', 'cpp']}
 
