@@ -115,6 +115,11 @@ autocmd FileType xml let b:vcm_tab_complete = 'omni'
 " SudoWrite command
 command! -nargs=0 SudoWrite w !sudo tee % > /dev/null
 
+" Prevent annoing mistypes
+command WQ wq
+command Wq wq
+command W w
+command Q q
 
 "
 " Keyboard shotrcuts
