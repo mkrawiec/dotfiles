@@ -2,7 +2,7 @@
 
 konsole                              \
     --separate                       \
-    --workdir ~/code                 \
+    --fullscreen                     \
+    --workdir ~                      \
     -p LocalTabTitleFormat=devenv    \
-    -e tmux
-
+    -e tmux &>/dev/null
