@@ -124,6 +124,19 @@ command! -nargs=0 SudoWrite w !sudo tee % > /dev/null
 "
 let mapleader=','
 
+" Disable lame arrows
+noremap <PageUp> <Nop>
+noremap <PageDown> <Nop>
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+noremap! <PageUp> <Esc>
+noremap! <PageDown> <Esc>
+noremap! <Up> <Esc>
+noremap! <Down> <Esc>
+noremap! <Left> <Esc>
+noremap! <Right> <Esc>
 
 " Toggle NERDTree
 nnoremap <silent> <C-n> :NERDTreeToggle<CR>
