@@ -9,3 +9,6 @@ fish/.config/fish/fishd*
 
 # systemd
 *.target.wants
+
+# OSX stuff
+*.DS_Store
