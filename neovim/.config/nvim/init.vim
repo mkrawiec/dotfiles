@@ -126,6 +126,9 @@ command Q q
 "
 let mapleader=','
 
+" Fix tmux-navigator
+nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
+
 " Disable lame arrows
 noremap <PageUp> <Nop>
 noremap <PageDown> <Nop>
