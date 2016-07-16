@@ -45,7 +45,6 @@ set numberwidth=5       " Little wider
 set cursorline          " Indicate current line
 set ruler               " Enable cursor position indicator
 set colorcolumn=80      " Show vertical line at line break
-set diffopt+=vertical   " Split vertical in diffs
 syntax enable           " Enable syntax highlighting
 
 "
@@ -70,6 +69,7 @@ set autoindent          " Align new line to the previous one
 "
 set splitright          " Puts new vsplit windows to the right of the current
 set splitbelow          " Puts new split windows to the bottom of the current
+set diffopt+=vertical   " Split vertical in diffs
 set hidden              " Allow
 
 "
