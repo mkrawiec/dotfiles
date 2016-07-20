@@ -10,6 +10,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'scrooloose/nerdtree'
     Plug 'scrooloose/nerdcommenter'
     Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
     Plug 'Shougo/unite.vim'
     Plug 'bronson/vim-trailing-whitespace'
     Plug 'janko-m/vim-test'
