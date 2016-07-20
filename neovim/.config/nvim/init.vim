@@ -11,6 +11,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'scrooloose/nerdcommenter'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
+    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
     Plug 'Shougo/unite.vim'
     Plug 'bronson/vim-trailing-whitespace'
     Plug 'janko-m/vim-test'
@@ -166,5 +167,6 @@ nnoremap <silent> <leader>l :TestLast<CR>
 nnoremap <silent> <leader>g :TestVisit<CR>
 
 " Unite.vim dialogs
-nnoremap <silent> <C-p> :Unite -start-insert file<CR>
-nnoremap <silent> <C-o> :Unite buffer<CR>
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <silent> <C-p> :Unite -start-insert file_rec/neovim<CR>
+nnoremap <silent> <C-o> :Unite -start-insert buffer<CR>
