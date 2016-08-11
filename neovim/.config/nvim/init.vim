@@ -18,6 +18,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'majutsushi/tagbar'
     Plug 'scrooloose/syntastic'
     Plug 'ajh17/VimCompletesMe'
+    Plug 'tpope/vim-commentary'
 
 " C/C++
     Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp']}
@@ -33,6 +34,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 
 " Other
     Plug 'sukima/xmledit'
+    Plug 'elzr/vim-json'
 
 call plug#end()
 
@@ -168,5 +170,5 @@ nnoremap <silent> <leader>g :TestVisit<CR>
 
 " Unite.vim dialogs
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <silent> <C-p> :Unite -start-insert file_rec/neovim<CR>
+nnoremap <silent> <C-p> :Unite -start-insert file_rec/git<CR>
 nnoremap <silent> <C-o> :Unite -start-insert buffer<CR>
