@@ -120,6 +120,8 @@ autocmd FileType xml let b:vcm_tab_complete = 'omni'
 " SudoWrite command
 command! -nargs=0 SudoWrite w !sudo tee % > /dev/null
 
+command! JSONFormat %!python -m json.tool
+
 " Prevent annoing mistypes
 command WQ wq
 command Wq wq
