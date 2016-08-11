@@ -31,6 +31,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 " JavaScript
     Plug 'pangloss/vim-javascript'
     Plug 'mxw/vim-jsx'
+    Plug 'flowtype/vim-flow'
 
 " Other
     Plug 'sukima/xmledit'
