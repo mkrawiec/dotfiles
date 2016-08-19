@@ -1,43 +1,4 @@
-call plug#begin('~/.local/share/nvim/site/plugged')
-
-" General
-    Plug 'w0ng/vim-hybrid'
-    Plug 'bling/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'christoomey/vim-tmux-navigator'
-
-" IDE plugins
-    Plug 'scrooloose/nerdtree'
-    Plug 'scrooloose/nerdcommenter'
-    Plug 'tpope/vim-fugitive'
-    Plug 'airblade/vim-gitgutter'
-    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-    Plug 'Shougo/unite.vim'
-    Plug 'bronson/vim-trailing-whitespace'
-    Plug 'janko-m/vim-test'
-    Plug 'majutsushi/tagbar'
-    Plug 'scrooloose/syntastic'
-    Plug 'ajh17/VimCompletesMe'
-    Plug 'tpope/vim-commentary'
-
-" C/C++
-    Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp']}
-    Plug 'xolox/vim-misc' | Plug 'xolox/vim-easytags', {'for': ['c', 'cpp']}
-    Plug 'vim-scripts/a.vim', {'for': ['c', 'cpp']}
-
-" Python
-    Plug 'hdima/python-syntax'
-
-" JavaScript
-    Plug 'pangloss/vim-javascript'
-    Plug 'mxw/vim-jsx'
-    Plug 'flowtype/vim-flow'
-
-" Other
-    Plug 'sukima/xmledit'
-    Plug 'elzr/vim-json'
-
-call plug#end()
+source plugs.vim
 
 "
 " Interface
