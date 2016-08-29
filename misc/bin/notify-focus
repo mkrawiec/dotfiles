@@ -5,7 +5,7 @@
 # @author mkrawiec
 
 # Specify programs which notifications you want to listen
-declare -ar LISTENED=('ScudCloud' 'California' 'Geary' 'Cantata')
+declare -ar LISTENED=('ScudCloud' 'California' 'Geary')
 
 # Declare action to be run on notification
 declare -r ACTION='wmctrl -a'
@@ -17,5 +17,5 @@ printf -v keys "%s\\|" "${LISTENED[@]}"
 dbus-monitor --session interface='org.freedesktop.Notifications' |
 grep --ignore-case --only --line-buffered $keys |
 while read -r match; do
-	eval "$ACTION $match"
+    eval "$ACTION $match"
 done
