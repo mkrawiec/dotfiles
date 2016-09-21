@@ -1,40 +1,22 @@
 ;; -*- mode: emacs-lisp -*-
-;; This file is loaded by Spacemacs at startup.
-;; It must be stored in your home directory.
 
+;; LAYERS
 (defun dotspacemacs/layers ()
-  "Configuration Layers declaration.
-You should not put any user code in this function besides modifying the variable
-values."
   (setq-default
-   ;; Base distribution to use. This is a layer contained in the directory
-   ;; `+distribution'. For now available distributions are `spacemacs-base'
-   ;; or `spacemacs'. (default 'spacemacs)
-   dotspacemacs-distribution 'spacemacs-base
-   ;; List of additional paths where to look for configuration layers.
-   ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
+   dotspacemacs-distribution 'spacemacs
    dotspacemacs-configuration-layer-path '()
-   ;; List of configuration layers to load. If it is the symbol `all' instead
-   ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
-     ;; <M-m f e R> (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
-     ;; auto-completion
-     ;; better-defaults
+     auto-completion
+     better-defaults
      emacs-lisp
-     ;; git
-     ;; markdown
-     ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
-     ;; version-control
+     git
+     ranger
+     shell
+     markdown
+     dockerfile
+     javascript
+     react
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -106,8 +88,8 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+   dotspacemacs-default-font '("Iosevka"
+                               :size 20
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -181,7 +163,7 @@ values."
    dotspacemacs-loading-progress-bar t
    ;; If non nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
-   dotspacemacs-fullscreen-at-startup nil
+   dotspacemacs-fullscreen-at-startup t
    ;; If non nil `spacemacs/toggle-fullscreen' will not use native fullscreen.
    ;; Use to disable fullscreen animations in OSX. (default nil)
    dotspacemacs-fullscreen-use-non-native nil
@@ -206,7 +188,7 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers 'relative
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
    dotspacemacs-smartparens-strict-mode nil
@@ -258,9 +240,11 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#d2ceda" "#f2241f" "#67b11d" "#b1951d" "#3a81c3" "#a31db1" "#21b8c7" "#655370"])
  '(package-selected-packages
    (quote
-    (ws-butler restart-emacs popwin page-break-lines macrostep ido-vertical-mode hl-todo help-fns+ helm-projectile projectile pkg-info epl helm-flx flx helm-descbinds helm helm-core popup async fill-column-indicator exec-path-from-shell evil-visualstar evil-surround evil-escape elisp-slime-nav auto-compile packed dash quelpa package-build use-package which-key bind-key bind-map evil spacemacs-theme))))
+    (helm-company helm-c-yasnippet company-web web-completion-data company-tern dash-functional company-statistics company-quickhelp pos-tip company auto-yasnippet ac-ispell auto-complete window-numbering volatile-highlights vi-tilde-fringe spaceline powerline smooth-scrolling rainbow-delimiters persp-mode pcre2el paradox hydra spinner open-junk-file neotree move-text lorem-ipsum linum-relative leuven-theme info+ indent-guide hungry-delete highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-mode-manager helm-make helm-ag google-translate golden-ratio flx-ido fancy-battery expand-region evil-tutor evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-args evil-anzu anzu eval-sexp-fu highlight define-word clean-aindent-mode buffer-move bracketed-paste auto-highlight-symbol aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line avy xterm-color shell-pop ranger multi-term eshell-prompt-extras esh-help solarized-theme web-mode web-beautify tern tagedit smeargle slim-mode scss-mode sass-mode orgit mmm-mode markdown-toc markdown-mode magit-gitflow less-css-mode json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors s js2-mode js-doc jade-mode helm-gitignore request helm-css-scss haml-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger gh-md evil-magit magit magit-popup git-commit with-editor emmet-mode dockerfile-mode coffee-mode ws-butler restart-emacs popwin page-break-lines macrostep ido-vertical-mode hl-todo help-fns+ helm-projectile projectile pkg-info epl helm-flx flx helm-descbinds helm helm-core popup async fill-column-indicator exec-path-from-shell evil-visualstar evil-surround evil-escape elisp-slime-nav auto-compile packed dash quelpa package-build use-package which-key bind-key bind-map evil spacemacs-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
