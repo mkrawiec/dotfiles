@@ -1,4 +1,4 @@
-source plugs.vim
+source ~/.config/nvim/plugs.vim
 
 "
 " Interface
@@ -42,12 +42,13 @@ set hidden              " Allow
 " Misc settings
 "
 set ignorecase          " Case insensitive search
-set smartcase           " Case sensitive when uc present
+set smartcase           " Case sensitive when uppercase present
 
-set noswapfile
-set nobackup
-set nowb
+set noswapfile          " Do not create .swp files
+set nobackup            " Do not create ~ files
+set nowb                " Prevent write backup
 
+set autochdir           " Auto change dir to current file
 set clipboard+=unnamedplus  " Always use system clipboard
 
 "
@@ -82,6 +83,7 @@ autocmd FileType xml let b:vcm_tab_complete = 'omni'
 " SudoWrite command
 command! -nargs=0 SudoWrite w !sudo tee % > /dev/null
 
+" Format JSON files
 command! JSONFormat %!python -m json.tool
 
 " Prevent annoing mistypes
