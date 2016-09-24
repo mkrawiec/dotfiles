@@ -3,6 +3,7 @@ neovim/.config/nvim/autoload/
 systemd/.config/systemd/user/*.target.wants
 
 fish/.config/fish/fish_history
+fish/.config/fish/functions/fzf_key_bindings.fish
 fish/.config/fish/fishd*
 
 kde/.local/share/konsole/bookmarks.xml*
