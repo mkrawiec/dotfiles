@@ -14,6 +14,7 @@
    )
   )
 
+;; Spacemacs variable configuration
 (defun dotspacemacs/init ()
   (setq-default
    dotspacemacs-editing-style 'vim
@@ -27,10 +28,11 @@
    )
   )
 
+;; Spacemacs post-config hook
 (defun dotspacemacs/user-config ()
   (setq powerline-default-separator 'arrow)
   (setq git-gutter-fr+-side 'left-fringe)
   (spaceline-compile)
   )
 
-;; custom emacs variables
+;; Custom emacs variables
