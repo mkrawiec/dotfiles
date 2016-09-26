@@ -18,11 +18,11 @@ nnoremap <leader>gF :Gpull<CR>
 nnoremap <leader>gi :Git init<CR>
 nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
 nnoremap <leader>gP :Gpush<CR>
-nnoremap <leader>gs <Plug>GitGutterStageHunk
+nmap <leader>gs <Plug>GitGutterStageHunk
 nnoremap <leader>gS :Gwrite<CR><CR>
-nnoremap <leader>gu <Plug>GitGutterUndoHunk
-nnoremap <leader>g] <Plug>GitGutterNextHunk
-nnoremap <leader>g[ <Plug>GitGutterPrevHunk
+nmap <leader>gu <Plug>GitGutterUndoHunk
+nmap <leader>g] <Plug>GitGutterNextHunk
+nmap <leader>g[ <Plug>GitGutterPrevHunk
 
 " (f) file
 nnoremap <leader>ft :NERDTreeToggle<CR>
