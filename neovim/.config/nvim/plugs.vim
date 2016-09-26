@@ -6,6 +6,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'vim-airline/vim-airline-themes'
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf.vim'
 
 " IDE plugins
     Plug 'scrooloose/nerdtree'
@@ -14,7 +15,6 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'tpope/vim-sleuth'
     Plug 'airblade/vim-gitgutter'
     Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-    Plug 'Shougo/unite.vim'
     Plug 'bronson/vim-trailing-whitespace'
     Plug 'janko-m/vim-test'
     Plug 'majutsushi/tagbar'
