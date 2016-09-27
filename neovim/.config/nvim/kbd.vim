@@ -22,8 +22,8 @@ nnoremap <leader>gP :Gpush<CR>
 nmap <leader>gs <Plug>GitGutterStageHunk
 nnoremap <leader>gS :Gwrite<CR><CR>
 nmap <leader>gu <Plug>GitGutterUndoHunk
-nmap <leader>g] <Plug>GitGutterNextHunk
-nmap <leader>g[ <Plug>GitGutterPrevHunk
+nmap <leader>gh <Plug>GitGutterNextHunk
+nmap <leader>gH <Plug>GitGutterPrevHunk
 
 " (f) file
 nnoremap <leader>ft :NERDTreeToggle<CR>
