@@ -11,10 +11,11 @@ nnoremap <leader>' :terminal<CR>
 " (g) git
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gc :Gcommit<Space>
-nnoremap <leader>gC :Gstatus<CR>
+nnoremap <leader>gC :Git checkout<Space>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gf :Gfetch<CR>
 nnoremap <leader>gF :Gpull<CR>
+nnoremap <leader>gg :Gstatus<CR>
 nnoremap <leader>gi :Git init<CR>
 nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
 nnoremap <leader>gP :Gpush<CR>
