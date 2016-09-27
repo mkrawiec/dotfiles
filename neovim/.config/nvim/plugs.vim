@@ -1,10 +1,15 @@
 call plug#begin('~/.local/share/nvim/site/plugged')
 
-" General
+" Themes
     Plug 'w0ng/vim-hybrid'
     Plug 'bling/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+
+" Enhancements
     Plug 'christoomey/vim-tmux-navigator'
+    Plug 'kana/vim-submode'
+    Plug 'tpope/vim-sleuth'
+    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
 
@@ -12,9 +17,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'scrooloose/nerdtree'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-commentary'
-    Plug 'tpope/vim-sleuth'
     Plug 'airblade/vim-gitgutter'
-    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
     Plug 'bronson/vim-trailing-whitespace'
     Plug 'janko-m/vim-test'
     Plug 'majutsushi/tagbar'
