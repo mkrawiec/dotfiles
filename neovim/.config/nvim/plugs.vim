@@ -7,22 +7,23 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 
 " Enhancements
     Plug 'christoomey/vim-tmux-navigator'
-    Plug 'kana/vim-submode'
     Plug 'tpope/vim-sleuth'
-    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+    Plug 'milkypostman/vim-togglelist'
+    Plug 'tpope/vim-repeat'
+    Plug 'schickling/vim-bufonly'
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
 
 " IDE plugins
+    Plug 'neomake/neomake'
+    Plug 'Shougo/deoplete.nvim'
     Plug 'scrooloose/nerdtree'
+    Plug 'scrooloose/nerdcommenter'
     Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-commentary'
     Plug 'airblade/vim-gitgutter'
     Plug 'bronson/vim-trailing-whitespace'
-    Plug 'janko-m/vim-test'
     Plug 'majutsushi/tagbar'
-    Plug 'scrooloose/syntastic'
-    Plug 'ajh17/VimCompletesMe'
+    Plug 'janko-m/vim-test'
 
 " Python
     Plug 'hdima/python-syntax'
@@ -31,9 +32,5 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'pangloss/vim-javascript'
     Plug 'mxw/vim-jsx'
     Plug 'flowtype/vim-flow'
-
-" Other
-    Plug 'sukima/xmledit'
-    Plug 'elzr/vim-json'
 
 call plug#end()

@@ -8,6 +8,26 @@ nnoremap <leader>: :Commands<CR>
 nnoremap <leader>! :!<Space>
 nnoremap <leader>' :terminal<CR>
 
+" (b) buffers
+nnoremap <leader>bb :Buffers<CR>
+nnoremap <leader>bd :bd<CR>
+nnoremap <leader>bD :BufOnly<CR>
+nnoremap <leader>bn :bn<CR>
+nnoremap <leader>bN :enew<CR>
+nnoremap <leader>bp :bp<CR>
+nnoremap <leader>bY ggVGy
+nnoremap <leader>bP ggVGp
+
+" (f) files
+nnoremap <leader>ft :NERDTreeToggle<CR>
+nnoremap <leader>fed :edit $MYVIMRC<CR>
+nnoremap <leader>feR :source $MYVIMRC<CR>
+nnoremap <leader>fE :SudoEdit<CR>
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fF :GFiles<CR>
+nnoremap <leader>fs :write %<CR>
+nnoremap <leader>fy :let @+=expand('%:p')<CR>
+
 " (g) git
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gc :Gcommit<Space>
@@ -22,23 +42,24 @@ nnoremap <leader>gP :Gpush<CR>
 nmap <leader>gs <Plug>GitGutterStageHunk
 nnoremap <leader>gS :Gwrite<CR><CR>
 nmap <leader>gu <Plug>GitGutterUndoHunk
-nmap <leader>gh <Plug>GitGutterNextHunk
-nmap <leader>gH <Plug>GitGutterPrevHunk
+nmap <leader>gn <Plug>GitGutterNextHunk
+nmap <leader>gp <Plug>GitGutterPrevHunk
 
-" (f) file
-nnoremap <leader>ft :NERDTreeToggle<CR>
-nnoremap <leader>fed :edit $MYVIMRC<CR>
-nnoremap <leader>feR :source $MYVIMRC<CR>
-nnoremap <leader>ff :Files<CR>
-nnoremap <leader>fF :GFiles<CR>
-nnoremap <leader>fs :write %<CR>
-
-" (b) buffer
-nnoremap <silent> <leader>bb :Buffers<CR>
-nnoremap <leader>bY ggVGy
-
-" (h) help
+" (h) help/history
 nnoremap <leader>hd :Helptags<CR>
+nnoremap <leader>h: :History:<CR>
+nnoremap <leader>h/ :History/<CR>
+
+" (l) location
+nnoremap <leader>ln :lnext<CR>
+nnoremap <leader>lp :lprevious<CR>
+nnoremap <leader>lt :call ToggleLocationList()<CR>
+
+" (q) quickfix
+nnoremap <leader>qt :call ToggleQuickfixList()<CR>
+
+" (s) search
+nnoremap <leader>sa :Ag
 
 " Disable lame arrows
 noremap <PageUp> <Nop>

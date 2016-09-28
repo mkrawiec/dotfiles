@@ -7,7 +7,6 @@ set virtualedit=onemore " Allow for cursor beyond last character
 set number              " Enable line numbers
 set relativenumber      " Make numbering relative to current line
 set showmatch           " Show matching brackets/parenthesis
-set numberwidth=5       " Little wider
 set cursorline          " Indicate current line
 set ruler               " Enable cursor position indicator
 set colorcolumn=80      " Show vertical line at line break
@@ -39,6 +38,9 @@ set splitbelow          " Puts new split windows to the bottom of the current
 set diffopt+=vertical   " Split vertical in diffs
 set hidden              " Allow
 
+set timeoutlen=1000
+set ttimeoutlen=0
+
 "
 " Misc settings
 "
@@ -60,27 +62,8 @@ set undodir=~/.vim/backups
 set undofile
 
 "
-" Plugin options
+" Commands
 "
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
-let g:syntastic_style_error_symbol = '⚡'
-
-let g:airline_powerline_fonts=1
-let g:airline_theme = 'hybridline'
-
-" Don't display these kinds of files
-let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
-      \ '__pycache__']
-
-" Use omnicompletion by default for certain filetype
-autocmd FileType xml let b:vcm_tab_complete = 'omni'
-
 " SudoWrite command
 command! -nargs=0 SudoWrite w !sudo tee % > /dev/null
 
@@ -92,5 +75,41 @@ command! WQ wq
 command! Wq wq
 command! W w
 command! Q q
+
+"
+" Plugin options
+"
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'hybridline'
+
+let g:gitgutter_override_sign_column_highlight = 0
+let g:gitgutter_map_keys = 0
+highlight link GitGutterAdd             DiffAdd
+highlight link GitGutterChange          DiffChange
+highlight link GitGutterDelete          DiffDelete
+highlight link GitGutterChangeDelete    DiffText
+
+" Don't display these kinds of files
+let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
+      \ '__pycache__']
+
+autocmd! BufWritePost,BufEnter * Neomake
+let g:neomake_list_height = 5
+let g:neomake_error_sign = {
+      \ 'text': '✗',
+      \ 'texthl': 'SpellBad',
+      \ }
+let g:neomake_warning_sign = {
+      \ 'text': '⚠',
+      \ 'texthl': 'SpellCap',
+      \ }
+let g:neomake_message_sign = {
+      \ 'text': '⚡',
+      \ 'texthl': 'SpellRare',
+      \ }
+let g:neomake_info_sign = {
+      \ 'text': 'ℹ',
+      \ 'texthl': 'SpellLocal',
+      \ }
 
 source ~/.config/nvim/kbd.vim
