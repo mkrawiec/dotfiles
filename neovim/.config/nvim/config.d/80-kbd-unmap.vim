@@ -4,3 +4,9 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+noremap! <PageUp> <Esc>
+noremap! <PageDown> <Esc>
+noremap! <Up> <Esc>
+noremap! <Down> <Esc>
+noremap! <Left> <Esc>
+noremap! <Right> <Esc>
