@@ -60,24 +60,3 @@ nnoremap <leader>qt :call ToggleQuickfixList()<CR>
 
 " (s) search
 nnoremap <leader>sa :Ag
-
-" Disable lame arrows
-noremap <PageUp> <Nop>
-noremap <PageDown> <Nop>
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-noremap! <PageUp> <Esc>
-noremap! <PageDown> <Esc>
-noremap! <Up> <Esc>
-noremap! <Down> <Esc>
-noremap! <Left> <Esc>
-noremap! <Right> <Esc>
-
-" Visual shifting (does not exit Visual mode)
-vnoremap < <gv
-vnoremap > >gv
-
-" More consistent Y
-nnoremap Y y$
