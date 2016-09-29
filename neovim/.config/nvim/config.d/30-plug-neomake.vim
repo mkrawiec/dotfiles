@@ -1,4 +1,3 @@
-autocmd! BufWritePost,BufEnter * Neomake
 let g:neomake_list_height = 5
 let g:neomake_error_sign = {
       \ 'text': '✗',
