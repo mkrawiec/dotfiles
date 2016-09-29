@@ -8,6 +8,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 " Enhancements
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'tpope/vim-sleuth'
+    Plug 'takac/vim-hardtime'
     Plug 'milkypostman/vim-togglelist'
     Plug 'tpope/vim-repeat'
     Plug 'schickling/vim-bufonly'
