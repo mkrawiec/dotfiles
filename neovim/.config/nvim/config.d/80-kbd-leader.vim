@@ -59,4 +59,4 @@ nnoremap <leader>lt :call ToggleLocationList()<CR>
 nnoremap <leader>qt :call ToggleQuickfixList()<CR>
 
 " (s) search
-nnoremap <leader>sa :Ag
+nnoremap <leader>sa :Ag<CR>
