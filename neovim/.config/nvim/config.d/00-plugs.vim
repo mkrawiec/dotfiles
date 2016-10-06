@@ -17,14 +17,15 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 
 " IDE plugins
     Plug 'neomake/neomake'
-    Plug 'Shougo/deoplete.nvim'
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'ajh17/VimCompletesMe'
     Plug 'scrooloose/nerdtree'
     Plug 'scrooloose/nerdcommenter'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
+    Plug 'airblade/vim-rooter'
     Plug 'bronson/vim-trailing-whitespace'
     Plug 'majutsushi/tagbar'
-    Plug 'janko-m/vim-test'
 
 " Python
     Plug 'hdima/python-syntax'
@@ -32,6 +33,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 " JavaScript
     Plug 'pangloss/vim-javascript'
     Plug 'mxw/vim-jsx'
-    Plug 'flowtype/vim-flow'
+    Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
+    Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 
 call plug#end()
