@@ -49,7 +49,6 @@ set noswapfile          " Do not create .swp files
 set nobackup            " Do not create ~ files
 set nowb                " Prevent write backup
 
-set autochdir           " Auto change dir to current file
 set clipboard+=unnamedplus  " Always use system clipboard
 
 "
@@ -58,4 +57,3 @@ set clipboard+=unnamedplus  " Always use system clipboard
 silent !mkdir ~/.vim/backups > /dev/null 2>&1
 set undodir=~/.vim/backups
 set undofile
-
