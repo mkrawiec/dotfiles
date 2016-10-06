@@ -15,7 +15,3 @@ let g:clang_format#style_options = {
     \ "SpaceBeforeParens" : "Never",
     \ "PointerAlignment" : "Right"
     \ }
-
-
-" Use only make syntax checker
-let g:syntastic_c_checkers = ['make']
