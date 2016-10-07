@@ -26,5 +26,5 @@ let b:neomake_javascript_eslint_exe = substitute(s:eslint_path, '^\n*\s*\(.\{-}\
 " Choose eslint as default maker
 let g:neomake_javascript_enabled_makers = ['eslint']
 
-" Enable linter on buffer write
-autocmd! BufWritePost * Neomake
+" Invoke NeoMake on buffers that are not diffs
+autocmd BufWritePost * if !&diff | Neomake | endif
