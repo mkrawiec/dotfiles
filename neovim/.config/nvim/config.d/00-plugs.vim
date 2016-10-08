@@ -35,4 +35,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
     Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 
+" TypeScript
+    Plug 'HerringtonDarkholme/yats.vim'
+    Plug 'mhartington/deoplete-typescript'
 call plug#end()
