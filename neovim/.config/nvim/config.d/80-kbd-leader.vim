@@ -42,21 +42,11 @@ nnoremap <leader>gP :Gpush<CR>
 nmap <leader>gs <Plug>GitGutterStageHunk
 nnoremap <leader>gS :Gwrite<CR><CR>
 nmap <leader>gu <Plug>GitGutterUndoHunk
-nmap <leader>gn <Plug>GitGutterNextHunk
-nmap <leader>gp <Plug>GitGutterPrevHunk
 
 " (h) help/history
 nnoremap <leader>hd :Helptags<CR>
 nnoremap <leader>h: :History:<CR>
 nnoremap <leader>h/ :History/<CR>
-
-" (l) location
-nnoremap <leader>ln :lnext<CR>
-nnoremap <leader>lp :lprevious<CR>
-nnoremap <leader>lt :call ToggleLocationList()<CR>
-
-" (q) quickfix
-nnoremap <leader>qt :call ToggleQuickfixList()<CR>
 
 " (s) search
 nnoremap <leader>sa :Ag<CR>

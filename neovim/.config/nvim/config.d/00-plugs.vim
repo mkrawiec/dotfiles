@@ -9,7 +9,6 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'tpope/vim-sleuth'
     Plug 'takac/vim-hardtime'
-    Plug 'milkypostman/vim-togglelist'
     Plug 'tpope/vim-repeat'
     Plug 'schickling/vim-bufonly'
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
