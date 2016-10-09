@@ -2,14 +2,22 @@
 set shiftwidth=2
 
 "
-" Deoplete
-"
-let g:deoplete#enable_at_startup = 1
-
-"
 " Neomake
 "
-let g:neomake_typescript_enabled_makers = ['tsc']
+" Use tsconf.json from current dir
+function! neomake#makers#ft#typescript#tsc()
+    return {
+        \ 'args': ['--project', getcwd(), '--noEmit'],
+        \ 'append_file': 0,
+        \ 'errorformat':
+        \   '%E%f %#(%l\,%c): error %m,' .
+        \   '%E%f %#(%l\,%c): %m,' .
+        \   '%Eerror %m,' .
+        \   '%C%\s%\+%m'
+        \ }
+endfunction
+
+let g:neomake_typescript_enabled_makers = ['tsc', 'tslint']
 
 " Enable linter on buffer write
 autocmd! BufWritePost * if !&diff | Neomake | endif

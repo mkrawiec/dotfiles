@@ -7,14 +7,15 @@ let g:jsx_ext_required = 0
 "
 " Deoplete
 "
-" Enable autocompletion
-let g:deoplete#enable_at_startup = 1
-
-" Configure sources
+" Configure external sources
 let g:deoplete#omni#functions = {}
 let g:deoplete#omni#functions.javascript = [
   \ 'tern#Complete'
 \]
+
+" Use tern_for_vim.
+let g:tern#command = ["tern"]
+let g:tern#arguments = ["--persistent"]
 
 "
 " Neomake

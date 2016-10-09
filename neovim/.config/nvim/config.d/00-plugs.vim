@@ -25,6 +25,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'airblade/vim-rooter'
     Plug 'bronson/vim-trailing-whitespace'
     Plug 'majutsushi/tagbar'
+    Plug 'jiangmiao/auto-pairs'
 
 " Python
     Plug 'hdima/python-syntax'
@@ -36,6 +37,6 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 
 " TypeScript
-    Plug 'HerringtonDarkholme/yats.vim'
+    Plug 'leafgarland/typescript-vim'
     Plug 'mhartington/deoplete-typescript'
 call plug#end()
