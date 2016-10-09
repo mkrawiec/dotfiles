@@ -1,4 +1,4 @@
-neovim/.config/nvim/autoload/
+neovim/.config/nvim/autoload/plug.vim*
 
 systemd/.config/systemd/user/*.target.wants
 

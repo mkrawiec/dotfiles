@@ -6,7 +6,7 @@ let maplocalleader=','
 " (-) general
 nnoremap <leader>: :Commands<CR>
 nnoremap <leader>! :!<Space>
-nnoremap <leader>' :terminal<CR>
+nnoremap <leader>' :call termsplit#toggle()<CR>
 
 " (b) buffers
 nnoremap <leader>bb :Buffers<CR>
