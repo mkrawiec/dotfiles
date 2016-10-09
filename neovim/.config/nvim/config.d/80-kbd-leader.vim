@@ -40,7 +40,8 @@ nnoremap <silent> <leader>gf :NeomakeSh git fetch<CR>:bot copen<CR>
 nnoremap <silent> <leader>gF :NeomakeSh git pull<CR>:bot copen<CR>
 nnoremap <leader>gg :Gstatus<CR>
 nnoremap <leader>gi :Git init<CR>
-nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
+nnoremap <silent> <leader>gl :Commits<CR>
+nnoremap <silent> <leader>gL :BCommits<CR>
 nnoremap <silent> <leader>gP :NeomakeSh git push<CR>:bot copen<CR>
 nmap <leader>gs <Plug>GitGutterStageHunk
 nnoremap <leader>gS :Gwrite<CR><CR>
@@ -52,7 +53,10 @@ nnoremap <leader>h: :History:<CR>
 nnoremap <leader>h/ :History/<CR>
 
 " (s) search
-nnoremap <leader>sa :Ag<CR>
+nnoremap <silent> <leader>sa :Ag<CR>
+nnoremap <silent> <leader>sc :noh<CR>
+nnoremap <silent> <leader>sb :Lines<CR>
+nnoremap <silent> <leader>sf :BLines<CR>
 
 " (w) window
 nnoremap <silent> <leader>wp :lclose \| pclose \| cclose<CR>
