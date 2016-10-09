@@ -36,12 +36,12 @@ nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gc :Gcommit<Space>
 nnoremap <leader>gC :Git checkout<Space>
 nnoremap <leader>gd :Gdiff<CR>
-nnoremap <silent> <leader>gf :NeomakeSh git fetch<CR>
-nnoremap <silent> <leader>gF :NeomakeSh git pull<CR>
+nnoremap <silent> <leader>gf :NeomakeSh git fetch<CR>:bot copen<CR>
+nnoremap <silent> <leader>gF :NeomakeSh git pull<CR>:bot copen<CR>
 nnoremap <leader>gg :Gstatus<CR>
 nnoremap <leader>gi :Git init<CR>
 nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
-nnoremap <silent> <leader>gP :NeomakeSh git push<CR>
+nnoremap <silent> <leader>gP :NeomakeSh git push<CR>:bot copen<CR>
 nmap <leader>gs <Plug>GitGutterStageHunk
 nnoremap <leader>gS :Gwrite<CR><CR>
 nmap <leader>gu <Plug>GitGutterUndoHunk
