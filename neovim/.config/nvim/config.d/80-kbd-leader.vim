@@ -18,6 +18,9 @@ nnoremap <leader>bp :bp<CR>
 nnoremap <leader>bY ggVGy
 nnoremap <leader>bP ggVGp
 
+" (c) compile
+nnoremap <leader>cc :Neomake!<CR>
+
 " (f) files
 nnoremap <leader>ft :NERDTreeToggle<CR>
 nnoremap <leader>fed :edit $MYVIMRC<CR>
@@ -33,12 +36,12 @@ nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gc :Gcommit<Space>
 nnoremap <leader>gC :Git checkout<Space>
 nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>gf :Gfetch<CR>
-nnoremap <leader>gF :Gpull<CR>
+nnoremap <silent> <leader>gf :NeomakeSh git fetch<CR>
+nnoremap <silent> <leader>gF :NeomakeSh git pull<CR>
 nnoremap <leader>gg :Gstatus<CR>
 nnoremap <leader>gi :Git init<CR>
 nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
-nnoremap <leader>gP :Gpush<CR>
+nnoremap <silent> <leader>gP :NeomakeSh git push<CR>
 nmap <leader>gs <Plug>GitGutterStageHunk
 nnoremap <leader>gS :Gwrite<CR><CR>
 nmap <leader>gu <Plug>GitGutterUndoHunk
@@ -50,3 +53,6 @@ nnoremap <leader>h/ :History/<CR>
 
 " (s) search
 nnoremap <leader>sa :Ag<CR>
+
+" (w) window
+nnoremap <silent> <leader>wp :lclose \| pclose \| cclose<CR>
