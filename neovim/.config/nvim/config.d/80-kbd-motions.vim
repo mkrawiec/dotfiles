@@ -3,9 +3,9 @@ nmap ]c <Plug>GitGutterNextHunk
 nmap [c <Plug>GitGutterPrevHunk
 
 " previous/next location
-nnoremap ]l :lnext<CR>
-nnoremap [l :lprevious<CR>
+nnoremap <silent> ]l :call errmov#lnext()<CR>
+nnoremap <silent> [l :call errmov#lprev()<CR>
 
 " previous/next quickfix
-nnoremap ]q :cnext<CR>
-nnoremap [q :cprevious<CR>
+nnoremap <silent> ]q :call errmov#cnext()<CR>
+nnoremap <silent> [q :call errmov#cprev()<CR>
