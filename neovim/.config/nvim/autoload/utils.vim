@@ -1,5 +1,5 @@
 " Toggle terminal split window
-fun! termsplit#toggle()
+fun! utils#ToggleTerm()
     let l:buffer_name = 'popup-term'
     let l:win_number = bufwinnr(l:buffer_name)
 
@@ -18,3 +18,13 @@ fun! termsplit#toggle()
         endif
     endif
 endf
+
+" Call another command if one failed
+fun! utils#ExeWithFallback(command, fallback)
+  try
+    exe a:command
+  catch
+    try | exe a:fallback | catch | endtry
+  endtry
+endf
+
