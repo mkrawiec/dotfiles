@@ -7,8 +7,9 @@ eval (dircolors -c $HOME/.dircolors)
 # Load system defaults for bash
 bash /etc/profile
 
-# Additional PATH locations
-set -U fish_user_paths ~/bin/
+# FZF config
+set -U fish_user_paths ~/bin/ ~/.fzf/bin/
+set -gx FZF_DEFAULT_COMMAND 'ag -g ""'
 
 ###########
 # ALIASES #
