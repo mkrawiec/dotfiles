@@ -11,6 +11,9 @@ bash /etc/profile
 set -U fish_user_paths ~/bin/ ~/.fzf/bin/
 set -gx FZF_DEFAULT_COMMAND 'ag -g ""'
 
+# Use vi style editing
+set -U fish_key_bindings fish_vi_key_bindings
+
 ###########
 # ALIASES #
 ###########
