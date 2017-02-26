@@ -8,6 +8,6 @@ set -x GDK_SCALE 1.5
 eval (python3 -m virtualfish)
 
 # Android and gradle in PATH
-set -U fish_user_paths ~/opt/android_sdk/{platform-tools,tools}/ $fish_user_paths ~/opt/gradle/bin $fish_user_paths
+set -U fish_user_paths ~/opt/android-sdk/{platform-tools,tools}/ $fish_user_paths $fish_user_paths
 
-set -x ANDROID_HOME ~/opt/android_sdk/
+set -x ANDROID_HOME ~/opt/android-sdk/
