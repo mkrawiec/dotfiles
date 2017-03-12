@@ -24,28 +24,23 @@ function fif; grep -rinw $argv[1] -e $argv[2]; end
 alias fifh 'fif .'
 alias nident 'curl -s http://ip-api.com/json | python3 -m json.tool'
 
-# DNF
-alias dup 'sudo dnf --refresh upgrade'
-alias din 'sudo dnf install'
-alias drm 'sudo dnf -C erase'
-alias di 'dnf -C info'
-alias dse 'dnf -C search'
-alias dsi 'dnf -C list installed | grep -i'
-alias dwp 'dnf -C provides'
+# Zypper
+alias zup 'sudo zypper dist-upgrade'
+alias zin 'sudo zypper install'
+alias zrm 'sudo zypper remove'
+alias zinf 'zypper info'
+alias zse 'zypper search'
+alias zsi 'zypper search -i'
+alias zwp 'zypper search --provides --match-exact'
 
 # Docker
 alias dockrm 'docker rm -f (docker ps -qa)'
 alias dockrmi 'docker rmi (docker images -f "dangling=true" -q)'
 alias dockip 'docker inspect --format "{{ .NetworkSettings.IPAddress }}"'
 
-# Creating nspawn containers
-function dnfstrap
-    sudo dnf --releasever=(rpm -E %fedora) --nogpg --installroot=$argv[1] --disablerepo='*' --enablerepo=fedora install systemd passwd dnf fedora-release vim-minimal
-end
-
 # Shortcuts for copy/paste
-alias xcopy 'xsel --clipboard --input'
-alias xpaste 'xsel --clipboard --output'
+alias xcopy 'xclip'
+alias xpaste 'xclip -o'
 
 # Stream laggy Twitch stream flawlessly ;)
 alias splay 'livestreamer -p mpv --player-continuous-http --hls-segment-threads 4'
