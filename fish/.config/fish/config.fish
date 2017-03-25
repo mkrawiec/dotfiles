@@ -19,6 +19,7 @@ set -U fish_key_bindings fish_vi_key_bindings
 ###########
 
 # General aliases
+alias g 'git'
 alias cl 'clear'
 function fif; grep -rinw $argv[1] -e $argv[2]; end
 alias fifh 'fif .'
