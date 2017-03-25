@@ -1,23 +1,27 @@
-" Use 2 spaces for shifting
-set shiftwidth=2
+"
+" Formatting
+"
+set shiftwidth=2       " Use 2 spaces for shifting
 
 "
-" Neomake
+" Keybindings
 "
-" Use tsconf.json from current dir
-function! neomake#makers#ft#typescript#tsc()
-    return {
-        \ 'args': ['--project', getcwd(), '--noEmit'],
-        \ 'append_file': 0,
-        \ 'errorformat':
-        \   '%E%f %#(%l\,%c): error %m,' .
-        \   '%E%f %#(%l\,%c): %m,' .
-        \   '%Eerror %m,' .
-        \   '%C%\s%\+%m'
-        \ }
-endfunction
 
-let g:neomake_typescript_enabled_makers = ['tsc', 'tslint']
+" (g) goto
+nnoremap <localleader>gg :TSDef<CR>
+nnoremap <localleader>gp :TSDefPreview<CR>
+nnoremap <localleader>gu :TSRefs<CR>
+
+" (h) help
+nnoremap <localleader>hd :TSDoc<CR>
+nnoremap <localleader>ht :TSType<CR>
+
+" (S) server
+nnoremap <localleader>Sr :TSRestart<CR>
+
+"
+" Linter
+"
 
 " Enable linter on buffer write
 autocmd! BufWritePost * if !&diff | Neomake | endif
