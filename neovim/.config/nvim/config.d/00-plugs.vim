@@ -1,42 +1,43 @@
 call plug#begin('~/.local/share/nvim/site/plugged')
 
-" Themes
+    " Themes
     Plug 'w0ng/vim-hybrid'
     Plug 'bling/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
 
-" Enhancements
+    " Enhancements
     Plug 'christoomey/vim-tmux-navigator'
-    Plug 'tpope/vim-sleuth'
     Plug 'takac/vim-hardtime'
+    Plug 'tpope/vim-sleuth'
     Plug 'tpope/vim-repeat'
     Plug 'schickling/vim-bufonly'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'bronson/vim-trailing-whitespace'
+    Plug 'ajh17/VimCompletesMe'
+
+    " IDE plugins
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
-
-" IDE plugins
     Plug 'neomake/neomake'
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'ajh17/VimCompletesMe'
     Plug 'scrooloose/nerdtree'
     Plug 'scrooloose/nerdcommenter'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'airblade/vim-rooter'
-    Plug 'bronson/vim-trailing-whitespace'
-    Plug 'majutsushi/tagbar'
-    Plug 'jiangmiao/auto-pairs'
+    Plug 'SirVer/ultisnips'
 
-" Python
+    " Syntax
     Plug 'hdima/python-syntax'
-
-" JavaScript
+    Plug 'hail2u/vim-css3-syntax'
     Plug 'pangloss/vim-javascript'
     Plug 'mxw/vim-jsx'
+    Plug 'leafgarland/typescript-vim'
+
+    " JavaScript
     Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
     Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 
-" TypeScript
-    Plug 'leafgarland/typescript-vim'
-    Plug 'mhartington/deoplete-typescript'
+    " TypeScript
+    Plug 'mhartington/nvim-typescript'
 call plug#end()
