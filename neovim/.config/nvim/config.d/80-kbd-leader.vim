@@ -18,8 +18,11 @@ nnoremap <leader>bp :bp<CR>
 nnoremap <leader>bY ggVGy
 nnoremap <leader>bP ggVGp
 
-" (c) compile
+" (c) compile / comment
 nnoremap <leader>cc :Neomake!<CR>
+map <leader>cl <Plug>NERDCommenterToggle
+map <leader>cL <Plug>NERDCommenterInvert
+map <leader>cy <Plug>NERDCommenterYank
 
 " (f) files
 nnoremap <leader>ft :NERDTreeToggle<CR>
