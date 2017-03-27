@@ -63,3 +63,4 @@ nnoremap <silent> <leader>sf :BLines<CR>
 
 " (w) window
 nnoremap <silent> <leader>wp :lclose \| pclose \| cclose<CR>
+nnoremap <leader>wg :GoldenRatioResize<CR>

@@ -33,3 +33,9 @@ let g:hardtime_ignore_buffer_patterns = [ "CustomPatt[ae]rn", "NERD.*" ]
 "
 " If no root detected change to the current dir
 let g:rooter_change_directory_for_non_project_files = 'current'
+
+"
+" golden-ratio
+"
+" Do not resize automatically
+let g:golden_ratio_autocommand = 0

@@ -14,6 +14,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'jiangmiao/auto-pairs'
     Plug 'bronson/vim-trailing-whitespace'
     Plug 'ajh17/VimCompletesMe'
+    Plug 'roman/golden-ratio'
 
     " IDE plugins
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
