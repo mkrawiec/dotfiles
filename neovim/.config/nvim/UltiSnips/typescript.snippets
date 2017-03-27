@@ -1,7 +1,41 @@
-snippet component
+snippet ngc
 import { Component } from '@angular/core'
 
 @Component({
+  selector: '',
+  template: require(''),
+  styles: [require('')]
 })
-export class TestComponent { }
+export class $1 { }
+endsnippet
+
+snippet ngs
+import { Injectable } from '@angular/core'
+
+@Injectable()
+export class $1 {
+$0
+}
+endsnippet
+
+snippet ngspec
+import { TestBed, async, inject } from '@angular/core/testing'
+
+describe('$1', () => {
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      providers: [
+$2
+      ]
+    })
+  }))
+
+  $0
+})
+endsnippet
+
+snippet ngit
+it('$1', async(inject([$2]), ($3) => {
+$0
+}))
 endsnippet
