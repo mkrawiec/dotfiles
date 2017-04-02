@@ -1,3 +1,6 @@
+###########
+# GENERAL #
+###########
 # Remove greeting text
 set --erase fish_greeting
 
@@ -13,6 +16,12 @@ set -gx FZF_DEFAULT_COMMAND 'ag -g ""'
 
 # Use vi style editing
 set -U fish_key_bindings fish_vi_key_bindings
+
+#################
+# HOST-SETTINGS #
+#################
+set host_config ~/.config/fish/hosts/(hostname).fish
+test -f $host_config; and source $host_config
 
 ###########
 # ALIASES #
@@ -65,6 +74,3 @@ function splaylq; splay $argv[1] worst; end
 # Download YouTube mp3
 alias ytmp3 'youtube-dl --extract-audio --audio-format mp3 --audio-quality 0'
 
-# Import host-specific settings
-set host_config ~/.config/fish/hosts/(hostname).fish
-test -f $host_config; and source $host_config
