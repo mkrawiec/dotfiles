@@ -19,17 +19,23 @@ set -U fish_key_bindings fish_vi_key_bindings
 ###########
 
 # General aliases
-alias g 'git'
 alias cl 'clear'
+
+# Workflow
+alias g 'git'
 function fif; grep -rinw $argv[1] -e $argv[2]; end
 alias fifh 'fif .'
-alias nident 'curl -s http://ip-api.com/json | python3 -m json.tool'
+
+# System
+alias neti 'curl -s http://ip-api.com/json | python3 -m json.tool'
 
 # Zypper
 alias zup 'sudo zypper dist-upgrade'
 alias zin 'sudo zypper install'
+alias zinn 'sudo zypper install --force'
 alias zrm 'sudo zypper remove'
-alias zinf 'zypper info'
+alias zcl 'sudo zypper clean --all'
+alias zi 'zypper info'
 alias zse 'zypper search'
 alias zsi 'zypper search -i'
 alias zwp 'zypper search --provides --match-exact'
@@ -39,11 +45,19 @@ alias dockrm 'docker rm -f (docker ps -qa)'
 alias dockrmi 'docker rmi (docker images -f "dangling=true" -q)'
 alias dockip 'docker inspect --format "{{ .NetworkSettings.IPAddress }}"'
 
+# Systemd
+alias sysde 'sudo systemctl enable'
+alias sysdd 'sudo systemctl disable'
+alias sysdr 'sudo systemctl restart'
+alias sysdi 'systemctl status'
+alias sysdls 'sudo systemctl list-units'
+alias sysdl 'sudo journalctl -n 20 -f -u'
+
 # Shortcuts for copy/paste
 alias xcopy 'xclip'
 alias xpaste 'xclip -o'
 
-# Stream laggy Twitch stream flawlessly ;)
+# Play laggy Twitch streams flawlessly
 alias splay 'livestreamer -p mpv --player-continuous-http --hls-segment-threads 4'
 function splayhq; splay $argv[1] best; end
 function splaylq; splay $argv[1] worst; end
