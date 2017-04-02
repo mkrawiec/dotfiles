@@ -16,7 +16,14 @@
 
     d = diff
     ds = diff --staged
+    dm = diff master
+    dd = diff develop
 
     s = status -s
     co = checkout
     cob = checkout -b
+
+    f = fetch --prune
+    ph = push
+    pl = pull
+    pr = pull --rebase
