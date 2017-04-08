@@ -27,3 +27,7 @@
     ph = push
     pl = pull
     pr = pull --rebase
+
+    r = rebase
+    ro = rebase -s recursive -X ours
+    rt = rebase -s recursive -X theirs
