@@ -12,7 +12,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'tpope/vim-repeat'
     Plug 'schickling/vim-bufonly'
     Plug 'jiangmiao/auto-pairs'
-    Plug 'bronson/vim-trailing-whitespace'
+    Plug 'ntpeters/vim-better-whitespace'
     Plug 'ajh17/VimCompletesMe'
     Plug 'roman/golden-ratio'
 
