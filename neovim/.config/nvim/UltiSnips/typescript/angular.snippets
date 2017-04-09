@@ -1,0 +1,41 @@
+global !p
+from snippet_helpers import *
+endglobal
+
+global !p
+def to_path(component):
+    name = component.replace('Component', '.component')
+    return to_kebab(name)
+endglobal
+
+snippet comp "component (angular)" b
+import { Component } from '@angular/core'
+
+@Component({
+  selector: '`!p snip.rv = to_kebab(t[1].replace('Component', ''))`',
+  template: require('./`!p snip.rv = to_path(t[1])`.html'),
+  styles: [require('./`!p snip.rv = to_path(t[1])`.scss')]
+})
+export class ${1:Component} { }
+endsnippet
+
+snippet serv "service (angular)" b
+import { Injectable } from '@angular/core'
+
+@Injectable()
+export class ${1}Service {
+$0
+}
+endsnippet
+
+snippet modu "module (angular)" b
+import { NgModule } from '@angular/core'
+import { CommonModule } from '@angular/common'
+
+@NgModule({
+  imports: [
+    CommonModule
+  ]
+})
+export class ${1}Module { }
+endsnippet

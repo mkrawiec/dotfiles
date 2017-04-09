@@ -9,6 +9,7 @@ fish/.config/fish/fishd*
 kde/.local/share/konsole/bookmarks.xml*
 
 .directory
+*.py[cod]
 
 # systemd
 *.target.wants
