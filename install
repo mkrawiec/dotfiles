@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+declare -r STOW_IGNORE='stowignore'
+
 pushd `dirname $0`
-stow $@
-popd 
+stow --ignore=$STOW_IGNORE $@
+popd
