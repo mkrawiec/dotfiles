@@ -2,6 +2,8 @@
 
 set -e
 
+declare -r STOWIGNORE_DIR="$1/stowignore/"
+
 # check if os is mac
 check_if_mac()
 {
@@ -24,8 +26,8 @@ setup_sudo()
 # run macos setup scripts
 run_scripts()
 {
-    for f in ./stowignore/script/*.sh; do
-        bash "$f" -H || break
+    for f in $STOWIGNORE_DIR/script.d/*.sh; do
+        bash "$f" "$STOWIGNORE_DIR" -H || break
     done
 }
 

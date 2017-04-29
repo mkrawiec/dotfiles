@@ -1,4 +1,4 @@
-declare -r ROOT=`git rev-parse --show-toplevel`
+declare -r ROOT=$1
 
 # get brew itself
 if ! [ -x "$(command -v brew)" ]; then

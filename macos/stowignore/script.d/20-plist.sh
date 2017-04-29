@@ -1,5 +1,5 @@
 shopt -s nullglob
-declare -r ROOT=`git rev-parse --show-toplevel`
+declare -r ROOT=$1
 
 for f in $ROOT/exported/*.plist; do
 	defaults import $(basename $f .plist) $f
