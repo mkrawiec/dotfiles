@@ -1202,7 +1202,7 @@
 	<key>PointerActions</key>
 	<dict/>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/maciek/dotfiles/stowignore/exported</string>
+	<string>/Users/maciek/dotfiles/macos/stowignore/exported</string>
 	<key>SUEnableAutomaticChecks</key>
 	<false/>
 	<key>SUFeedAlternateAppNameKey</key>
