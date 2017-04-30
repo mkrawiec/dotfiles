@@ -3,6 +3,7 @@
 set -e
 
 declare -r STOW_IGNORE='^stowignore|install.sh$'
+declare -r DOTFILES_ROOT=`dirname $0`
 
 # display confirmation prompt
 display_yes_no()
@@ -29,13 +30,13 @@ run_install_scripts()
 
         if [ -f $file ]; then
             echo "Running install.sh for $f"
-            bash $file
+            bash "$file" -H || break
         fi
     done
 }
 
 display_yes_no
-pushd `dirname $0`
+pushd $DOTFILES_ROOT
     stow_files $@
     run_install_scripts $@
 popd

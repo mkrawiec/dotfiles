@@ -2,7 +2,8 @@
 
 set -e
 
-declare -r STOWIGNORE_DIR="$1/stowignore/"
+declare -r SCRIPT_ROOT=`dirname $0`
+declare -r STOWIGNORE_PATH="$SCRIPT_ROOT/stowignore"
 
 # check if os is mac
 check_if_mac()
