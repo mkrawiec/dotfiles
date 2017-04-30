@@ -27,8 +27,8 @@ setup_sudo()
 # run macos setup scripts
 run_scripts()
 {
-    for f in $STOWIGNORE_DIR/script.d/*.sh; do
-        bash "$f" "$STOWIGNORE_DIR" -H || break
+    for f in $STOWIGNORE_PATH/script.d/*.sh; do
+        bash "$f" "$STOWIGNORE_PATH" -H || break
     done
 }
 
