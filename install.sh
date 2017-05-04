@@ -55,7 +55,7 @@ run_install_scripts()
 }
 
 check_stow
-check_args
+check_args $@
 display_yes_no
 pushd $DOTFILES_ROOT
     stow_files $@

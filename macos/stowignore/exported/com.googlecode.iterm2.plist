@@ -416,7 +416,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Downloads</string>
+	<string>~/dotfiles/macos/stowignore/exported</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -451,9 +451,9 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>30 178 796 473 0 0 1024 746 </string>
+	<string>85 252 796 473 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>126 163 650 527 0 0 1024 746 </string>
+	<string>364 248 650 527 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>114 43 570 452 0 0 1024 746 </string>
 	<key>NeverWarnAboutShortLivedSessions_59B25BB7-1C66-46FB-BA18-E2A9F52475B3</key>
@@ -1195,6 +1195,8 @@
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>514588829.155352</real>
 	<key>OnlyWhenMoreTabs</key>
@@ -1203,6 +1205,10 @@
 	<dict/>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/maciek/dotfiles/macos/stowignore/exported</string>
+	<key>PromptOnQuit</key>
+	<false/>
+	<key>QuitWhenAllWindowsClosed</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<false/>
 	<key>SUFeedAlternateAppNameKey</key>
