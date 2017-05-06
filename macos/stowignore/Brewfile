@@ -1,0 +1,58 @@
+tap 'caskroom/cask'
+tap 'homebrew/core'
+tap 'homebrew/bundle'
+tap 'neovim/neovim'
+tap 'caskroom/fonts'
+
+# basic utils
+brew 'coreutils'
+brew 'findutils', args: ['with-default-names']
+brew 'diffutils', args: ['with-default-names']
+brew 'gnu-sed', args: ['with-default-names']
+brew 'gnu-tar', args: ['with-default-names']
+brew 'gnu-which', args: ['with-default-names']
+brew 'readline'
+brew 'grep', args: ['with-default-names']
+brew 'gawk'
+brew 'less', args: ['with-default-names']
+brew 'wget'
+brew 'xz'
+brew 'ack'
+brew 'tree'
+brew 'python3'
+
+# toolbox
+brew 'fish'
+brew 'git'
+brew 'stow'
+brew 'the_silver_searcher'
+brew 'tmux'
+brew 'neovim'
+brew 'docker'
+brew 'docker-machine'
+
+# js development
+brew 'node@6'
+brew 'yarn'
+
+# pass
+brew 'pass'
+brew 'pinentry-mac'
+brew 'gnupg'
+
+# gui apps
+brew 'cask'
+cask 'firefox'
+cask 'google-chrome'
+cask 'hammerspoon'
+cask 'iterm2'
+cask 'karabiner-elements'
+cask 'qtpass'
+cask 'slack'
+cask 'spotify'
+cask 'virtualbox'
+cask 'virtualbox-extension-pack'
+
+# fonts
+cask 'font-iosevka'
+cask 'font-lato'
