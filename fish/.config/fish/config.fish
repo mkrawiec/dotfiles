@@ -2,7 +2,7 @@
 # GENERAL #
 ###########
 # Remove greeting text
-set --erase fish_greeting
+set fish_greeting ""
 
 # DIRCOLORS for ls
 eval (dircolors -c $HOME/.dircolors)
