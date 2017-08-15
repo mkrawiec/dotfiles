@@ -44,9 +44,9 @@
 			<dict>
 				<key>parameters</key>
 				<array>
-					<integer>65535</integer>
+					<integer>49</integer>
 					<integer>18</integer>
-					<integer>262144</integer>
+					<integer>917504</integer>
 				</array>
 				<key>type</key>
 				<string>standard</string>
@@ -60,9 +60,9 @@
 			<dict>
 				<key>parameters</key>
 				<array>
-					<integer>65535</integer>
+					<integer>50</integer>
 					<integer>19</integer>
-					<integer>262144</integer>
+					<integer>917504</integer>
 				</array>
 				<key>type</key>
 				<string>standard</string>
@@ -92,9 +92,9 @@
 			<dict>
 				<key>parameters</key>
 				<array>
-					<integer>65535</integer>
+					<integer>51</integer>
 					<integer>20</integer>
-					<integer>262144</integer>
+					<integer>917504</integer>
 				</array>
 				<key>type</key>
 				<string>standard</string>
@@ -108,8 +108,24 @@
 			<dict>
 				<key>parameters</key>
 				<array>
-					<integer>65535</integer>
+					<integer>52</integer>
 					<integer>21</integer>
+					<integer>917504</integer>
+				</array>
+				<key>type</key>
+				<string>standard</string>
+			</dict>
+		</dict>
+		<key>122</key>
+		<dict>
+			<key>enabled</key>
+			<false/>
+			<key>value</key>
+			<dict>
+				<key>parameters</key>
+				<array>
+					<integer>65535</integer>
+					<integer>23</integer>
 					<integer>262144</integer>
 				</array>
 				<key>type</key>
@@ -432,14 +448,14 @@
 		<key>32</key>
 		<dict>
 			<key>enabled</key>
-			<false/>
+			<true/>
 			<key>value</key>
 			<dict>
 				<key>parameters</key>
 				<array>
-					<integer>65535</integer>
-					<integer>126</integer>
-					<integer>8650752</integer>
+					<integer>115</integer>
+					<integer>1</integer>
+					<integer>917504</integer>
 				</array>
 				<key>type</key>
 				<string>standard</string>
@@ -725,9 +741,9 @@
 			<dict>
 				<key>parameters</key>
 				<array>
-					<integer>167</integer>
-					<integer>10</integer>
-					<integer>262144</integer>
+					<integer>100</integer>
+					<integer>2</integer>
+					<integer>917504</integer>
 				</array>
 				<key>type</key>
 				<string>standard</string>

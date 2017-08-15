@@ -33,7 +33,6 @@ brew 'docker-machine'
 
 # js development
 brew 'node@6'
-brew 'yarn'
 
 # pass
 brew 'pass'
@@ -44,7 +43,6 @@ brew 'gnupg'
 brew 'cask'
 cask 'firefox'
 cask 'google-chrome'
-cask 'hammerspoon'
 cask 'iterm2'
 cask 'karabiner-elements'
 cask 'spectacle'
@@ -55,6 +53,7 @@ cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'android-file-transfer'
 cask 'postgres'
+cask 'tunnelblick'
 
 # fonts
 cask 'font-iosevka'
