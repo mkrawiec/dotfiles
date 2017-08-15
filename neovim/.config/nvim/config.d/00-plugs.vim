@@ -8,8 +8,8 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     " Enhancements
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'takac/vim-hardtime'
-    Plug 'tpope/vim-sleuth'
     Plug 'tpope/vim-repeat'
+    Plug 'tpope/vim-surround'
     Plug 'schickling/vim-bufonly'
     Plug 'jiangmiao/auto-pairs'
     Plug 'ntpeters/vim-better-whitespace'
@@ -27,6 +27,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'airblade/vim-gitgutter'
     Plug 'airblade/vim-rooter'
     Plug 'SirVer/ultisnips'
+    Plug 'editorconfig/editorconfig-vim'
 
     " Syntax
     Plug 'hdima/python-syntax'
@@ -34,10 +35,6 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'pangloss/vim-javascript'
     Plug 'mxw/vim-jsx'
     Plug 'leafgarland/typescript-vim'
-
-    " JavaScript
-    Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
-    Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 
     " TypeScript
     Plug 'mhartington/nvim-typescript'
