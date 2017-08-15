@@ -20,6 +20,7 @@ brew 'xz'
 brew 'ack'
 brew 'tree'
 brew 'python3'
+brew 'reattach-to-user-namespace'
 
 # toolbox
 brew 'fish'
