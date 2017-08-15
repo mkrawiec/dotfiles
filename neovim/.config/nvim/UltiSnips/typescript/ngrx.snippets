@@ -1,0 +1,39 @@
+global !p
+from snippet_helpers import *
+endglobal
+
+snippet acti "action (ngrx)" b
+export class $1 implements Action {
+  readonly type = `!p snip.rv = to_uppercase(t[1])`
+
+  constructor(public payload: ${2:any}) { }
+}
+endsnippet
+
+snippet redu "reducer (ngrx)" b
+import * as $2 from '$3'
+
+export function $1(
+  state: $1State = default$1State,
+  action: $2.Actions
+): $1State {
+  switch(action.type) {
+    $0
+
+    default:
+      return action
+  }
+}
+endsnippet
+
+snippet effe "effect (ngrx)" b
+import { Injectable } from '@angular/core'
+import { Effect, Actions } from '@ngrx/effects'
+
+@Injectable()
+export class $1Effects {
+  constructor(private actions: Actions) { }
+
+  $0
+}
+endsnippet

@@ -7,5 +7,5 @@ let g:UltiSnipsEditSplit = 'vertical'
 " Configure expansion shortcuts
 let g:UltiSnipsExpandTrigger = '<C-s>'
 "let g:UltiSnipsListSnippets = '<leader>'
-let g:UltiSnipsJumpForwardTrigger = '<C-n>'
-let g:UltiSnipsJumpBackwardTrigger = '<C-p>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'

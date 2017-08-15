@@ -13,10 +13,19 @@ import { Component } from '@angular/core'
 
 @Component({
   selector: '`!p snip.rv = to_kebab(t[1].replace('Component', ''))`',
-  template: require('./`!p snip.rv = to_path(t[1])`.html'),
-  styles: [require('./`!p snip.rv = to_path(t[1])`.scss')]
+  templateUrl: './`!p snip.rv = to_path(t[1])`.html',
+  styleUrls: ['./`!p snip.rv = to_path(t[1])`.scss']
 })
 export class ${1:Component} { }
+endsnippet
+
+snippet dire "directive (angular)" b
+import { Directive } from '@angular/core'
+
+@Directive({
+  selector: '`!p snip.rv = to_kebab(t[1].replace('Directive', ''))`'
+})
+export class ${1:Directive} { }
 endsnippet
 
 snippet serv "service (angular)" b
