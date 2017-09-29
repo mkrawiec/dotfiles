@@ -31,3 +31,6 @@
     r = rebase
     ro = rebase -s recursive -X ours
     rt = rebase -s recursive -X theirs
+
+    name=rev-parse --abbrev-ref HEAD
+    recent=branch --sort=committerdate --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))'
