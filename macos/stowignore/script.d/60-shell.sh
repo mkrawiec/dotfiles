@@ -22,7 +22,7 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 defaults write com.apple.dock mru-spaces -bool false
 
 # Reset Launchpad, but keep the desktop wallpaper intact
-find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
+find "${HOME}/Library/Application Support/Dock" -maxdepth 1 -name "*-*.db" -delete
 
 # Change minimize/maximize window effect
 defaults write com.apple.dock mineffect -string "scale"

@@ -28,17 +28,13 @@ brew 'git'
 brew 'stow'
 brew 'the_silver_searcher'
 brew 'tmux'
+brew 'httpie'
 brew 'neovim'
 brew 'docker'
 brew 'docker-machine'
 
 # js development
 brew 'node@6'
-
-# pass
-brew 'pass'
-brew 'pinentry-mac'
-brew 'gnupg'
 
 # gui apps
 brew 'cask'
@@ -53,8 +49,8 @@ cask 'spotify'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'android-file-transfer'
-cask 'postgres'
 cask 'tunnelblick'
+cask 'keepassxc'
 
 # fonts
 cask 'font-iosevka'
