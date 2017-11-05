@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-export SSH_ASKPASS=$(which ksshaskpass)
-
 find ~/.ssh/ \
-    -type f ! -name "*.*" \
+    -type f ! -name "*.pub" \
     -name "id_rsa*" \
     -exec ssh-add '{}' \; > /dev/null

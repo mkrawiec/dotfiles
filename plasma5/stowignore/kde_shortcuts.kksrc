@@ -1,13 +1,5 @@
-[KDE Keyboard Layout Switcher][Global Shortcuts]
-Disable Touchpad=Meta+Shift+T
-Enable Touchpad=Meta+T
-Switch to Next Keyboard Layout=none
-Toggle Touchpad=Touchpad Toggle
-{22179eba-e48a-4fef-b87e-7d6ce1f9df2b}=Print
-{35720a25-7bb9-4d7c-aa00-6bba617ea484}=Meta+Print
-{46e188cd-acac-4243-81fa-922b6ea0159b}=Ctrl+Print
-{8791a3a7-c176-4399-9c06-8fdae2ece4ee}=Shift+Print
-{d03619b6-9b3c-48cc-9d9c-a2aadb485550}=Meta+G
+[kaccess][Global Shortcuts]
+Toggle Screen Reader On and Off=none
 
 [kded5][Global Shortcuts]
 Decrease Keyboard Brightness=Keyboard Brightness Down
@@ -19,7 +11,26 @@ PowerOff=Power Off
 Show System Activity=Ctrl+Alt+Del
 Sleep=Sleep
 Toggle Keyboard Backlight=Keyboard Light On/Off
-display=Display; Meta+P
+display=Display;\s
+
+[khotkeys][Global Shortcuts]
+Disable Touchpad=Touchpad Off
+Enable Touchpad=Touchpad On
+Switch to Next Keyboard Layout=Ctrl+Alt+K
+Toggle Touchpad=Touchpad Toggle
+{0919175b-d8ae-4a7e-b8fe-eb513979f6d5}=Meta+Print
+{af4611ce-4a63-4ca4-a15b-3949645846c5}=Print
+{c8ce624a-0446-4f9d-8ee2-9e817156bc0f}=Meta+Shift+Print
+{d03619b6-9b3c-48cc-9d9c-a2aadb485550}=Search
+{d2859160-c332-4537-bfde-b68fac02dd16}=Shift+Print
+
+[kmix][Global Shortcuts]
+decrease_microphone_volume=Microphone Volume Down
+decrease_volume=Volume Down
+increase_microphone_volume=Microphone Volume Up
+increase_volume=Volume Up
+mic_mute=Microphone Mute
+mute=Volume Mute
 
 [krunner][Global Shortcuts]
 run command=Meta+D
@@ -36,10 +47,10 @@ Reboot Without Confirmation=none
 Activate Window Demanding Attention=Meta+Z
 Decrease Opacity=none
 Expose=none
-ExposeAll=Meta+E
-ExposeClass=Meta+Shift+E
+ExposeAll=none
+ExposeClass=none
 Increase Opacity=none
-Invert Screen Colors=none
+Invert Screen Colors=Meta+Shift+I
 Kill Window=Meta+Shift+X
 MoveMouseToCenter=none
 MoveMouseToFocus=none
@@ -50,16 +61,16 @@ MoveZoomUp=none
 Remove Window From Group=none
 Setup Window Shortcut=none
 Show Desktop=none
-ShowDesktopGrid=none
+ShowDesktopGrid=Meta+S
 Suspend Compositing=none
 Switch One Desktop Down=none
 Switch One Desktop Up=none
 Switch One Desktop to the Left=none
 Switch One Desktop to the Right=none
-Switch Window Down=Meta+J
-Switch Window Left=Meta+H
-Switch Window Right=Meta+L
-Switch Window Up=Meta+K
+Switch Window Down=none
+Switch Window Left=none
+Switch Window Right=none
+Switch Window Up=none
 Switch to Desktop 1=Meta+1
 Switch to Desktop 10=none
 Switch to Desktop 11=none
@@ -130,12 +141,12 @@ Window Pack Down=none
 Window Pack Left=none
 Window Pack Right=none
 Window Pack Up=none
-Window Quick Tile Bottom=Meta+Shift+J
+Window Quick Tile Bottom=Meta+J
 Window Quick Tile Bottom Left=none
 Window Quick Tile Bottom Right=none
-Window Quick Tile Left=Meta+Shift+H
-Window Quick Tile Right=Meta+Shift+L
-Window Quick Tile Top=Meta+Shift+K
+Window Quick Tile Left=Meta+H
+Window Quick Tile Right=Meta+L
+Window Quick Tile Top=Meta+K
 Window Quick Tile Top Left=none
 Window Quick Tile Top Right=none
 Window Raise=none
@@ -164,9 +175,9 @@ Window to Desktop 7=Meta+&
 Window to Desktop 8=Meta+*
 Window to Desktop 9=Meta+(
 Window to Next Desktop=none
-Window to Next Screen=Meta+`
+Window to Next Screen=Meta+N
 Window to Previous Desktop=none
-Window to Previous Screen=Meta+~
+Window to Previous Screen=Meta+P
 Window to Screen 0=none
 Window to Screen 1=none
 Window to Screen 2=none
@@ -179,6 +190,12 @@ view_actual_size=none
 view_zoom_in=none
 view_zoom_out=none
 
+[mediacontrol][Global Shortcuts]
+nextmedia=Media Next
+playpausemedia=Media Play
+previousmedia=Media Previous
+stopmedia=Media Stop
+
 [plasmashell][Global Shortcuts]
 activate task manager entry 1=Alt+1
 activate task manager entry 10=none
@@ -190,8 +207,6 @@ activate task manager entry 6=Alt+6
 activate task manager entry 7=Alt+7
 activate task manager entry 8=Alt+8
 activate task manager entry 9=Alt+9
-activate widget 10=none
-activate widget 19=none
 clear-history=none
 clipboard_action=none
 cycleNextAction=none
