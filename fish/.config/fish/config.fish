@@ -29,11 +29,13 @@ test -f $host_config; and source $host_config
 
 # General aliases
 alias cl 'clear'
-
-# Workflow
+alias gcd 'cd (git rev-parse --show-toplevel)'
+alias bash 'bash --norc'
 alias g 'git'
 function fif; grep -rinw $argv[1] -e $argv[2]; end
 alias fifh 'fif .'
+alias xcopy 'xclip'
+alias xpaste 'xclip -o'
 
 # System
 alias neti 'curl -s http://ip-api.com/json | python3 -m json.tool'
@@ -62,10 +64,6 @@ alias sysdi 'systemctl status'
 alias sysdls 'sudo systemctl list-units'
 alias sysdl 'sudo journalctl -n 20 -f -u'
 
-# Shortcuts for copy/paste
-alias xcopy 'xclip'
-alias xpaste 'xclip -o'
-
 # Play laggy Twitch streams flawlessly
 alias splay 'livestreamer -p mpv --player-continuous-http --hls-segment-threads 4'
 function splayhq; splay $argv[1] best; end
@@ -73,4 +71,3 @@ function splaylq; splay $argv[1] worst; end
 
 # Download YouTube mp3
 alias ytmp3 'youtube-dl --extract-audio --audio-format mp3 --audio-quality 0'
-

@@ -12,6 +12,6 @@ Parent=FALLBACK/
 ScrollBarPosition=2
 
 [Terminal Features]
-BlinkingCursorEnabled=1
+BlinkingCursorEnabled=true
 FlowControlEnabled=false
 UrlHintsModifiers=67108864
