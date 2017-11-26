@@ -49,6 +49,3 @@ nnoremap <localleader>Se :TSEditConfig<CR>
 " Use version installed to local node_modules
 let s:tslint_path = system('npm-which tslint')
 let b:neomake_typescript_tslint_exe = substitute(s:tslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
-
-" Enable linter on buffer write
-autocmd! BufWritePost * if !&diff | Neomake | endif
