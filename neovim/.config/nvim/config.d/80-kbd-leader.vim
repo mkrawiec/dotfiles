@@ -19,13 +19,14 @@ nnoremap <leader>bY ggVGy
 nnoremap <leader>bP ggVGp
 
 " (c) compile / comment
-nnoremap <leader>cc :Neomake!<CR>
+nnoremap <leader>cc :make<CR>
 map <leader>cl <Plug>NERDCommenterToggle
 map <leader>cL <Plug>NERDCommenterInvert
 map <leader>cy <Plug>NERDCommenterYank
 
 " (f) files
 nnoremap <leader>ft :NERDTreeToggle<CR>
+nnoremap <leader>fT :NERDTreeFind<CR>
 nnoremap <leader>fed :edit $MYVIMRC<CR>
 nnoremap <leader>feR :source $MYVIMRC<CR>
 nnoremap <leader>fE :SudoEdit<CR>
@@ -35,19 +36,20 @@ nnoremap <leader>fs :write %<CR>
 nnoremap <leader>fy :let @+=expand('%:p')<CR>
 
 " (g) git
-nnoremap <leader>gb :Gblame<CR>
-nnoremap <leader>gc :Gcommit<Space>
-nnoremap <leader>gC :Git checkout<Space>
-nnoremap <leader>gd :Gdiff<CR>
-nnoremap <silent> <leader>gf :NeomakeSh git fetch<CR>:bot copen<CR>
-nnoremap <silent> <leader>gF :NeomakeSh git pull<CR>:bot copen<CR>
-nnoremap <leader>gg :Gstatus<CR>
-nnoremap <leader>gi :Git init<CR>
-nnoremap <silent> <leader>gl :Commits<CR>
-nnoremap <silent> <leader>gL :BCommits<CR>
-nnoremap <silent> <leader>gP :NeomakeSh git push<CR>:bot copen<CR>
+nnoremap <leader>g: :Gina<Space>
+nnoremap <leader>gg :Gina status -s<CR>
+nnoremap <leader>gb :Gina blame<CR>
+nnoremap <leader>gd :Gina compare<CR>
+nnoremap <leader>gD :Gina chaperon<CR>
+nnoremap <leader>gl :Gina log<CR>
+nnoremap <leader>gc :Gina branch<CR>
+nnoremap <leader>gC :Gina commit<CR>
+nnoremap <leader>gi :Gina! init<CR>
+nnoremap <leader>gp :Gina! pull --ff-only<CR>
+nnoremap <leader>gP :Gina! push<CR>
+nnoremap <leader>gS :Gina! add %<CR>:e %<CR>
+nnoremap <leader>gU :Gina! reset -q %<CR>:e %<CR>
 nmap <leader>gs <Plug>GitGutterStageHunk
-nnoremap <leader>gS :Gwrite<CR><CR>
 nmap <leader>gu <Plug>GitGutterUndoHunk
 
 " (h) help/history
@@ -57,6 +59,7 @@ nnoremap <leader>h/ :History/<CR>
 
 " (s) search
 nnoremap <silent> <leader>sa :Ag<CR>
+nnoremap <silent> <leader>sg :Gina grep<CR>
 nnoremap <silent> <leader>sc :noh<CR>
 nnoremap <silent> <leader>sb :Lines<CR>
 nnoremap <silent> <leader>sf :BLines<CR>

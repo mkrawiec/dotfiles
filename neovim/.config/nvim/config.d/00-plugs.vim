@@ -24,7 +24,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'scrooloose/nerdtree'
     Plug 'scrooloose/nerdcommenter'
-    Plug 'tpope/vim-fugitive'
+    Plug 'lambdalisue/gina.vim'
     Plug 'airblade/vim-gitgutter'
     Plug 'airblade/vim-rooter'
     Plug 'SirVer/ultisnips'
