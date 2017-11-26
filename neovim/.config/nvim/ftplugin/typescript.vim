@@ -33,7 +33,7 @@ nnoremap <localleader>ht :TSType<CR>
 
 " (s) search
 " Search symbol
-nnoremap <localleader>ss :TSSearchFZF
+nnoremap <localleader>ss :TSSearchFZF<CR>
 " Search reference
 nnoremap <localleader>sr :TSRefs<CR>
 
@@ -41,11 +41,3 @@ nnoremap <localleader>sr :TSRefs<CR>
 nnoremap <localleader>Sr :TSRestart<CR>
 nnoremap <localleader>Sp :TSReloadProject<CR>
 nnoremap <localleader>Se :TSEditConfig<CR>
-
-"
-" Linter
-"
-
-" Use version installed to local node_modules
-let s:tslint_path = system('npm-which tslint')
-let b:neomake_typescript_tslint_exe = substitute(s:tslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
