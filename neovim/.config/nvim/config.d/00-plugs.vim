@@ -15,6 +15,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'ntpeters/vim-better-whitespace'
     Plug 'ajh17/VimCompletesMe'
     Plug 'roman/golden-ratio'
+    Plug 'Yggdroot/indentLine'
 
     " IDE plugins
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
