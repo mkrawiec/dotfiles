@@ -23,10 +23,10 @@ let g:NERDCreateDefaultMappings = 0
 let g:hardtime_default_on = 1
 
 " Disable arrow keys
-let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+let g:list_of_disabled_keys = ['<UP>', '<DOWN>', '<LEFT>', '<RIGHT>']
 
 " ignore buffers
-let g:hardtime_ignore_buffer_patterns = [ "CustomPatt[ae]rn", "NERD.*" ]
+let g:hardtime_ignore_buffer_patterns = ['NERD.*']
 
 "
 " vim-rooter

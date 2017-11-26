@@ -16,6 +16,9 @@ fun! utils#ToggleTerm()
             terminal
             exe 'file ' . l:buffer_name
         endif
+
+        " automatically go to insert mode
+        startinsert
     endif
 endf
 

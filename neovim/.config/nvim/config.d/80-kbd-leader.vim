@@ -25,15 +25,17 @@ map <leader>cL <Plug>NERDCommenterInvert
 map <leader>cy <Plug>NERDCommenterYank
 
 " (f) files
+nnoremap <leader>fb :Marks<CR>
 nnoremap <leader>ft :NERDTreeToggle<CR>
 nnoremap <leader>fT :NERDTreeFind<CR>
 nnoremap <leader>fed :edit $MYVIMRC<CR>
 nnoremap <leader>feR :source $MYVIMRC<CR>
-nnoremap <leader>fE :SudoEdit<CR>
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>fF :GFiles<CR>
 nnoremap <leader>fs :write %<CR>
-nnoremap <leader>fy :let @+=expand('%:p')<CR>
+nnoremap <leader>fS :SudoWrite<CR>
+nnoremap <leader>fo :silent !open %<CR>
+nnoremap <leader>fy :silent let @+=expand('%:p')<CR>:echo expand('%:p')<CR>
 
 " (g) git
 nnoremap <leader>g: :Gina<Space>
@@ -53,17 +55,24 @@ nmap <leader>gs <Plug>GitGutterStageHunk
 nmap <leader>gu <Plug>GitGutterUndoHunk
 
 " (h) help/history
-nnoremap <leader>hd :Helptags<CR>
+nnoremap <leader>hh :Helptags<CR>
+nnoremap <leader>hm :Maps<CR>
 nnoremap <leader>h: :History:<CR>
 nnoremap <leader>h/ :History/<CR>
+
+" (i) text inserts
+nnoremap <leader>is :Snippets<CR>
+nnoremap <leader>ie :UltiSnipsEdit<CR>
 
 " (s) search
 nnoremap <silent> <leader>sa :Ag<CR>
 nnoremap <silent> <leader>sg :Gina grep<CR>
 nnoremap <silent> <leader>sc :noh<CR>
+nnoremap <silent> <leader>ss :BLines<CR>
 nnoremap <silent> <leader>sb :Lines<CR>
-nnoremap <silent> <leader>sf :BLines<CR>
 
 " (w) window
+nnoremap <leader>w <C-W>
 nnoremap <silent> <leader>wp :lclose \| pclose \| cclose<CR>
 nnoremap <leader>wg :GoldenRatioResize<CR>
+nnoremap <leader>wW :Windows<CR>
