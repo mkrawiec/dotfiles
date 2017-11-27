@@ -10,7 +10,7 @@ nnoremap <leader>' :call utils#ToggleTerm()<CR>
 " (b) buffers
 nnoremap <leader>bb :Buffers<CR>
 nnoremap <leader>bd :bp\|bd #<CR>
-nnoremap <leader>bD :BufOnly<CR>
+nnoremap <leader>bD :%bd\|e #<CR>
 nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bN :enew<CR>
 nnoremap <leader>bp :bp<CR>

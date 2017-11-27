@@ -10,7 +10,6 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'takac/vim-hardtime'
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-surround'
-    Plug 'schickling/vim-bufonly'
     Plug 'jiangmiao/auto-pairs'
     Plug 'ntpeters/vim-better-whitespace'
     Plug 'ajh17/VimCompletesMe'
