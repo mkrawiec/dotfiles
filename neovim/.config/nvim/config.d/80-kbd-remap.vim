@@ -5,14 +5,13 @@ vnoremap > >gv
 " More consistent Y
 nnoremap Y y$
 
-" Remap lowercase s to surround
+" Use lowercase s for surround
 xmap s <Plug>VSurround
-xmap S <Plug>VgSurround
 
-" Use <leader> w instead
+" Use <leader>w instead
 nnoremap <C-w> <nop>
 
-" Add consistent movement bindings in terminal mode
+" Add movement bindings in terminal mode
 tnoremap <C-[> <C-\><C-n>
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j

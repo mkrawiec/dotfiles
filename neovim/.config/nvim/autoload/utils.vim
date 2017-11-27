@@ -31,3 +31,12 @@ fun! utils#ExeWithFallback(command, fallback)
   endtry
 endf
 
+" Pull from 'origin <current>'
+fun! utils#PullThisBranch()
+  execute 'Gina! pull --autostash --rebase origin ' . gina#component#repo#branch()
+endf
+
+" Push to 'origin <current>'
+fun! utils#PushThisBranch()
+  execute 'Gina! push origin ' . gina#component#repo#branch()
+endf

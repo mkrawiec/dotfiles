@@ -1,5 +1,4 @@
 " leader keys
-nnoremap <Space> <nop>
 let mapleader=' '
 let maplocalleader=','
 
@@ -10,7 +9,7 @@ nnoremap <leader>' :call utils#ToggleTerm()<CR>
 
 " (b) buffers
 nnoremap <leader>bb :Buffers<CR>
-nnoremap <leader>bd :bd<CR>
+nnoremap <leader>bd :bp\|bd #<CR>
 nnoremap <leader>bD :BufOnly<CR>
 nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bN :enew<CR>
@@ -35,7 +34,8 @@ nnoremap <leader>fF :GFiles<CR>
 nnoremap <leader>fs :write %<CR>
 nnoremap <leader>fS :SudoWrite<CR>
 nnoremap <leader>fo :silent !open %<CR>
-nnoremap <leader>fy :silent let @+=expand('%:p')<CR>:echo expand('%:p')<CR>
+nnoremap <leader>fy :silent let @+=expand('%:p')<CR><C-g>
+nnoremap <leader>fx :ExtEdit<Space>
 
 " (g) git
 nnoremap <leader>g: :Gina<Space>
@@ -47,8 +47,8 @@ nnoremap <leader>gl :Gina log<CR>
 nnoremap <leader>gc :Gina branch<CR>
 nnoremap <leader>gC :Gina commit<CR>
 nnoremap <leader>gi :Gina! init<CR>
-nnoremap <leader>gp :Gina! pull --ff-only<CR>
-nnoremap <leader>gP :Gina! push<CR>
+nnoremap <leader>gp :call utils#PullThisBranch()<CR>
+nnoremap <leader>gP :call utils#PushThisBranch()<CR>
 nnoremap <leader>gS :Gina! add %<CR>:e %<CR>
 nnoremap <leader>gU :Gina! reset -q %<CR>:e %<CR>
 nmap <leader>gs <Plug>GitGutterStageHunk

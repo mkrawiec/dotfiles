@@ -39,9 +39,3 @@ let g:rooter_change_directory_for_non_project_files = 'current'
 "
 " Do not resize automatically
 let g:golden_ratio_autocommand = 0
-
-"
-" ale
-"
-let g:ale_sign_error = '✗'
-let g:ale_sign_warning = '⚠'

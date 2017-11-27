@@ -8,4 +8,7 @@ let b:vcm_tab_complete = 'omni'
 let g:deoplete#enable_at_startup = 1
 
 " auto close preview window
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+augroup ClosePreview
+  autocmd!
+  autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+augroup END

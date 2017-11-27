@@ -14,12 +14,6 @@ nnoremap <localleader>gg :TSDef<CR>
 nnoremap <localleader>gG :TSDefPreview<CR>
 " Go spec.ts <-> .ts (toggle)
 nnoremap <localleader>gs :e %:p:s,.spec.ts$,.X123X,:s,.ts$,.spec.ts,:s,.X123X$,.ts,<CR>
-" Go to .html counterpart
-nnoremap <localleader>gh :e %<.html<CR>
-" Go to .scss counterpart
-nnoremap <localleader>gc :e %<.scss<CR>
-" Go to .ts counterpart
-nnoremap <localleader>gt :e %<.ts<CR>
 
 " (r) refactor
 " Rename symbol under cursor
