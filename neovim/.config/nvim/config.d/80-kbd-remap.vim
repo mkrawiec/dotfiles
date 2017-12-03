@@ -5,6 +5,10 @@ vnoremap > >gv
 " More consistent Y
 nnoremap Y y$
 
+" Replace search term under cursor, dot repeats the change.
+nnoremap c* *Ncgn
+nnoremap c# #NcgN
+
 " Use lowercase s for surround
 xmap s <Plug>VSurround
 

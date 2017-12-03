@@ -35,16 +35,25 @@ set diffopt+=vertical   " Split vertical in diffs
 set hidden              " Allow changing buffers with unsaved changes
 
 "
-" Misc settings
+" Case & search
 "
 set ignorecase          " Case insensitive search
 set smartcase           " Case sensitive when uppercase present
+set infercase           " Case aware completion
+set inccommand=nosplit  " Enable interactive search and replace
 
+"
+" Misc settings
+"
 set noswapfile          " Do not create .swp files
 set nobackup            " Do not create ~ files
 set nowb                " Prevent write backup
 
 set clipboard+=unnamedplus  " Always use system clipboard
+
+" Use the_silver_searcher as backend for vimgrep
+set grepprg=ag\ --vimgrep\ $*
+set grepformat=%f:%l:%c:%m
 
 "
 " Persistent undo
