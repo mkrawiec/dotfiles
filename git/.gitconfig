@@ -34,3 +34,4 @@
 
     name=rev-parse --abbrev-ref HEAD
     recent=branch --sort=committerdate --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))'
+    alias = config --get-regexp ^alias\\.

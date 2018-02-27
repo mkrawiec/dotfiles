@@ -1,7 +1,7 @@
 # Configuration specific to mkrawiec-mbp hostname
 
 # Use gnu version of coreutils
-set -U fish_user_paths /usr/local/opt/coreutils/libexec/gnubin /Applications/Postgres.app/Contents/Versions/9.6/bin $fish_user_paths
+set -U fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
 set -x MANPATH /usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 
 # Setup links to neovim

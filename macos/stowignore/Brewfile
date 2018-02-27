@@ -21,6 +21,7 @@ brew 'ack'
 brew 'tree'
 brew 'python3'
 brew 'reattach-to-user-namespace'
+brew 'colordiff'
 
 # toolbox
 brew 'fish'
@@ -30,14 +31,14 @@ brew 'the_silver_searcher'
 brew 'tmux'
 brew 'httpie'
 brew 'neovim'
-brew 'docker'
-brew 'docker-machine'
+brew 'cloc'
 
 # js development
 brew 'node@8'
 
 # gui apps
 brew 'cask'
+cask 'docker'
 cask 'firefox'
 cask 'google-chrome'
 cask 'iterm2'
