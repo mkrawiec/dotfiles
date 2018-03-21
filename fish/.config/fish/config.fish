@@ -45,6 +45,11 @@ alias dockrm 'docker rm -f (docker ps -qa)'
 alias dockrmi 'docker rmi (docker images -f "dangling=true" -q)'
 alias dockip 'docker inspect --format "{{ .NetworkSettings.IPAddress }}"'
 
+# npm
+alias npmi 'npm install --save'
+alias npmii 'npm install --save-dev'
+function npmv; npm info $argv[1] dist-tags; end
+
 # Play laggy Twitch streams flawlessly
 alias splay 'livestreamer -p mpv --player-continuous-http --hls-segment-threads 4'
 function splayhq; splay $argv[1] best; end
