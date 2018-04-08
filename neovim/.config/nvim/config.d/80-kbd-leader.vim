@@ -71,6 +71,12 @@ nnoremap <silent> <leader>sc :noh<CR>
 nnoremap <silent> <leader>ss :BLines<CR>
 nnoremap <silent> <leader>sb :Lines<CR>
 
+" (t) toggles
+nnoremap <leader>tc :call deoplete#toggle()<CR>
+nnoremap <leader>ts :set spell! spelllang=pl<CR>
+nnoremap <leader>tw :set wrap!<CR>
+nnoremap <leader>tn :set relativenumber!<CR>
+
 " (w) window
 nnoremap <leader>w <C-W>
 nnoremap <silent> <leader>wp :lclose \| pclose \| cclose<CR>
