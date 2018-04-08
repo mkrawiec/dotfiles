@@ -28,41 +28,22 @@ test -f $host_config; and source $host_config
 ###########
 
 # General aliases
-alias cl 'clear'
-alias gcd 'cd (git rev-parse --show-toplevel)'
 alias bash 'bash --norc'
-alias g 'git'
+alias cl 'clear'
+alias myip 'curl -s http://ip-api.com/json | python3 -m json.tool'
+
+# Searching
 function fif; grep -rinw $argv[1] -e $argv[2]; end
 alias fifh 'fif .'
-alias xcopy 'xclip'
-alias xpaste 'xclip -o'
 
-# System
-alias neti 'curl -s http://ip-api.com/json | python3 -m json.tool'
-
-# Zypper
-alias zup 'sudo zypper dist-upgrade'
-alias zin 'sudo zypper install'
-alias zinn 'sudo zypper install --force'
-alias zrm 'sudo zypper remove'
-alias zcl 'sudo zypper clean --all'
-alias zi 'zypper info'
-alias zse 'zypper search'
-alias zsi 'zypper search -i'
-alias zwp 'zypper search --provides --match-exact'
+# Git
+alias g 'git'
+alias gcd 'cd (git rev-parse --show-toplevel)'
 
 # Docker
 alias dockrm 'docker rm -f (docker ps -qa)'
 alias dockrmi 'docker rmi (docker images -f "dangling=true" -q)'
 alias dockip 'docker inspect --format "{{ .NetworkSettings.IPAddress }}"'
-
-# Systemd
-alias sysde 'sudo systemctl enable'
-alias sysdd 'sudo systemctl disable'
-alias sysdr 'sudo systemctl restart'
-alias sysdi 'systemctl status'
-alias sysdls 'sudo systemctl list-units'
-alias sysdl 'sudo journalctl -n 20 -f -u'
 
 # Play laggy Twitch streams flawlessly
 alias splay 'livestreamer -p mpv --player-continuous-http --hls-segment-threads 4'
@@ -71,3 +52,11 @@ function splaylq; splay $argv[1] worst; end
 
 # Download YouTube mp3
 alias ytmp3 'youtube-dl --extract-audio --audio-format mp3 --audio-quality 0'
+
+# Platform specific
+switch (uname -s)
+    case 'Linux'
+        _alias_linux
+    case 'Darwin'
+        _alias_macos
+end
