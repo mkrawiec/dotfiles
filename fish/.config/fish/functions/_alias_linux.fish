@@ -2,6 +2,7 @@ function _alias_linux
     alias xcopy 'xclip'
     alias xpaste 'xclip -o'
     alias sd 'sudo systemctl'
+    alias sdlog 'sudo journalctl -n 20 -f -u'
 
     # Zypper
     alias zup 'sudo zypper dist-upgrade'
