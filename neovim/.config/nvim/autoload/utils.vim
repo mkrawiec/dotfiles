@@ -33,10 +33,10 @@ endf
 
 " Pull from 'origin <current>'
 fun! utils#PullThisBranch()
-  execute 'Gina! pull --autostash --rebase origin ' . gina#component#repo#branch()
+  execute 'Gpull --autostash --rebase origin ' . fugitive#head()
 endf
 
 " Push to 'origin <current>'
 fun! utils#PushThisBranch()
-  execute 'Gina! push origin ' . gina#component#repo#branch()
+  execute 'Gpush origin ' . fugitive#head()
 endf

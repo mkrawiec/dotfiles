@@ -1,5 +1,4 @@
 call plug#begin('~/.local/share/nvim/site/plugged')
-
     " Themes
     Plug 'w0ng/vim-hybrid'
     Plug 'bling/vim-airline'
@@ -23,7 +22,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'scrooloose/nerdtree'
     Plug 'scrooloose/nerdcommenter'
-    Plug 'lambdalisue/gina.vim'
+    Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'airblade/vim-rooter'
     Plug 'SirVer/ultisnips'

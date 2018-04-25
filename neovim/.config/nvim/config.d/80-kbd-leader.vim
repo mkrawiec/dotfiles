@@ -38,19 +38,15 @@ nnoremap <leader>fy :silent let @+=expand('%:p')<CR><C-g>
 nnoremap <leader>fx :ExtEdit<Space>
 
 " (g) git
-nnoremap <leader>g: :Gina<Space>
-nnoremap <leader>gg :Gina status -s<CR>
-nnoremap <leader>gb :Gina blame<CR>
-nnoremap <leader>gd :Gina compare<CR>
-nnoremap <leader>gD :Gina chaperon<CR>
-nnoremap <leader>gl :Gina log<CR>
-nnoremap <leader>gc :Gina branch<CR>
-nnoremap <leader>gC :Gina commit<CR>
-nnoremap <leader>gi :Gina! init<CR>
+nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gc :Git checkout<space>
+nnoremap <leader>gC :Gcommit<CR>
+nnoremap <leader>gg :Gstatus<CR>
+nnoremap <leader>gl :Commits<CR>
+nnoremap <leader>gL :BCommits<CR>
 nnoremap <leader>gp :call utils#PullThisBranch()<CR>
 nnoremap <leader>gP :call utils#PushThisBranch()<CR>
-nnoremap <leader>gS :Gina! add %<CR>:e %<CR>
-nnoremap <leader>gU :Gina! reset -q %<CR>:e %<CR>
+nnoremap <leader>gS :Gwrite<CR>
 nmap <leader>gs <Plug>GitGutterStageHunk
 nmap <leader>gu <Plug>GitGutterUndoHunk
 
@@ -65,11 +61,11 @@ nnoremap <leader>is :Snippets<CR>
 nnoremap <leader>ie :UltiSnipsEdit<CR>
 
 " (s) search
-nnoremap <silent> <leader>sa :Ag<CR>
-nnoremap <silent> <leader>sg :Gina grep<CR>
-nnoremap <silent> <leader>sc :noh<CR>
-nnoremap <silent> <leader>ss :BLines<CR>
-nnoremap <silent> <leader>sb :Lines<CR>
+nnoremap <leader>sa :Ag<CR>
+nnoremap <leader>sg :Ggrep -i<space>
+nnoremap <leader>sc :noh<CR>
+nnoremap <leader>ss :BLines<CR>
+nnoremap <leader>sb :Lines<CR>
 
 " (t) toggles
 nnoremap <leader>tc :call deoplete#toggle()<CR>
