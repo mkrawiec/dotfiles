@@ -5,6 +5,7 @@ let maplocalleader=','
 " (-) general
 nnoremap <leader>: :Commands<CR>
 nnoremap <leader>! :!<Space>
+nnoremap <leader>@ @:
 nnoremap <leader>' :call utils#ToggleTerm()<CR>
 
 " (b) buffers
@@ -46,15 +47,16 @@ nnoremap <leader>gl :Commits<CR>
 nnoremap <leader>gL :BCommits<CR>
 nnoremap <leader>gp :call utils#PullThisBranch()<CR>
 nnoremap <leader>gP :call utils#PushThisBranch()<CR>
-nnoremap <leader>gS :Gwrite<CR>
+nnoremap <leader>gS :Gwrite<CR>:e<CR>
 nmap <leader>gs <Plug>GitGutterStageHunk
 nmap <leader>gu <Plug>GitGutterUndoHunk
 
 " (h) help/history
-nnoremap <leader>hh :Helptags<CR>
-nnoremap <leader>hm :Maps<CR>
+nnoremap <leader>hh :History<CR>
 nnoremap <leader>h: :History:<CR>
 nnoremap <leader>h/ :History/<CR>
+nnoremap <leader>ht :Helptags<CR>
+nnoremap <leader>hm :Maps<CR>
 
 " (i) text inserts
 nnoremap <leader>is :Snippets<CR>
@@ -69,12 +71,12 @@ nnoremap <leader>sb :Lines<CR>
 
 " (t) toggles
 nnoremap <leader>tc :call deoplete#toggle()<CR>
-nnoremap <leader>ts :set spell! spelllang=pl<CR>
-nnoremap <leader>tw :set wrap!<CR>
-nnoremap <leader>tn :set relativenumber!<CR>
+nnoremap <silent><leader>ts :set spell! spelllang=pl<CR>: set spell?<CR>
+nnoremap <silent><leader>tw :set wrap!<CR>:set wrap?<CR>
+nnoremap <silent><leader>tr :set relativenumber!<CR>:set relativenumber?<CR>
 
 " (w) window
 nnoremap <leader>w <C-W>
-nnoremap <silent> <leader>wp :lclose \| pclose \| cclose<CR>
+nnoremap <silent><leader>wp :lclose \| pclose \| cclose<CR>
 nnoremap <leader>wg :GoldenRatioResize<CR>
 nnoremap <leader>wW :Windows<CR>
