@@ -26,8 +26,8 @@ map <leader>cy <Plug>NERDCommenterYank
 
 " (f) files
 nnoremap <leader>fb :Marks<CR>
-nnoremap <leader>ft :NERDTreeToggle<CR>
-nnoremap <leader>fT :NERDTreeFind<CR>
+nnoremap <leader>ft :call utils#ToggleNetrw()<CR>
+nnoremap <leader>fT :call utils#ToggleNetrw('%:p:h')<CR>
 nnoremap <leader>fed :edit $MYVIMRC<CR>
 nnoremap <leader>feR :source $MYVIMRC<CR>
 nnoremap <leader>ff :Files<CR>

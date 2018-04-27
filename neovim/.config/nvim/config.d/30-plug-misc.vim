@@ -5,12 +5,6 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'hybridline'
 
 "
-" NERD Tree
-"
-" Don't display these kinds of files
-let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
-      \ '__pycache__']
-"
 " NERD Commenter
 "
 " Disable default mappings
@@ -24,9 +18,6 @@ let g:hardtime_default_on = 1
 
 " Disable arrow keys
 let g:list_of_disabled_keys = ['<UP>', '<DOWN>', '<LEFT>', '<RIGHT>']
-
-" ignore buffers
-let g:hardtime_ignore_buffer_patterns = ['NERD.*']
 
 "
 " vim-rooter

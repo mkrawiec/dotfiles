@@ -20,7 +20,6 @@ call plug#begin('~/.local/share/nvim/site/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'w0rp/ale'
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'scrooloose/nerdtree'
     Plug 'scrooloose/nerdcommenter'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
