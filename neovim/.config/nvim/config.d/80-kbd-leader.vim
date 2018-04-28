@@ -3,9 +3,8 @@ let mapleader=' '
 let maplocalleader=','
 
 " (-) general
-nnoremap <leader>: :Commands<CR>
-nnoremap <leader>! :!<Space>
-nnoremap <leader>@ @:
+nnoremap <leader><space> :Commands<CR>
+nnoremap <leader>! :!<space>
 nnoremap <leader>' :call utils#ToggleTerm()<CR>
 
 " (b) buffers
@@ -36,12 +35,13 @@ nnoremap <leader>fs :write %<CR>
 nnoremap <leader>fS :SudoWrite<CR>
 nnoremap <leader>fo :silent !open %<CR>
 nnoremap <leader>fy :silent let @+=expand('%:p')<CR><C-g>
-nnoremap <leader>fx :ExtEdit<Space>
+nnoremap <leader>fx :ExtEdit<space>
 
 " (g) git
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gc :Git checkout<space>
 nnoremap <leader>gC :Gcommit<CR>
+nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gg :Gstatus<CR>
 nnoremap <leader>gl :Commits<CR>
 nnoremap <leader>gL :BCommits<CR>
@@ -77,6 +77,7 @@ nnoremap <silent><leader>tr :set relativenumber!<CR>:set relativenumber?<CR>
 
 " (w) window
 nnoremap <leader>w <C-W>
-nnoremap <silent><leader>wp :lclose \| pclose \| cclose<CR>
 nnoremap <leader>wg :GoldenRatioResize<CR>
+nnoremap <silent><leader>wp :lclose \| pclose \| cclose<CR>
+nnoremap <leader>ww <C-W><C-P>
 nnoremap <leader>wW :Windows<CR>
