@@ -9,6 +9,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
   Plug 'takac/vim-hardtime'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-commentary'
   Plug 'jiangmiao/auto-pairs'
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'ajh17/VimCompletesMe'
@@ -20,7 +21,6 @@ call plug#begin('~/.local/share/nvim/site/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'w0rp/ale'
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
   Plug 'airblade/vim-rooter'

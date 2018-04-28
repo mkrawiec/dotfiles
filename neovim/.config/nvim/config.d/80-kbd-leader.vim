@@ -1,10 +1,9 @@
 " leader keys
-let mapleader=' '
-let maplocalleader=','
+let mapleader = ' '
+let maplocalleader = ','
 
 " (-) general
 nnoremap <leader><space> :Commands<CR>
-nnoremap <leader>! :!<space>
 nnoremap <leader>' :call utils#ToggleTerm()<CR>
 
 " (b) buffers
@@ -16,12 +15,6 @@ nnoremap <leader>bN :enew<CR>
 nnoremap <leader>bp :bp<CR>
 nnoremap <leader>bY ggVGy
 nnoremap <leader>bP ggVGp
-
-" (c) compile / comment
-nnoremap <leader>cc :make<CR>
-map <leader>cl <Plug>NERDCommenterToggle
-map <leader>cL <Plug>NERDCommenterInvert
-map <leader>cy <Plug>NERDCommenterYank
 
 " (f) files
 nnoremap <leader>fb :Marks<CR>

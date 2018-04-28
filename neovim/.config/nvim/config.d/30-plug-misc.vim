@@ -5,12 +5,6 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'hybridline'
 
 "
-" NERD Commenter
-"
-" Disable default mappings
-let g:NERDCreateDefaultMappings = 0
-
-"
 " vim-hardtime
 "
 " Break habits
