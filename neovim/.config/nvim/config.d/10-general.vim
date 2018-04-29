@@ -24,7 +24,12 @@ set expandtab           " Use spaces instead of tabs
 set softtabstop=4       " Indentation with TAB uses 4 spaces
 set shiftwidth=4        " Indentation with >> uses 4 spaces
 set shiftround          " Round indent to multiple of shiftwidth
-set autoindent          " Align new line to the previous one
+
+"
+" Folding
+"
+set foldmethod=indent   " Automatically create folds based on indentation
+set foldlevelstart=1    " Fold every opened file by default (training)
 
 "
 " Windows & buffers
