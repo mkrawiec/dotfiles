@@ -10,8 +10,8 @@ let g:netrw_browsex_viewer = 'open'
 " Use tree style listing
 let g:netrw_liststyle = 3
 
-" Respect .gitingore and hide dotfiles
-let g:netrw_list_hide = netrw_gitignore#Hide().'\(^\|\s\s\)\zs\.\S\+'
+" Hide dot files by default
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
 " Simplify sorting pattern
 let g:netrw_sort_sequence = '[\/]$,*'
@@ -21,3 +21,6 @@ let g:netrw_use_errorwindow = 0
 
 " Set absolute split size
 let g:netrw_winsize = -28
+
+" Save .netrwhist to cache folder
+let g:netrw_home = expand('~').'/.local/share/nvim'
