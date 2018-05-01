@@ -24,3 +24,6 @@ let g:netrw_winsize = -28
 
 " Save .netrwhist to cache folder
 let g:netrw_home = expand('~').'/.local/share/nvim'
+
+" Allow deleting non-empty local directories
+let g:netrw_localrmdir = 'rm -r'

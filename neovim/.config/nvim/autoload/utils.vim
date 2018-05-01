@@ -17,7 +17,7 @@ fun! utils#ToggleTerm()
       exe 'file ' . l:buffer_name
     endif
 
-    " automatically go to insert mode
+    set previewwindow
     startinsert
   endif
 endf

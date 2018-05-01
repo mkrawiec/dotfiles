@@ -24,6 +24,7 @@ nnoremap <leader>fed :edit $MYVIMRC<CR>
 nnoremap <leader>feR :source $MYVIMRC<CR>
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>fF :GFiles<CR>
+nnoremap <leader>fr :History<CR>
 nnoremap <leader>fs :write %<CR>
 nnoremap <leader>fS :SudoWrite<CR>
 nnoremap <leader>fo :silent !open %<CR>
@@ -44,10 +45,7 @@ nnoremap <leader>gS :Gwrite<CR>:e<CR>
 nmap <leader>gs <Plug>GitGutterStageHunk
 nmap <leader>gu <Plug>GitGutterUndoHunk
 
-" (h) help/history
-nnoremap <leader>hh :History<CR>
-nnoremap <leader>h: :History:<CR>
-nnoremap <leader>h/ :History/<CR>
+" (h) help
 nnoremap <leader>ht :Helptags<CR>
 nnoremap <leader>hm :Maps<CR>
 
@@ -61,16 +59,14 @@ nnoremap <leader>sg :Ggrep -i<space>
 nnoremap <leader>sc :noh<CR>
 nnoremap <leader>ss :BLines<CR>
 nnoremap <leader>sb :Lines<CR>
+nnoremap <leader>sr :History/<CR>
 
 " (t) toggles
 nnoremap <leader>tc :call deoplete#toggle()<CR>
 nnoremap <silent><leader>ts :set spell! spelllang=pl<CR>: set spell?<CR>
-nnoremap <silent><leader>tw :set wrap!<CR>:set wrap?<CR>
-nnoremap <silent><leader>tr :set relativenumber!<CR>:set relativenumber?<CR>
 
 " (w) window
 nnoremap <leader>w <C-W>
 nnoremap <leader>wg :GoldenRatioResize<CR>
 nnoremap <silent><leader>wp :lclose \| pclose \| cclose<CR>
-nnoremap <leader>ww <C-W><C-P>
 nnoremap <leader>wW :Windows<CR>
