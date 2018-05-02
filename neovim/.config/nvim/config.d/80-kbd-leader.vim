@@ -64,6 +64,7 @@ nnoremap <leader>sr :History/<CR>
 " (t) toggles
 nnoremap <leader>tc :call deoplete#toggle()<CR>
 nnoremap <silent><leader>ts :set spell! spelllang=pl<CR>: set spell?<CR>
+nnoremap <silent><leader>tn :set invnumber invrelativenumber<CR>
 
 " (w) window
 nnoremap <leader>w <C-W>

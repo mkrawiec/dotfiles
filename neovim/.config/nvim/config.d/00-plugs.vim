@@ -12,7 +12,6 @@ call plug#begin('~/.local/share/nvim/site/plugged')
   Plug 'tpope/vim-commentary'
   Plug 'jiangmiao/auto-pairs'
   Plug 'ntpeters/vim-better-whitespace'
-  Plug 'ajh17/VimCompletesMe'
   Plug 'roman/golden-ratio'
   Plug 'Yggdroot/indentLine'
 
