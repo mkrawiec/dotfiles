@@ -15,6 +15,9 @@ xmap s <Plug>VSurround
 " Use <leader>w instead
 nnoremap <C-w> <nop>
 
+" Auto close tags with </ and insert within
+inoremap </ </<C-x><C-o><Esc>vit<Esc>i
+
 " Add movement bindings in terminal mode
 tnoremap <C-[> <C-\><C-n>
 tnoremap <C-h> <C-\><C-n><C-w>h

@@ -7,6 +7,9 @@ command! -nargs=0 JSONFormat %!python -m json.tool
 " Edit filename with different extension
 command! -nargs=1 ExtEdit :e %<.<args>
 
+" Strip trailing witespace
+command! -nargs=0 StripWhitespace :%s/\s\+$//
+
 " Avoid annoing mistypes
 command! WQ wq
 command! Wq wq

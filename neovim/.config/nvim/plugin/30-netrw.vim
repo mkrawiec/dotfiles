@@ -10,6 +10,9 @@ let g:netrw_browsex_viewer = 'open'
 " Use tree style listing
 let g:netrw_liststyle = 3
 
+" Do not reuse buffers (fixes weird glitches)
+let g:netrw_fastbrowse = 0
+
 " Hide dot files by default
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
