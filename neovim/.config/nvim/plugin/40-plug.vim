@@ -22,6 +22,12 @@ let g:golden_ratio_autocommand = 0
 let g:fzf_command_prefix = 'Fzf'
 
 "
+" vim-dirvish
+"
+" Put directories on top of the listing
+let g:dirvish_mode = ':sort | sort ,^.*[\/],'
+
+"
 " netrw
 "
 " Prevent netrw from being loaded

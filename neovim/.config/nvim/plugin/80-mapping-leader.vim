@@ -59,6 +59,7 @@ nnoremap <silent> <leader>sr :FzfHistory/<CR>
 nnoremap <leader>tc :call deoplete#toggle()<CR>
 nnoremap <silent> <leader>ts :set spell! spelllang=pl spell?<CR>
 nnoremap <silent> <leader>tn :set invnumber invrelativenumber<CR>
+nnoremap <silent> <leader>tp :set paste! paste?<CR>
 
 " (w) window
 nnoremap <silent> <leader>w <C-W>
