@@ -6,13 +6,13 @@ call plug#begin('~/.local/share/nvim/plugged')
 
   " Enhancements
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'takac/vim-hardtime'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
   Plug 'jiangmiao/auto-pairs'
   Plug 'roman/golden-ratio'
   Plug 'Yggdroot/indentLine'
+  Plug 'justinmk/vim-dirvish'
 
   " IDE plugins
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

@@ -18,8 +18,6 @@ nnoremap <silent> <leader>bP ggVGp
 
 " (f) files
 nnoremap <silent> <leader>fb :FzfMarks<CR>
-nnoremap <silent> <leader>ft :call utils#ToggleNetrw()<CR>
-nnoremap <silent> <leader>fT :call utils#ToggleNetrw('%:p:h')<CR>
 nnoremap <silent> <leader>fed :edit $MYVIMRC<CR>
 nnoremap <silent> <leader>feR :source $MYVIMRC \| runtime! plugin/**/*.vim<CR>
 nnoremap <silent> <leader>ff :FzfFiles<CR>

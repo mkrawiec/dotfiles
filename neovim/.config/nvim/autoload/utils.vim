@@ -22,20 +22,6 @@ fun! utils#ToggleTerm()
   endif
 endf
 
-" Prevent opening new window when doing Lexplore
-fun! utils#ToggleNetrw(...)
-  let l:buffer_name = 'NetrwTreeListing'
-  let l:win_number = bufwinnr(l:buffer_name)
-  let l:path = get(a:, 1, '.')
-
-  " check if window already open
-  if l:win_number > 0
-    exe l:win_number . 'wincmd c'
-  else
-    exe 'Lexplore' . l:path
-  endif
-endf
-
 " Call another command if one failed
 fun! utils#ExeWithFallback(command, fallback)
   try
