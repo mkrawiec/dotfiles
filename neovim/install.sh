@@ -4,4 +4,3 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 # run :PlugInstall
 nvim -E -c PlugInstall -c qall
-
