@@ -31,15 +31,14 @@ nnoremap <leader>fx :ExtEdit<space>
 
 " (g) git
 nnoremap <leader>gb :Gblame<CR>
-nnoremap <leader>gc :Git checkout<space>
-nnoremap <leader>gC :Gcommit<CR>
+nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gg :Gstatus<CR>
+nnoremap <leader>gp :call utils#PullThisBranch()<CR>
+nnoremap <leader>gP :call utils#PushThisBranch()<CR>
+nnoremap <leader>gS :Gwrite<CR>
 nnoremap <silent> <leader>gl :FzfCommits<CR>
 nnoremap <silent> <leader>gL :FzfBCommits<CR>
-nnoremap <silent> <leader>gp :call utils#PullThisBranch()<CR>
-nnoremap <silent> <leader>gP :call utils#PushThisBranch()<CR>
-nnoremap <silent> <leader>gS :Gwrite<CR>
 nmap <silent> <leader>gs <Plug>GitGutterStageHunk
 nmap <silent> <leader>gu <Plug>GitGutterUndoHunk
 
