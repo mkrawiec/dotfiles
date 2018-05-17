@@ -10,7 +10,6 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'roman/golden-ratio'
   Plug 'Yggdroot/indentLine'
   Plug 'justinmk/vim-dirvish'
 

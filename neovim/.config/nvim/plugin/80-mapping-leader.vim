@@ -64,6 +64,6 @@ nnoremap <silent> <leader>tp :set paste! paste?<CR>
 " (w) window
 nnoremap <silent> <leader>w <C-W>
 nnoremap <silent> <leader>wq <nop>
-nnoremap <silent> <leader>wg :GoldenRatioResize<CR>
+nnoremap <silent> <leader>wg :call utils#GoldenRatio()<CR>
 nnoremap <silent> <leader>wp :lclose \| pclose \| cclose<CR>
 nnoremap <silent> <leader>wW :FzfWindows<CR>

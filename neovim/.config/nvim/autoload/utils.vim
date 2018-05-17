@@ -42,3 +42,9 @@ endf
 fun! utils#PushThisBranch()
   execute 'Gpush origin ' . fugitive#head()
 endf
+
+fun! utils#GoldenRatio()
+  wincmd =
+  execute 'resize' . (winheight(0) * 5/4)
+  execute 'vertical resize' . (winwidth(0) * 5/4)
+endf
