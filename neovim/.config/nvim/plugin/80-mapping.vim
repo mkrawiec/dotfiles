@@ -18,8 +18,10 @@ nnoremap <C-w> <nop>
 " Auto close tags with </ and insert within
 inoremap </ </<C-x><C-o><Esc>vit<Esc>i
 
-" Add movement bindings in terminal mode
+" Use the same exit mapping as insert mode
 tnoremap <C-[> <C-\><C-n>
+
+" Add movement bindings in terminal mode
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k

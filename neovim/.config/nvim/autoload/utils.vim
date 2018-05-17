@@ -15,9 +15,11 @@ fun! utils#ToggleTerm()
     else
       terminal
       exe 'file ' . l:buffer_name
+
+      " Close terminal window when leaving insert mode
+      tnoremap <buffer><silent><C-[> <C-\><C-n>:call utils#ToggleTerm()<CR>
     endif
 
-    set previewwindow
     startinsert
   endif
 endf
