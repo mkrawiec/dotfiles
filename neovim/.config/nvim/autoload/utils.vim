@@ -7,7 +7,7 @@ fun! utils#ToggleTerm()
   if l:win_number > 0
     exe l:win_number . 'wincmd c'
   else
-    split | resize 10
+    split | exe 'resize' . &previewheight
 
     " check if buffer exists
     if bufexists(l:buffer_name)
@@ -15,6 +15,9 @@ fun! utils#ToggleTerm()
     else
       terminal
       exe 'file ' . l:buffer_name
+
+      " Disable line numbers
+      setlocal nonumber norelativenumber
 
       " Close terminal window when leaving insert mode
       tnoremap <buffer><silent><C-[> <C-\><C-n>:call utils#ToggleTerm()<CR>

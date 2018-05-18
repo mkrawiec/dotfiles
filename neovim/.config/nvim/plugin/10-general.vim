@@ -8,6 +8,7 @@ set showmatch           " Show matching brackets/parenthesis
 set cursorline          " Indicate current line
 set ruler               " Enable cursor position indicator
 set colorcolumn=80      " Show vertical line at line break
+set notimeout           " Await mapping completion indefinitely
 set clipboard+=unnamedplus  " Always use system clipboard
 
 "
