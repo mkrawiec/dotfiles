@@ -1,37 +1,23 @@
 "
-" Formatting
-"
-set shiftwidth=2       " Use 2 spaces for shifting
-
-"
 " Keybindings
 "
 
 " (g) goto
-" Go to definition
-nnoremap <localleader>gg :TSDef<CR>
-" Go to definition (preview)
-nnoremap <localleader>gG :TSDefPreview<CR>
-" Go spec.ts <-> .ts (toggle)
-nnoremap <localleader>gs :e %:p:s,.spec.ts$,.X123X,:s,.ts$,.spec.ts,:s,.X123X$,.ts,<CR>
+nnoremap <buffer><localleader>gg :TSDef<CR>
+nnoremap <buffer><localleader>gt :TSTypeDef<CR>
+nnoremap <buffer><localleader>gu :TSRefs<CR>
 
 " (r) refactor
-" Rename symbol under cursor
-nnoremap <localleader>rr :TSRename<CR>
-" Autoimport symbol under cursor
-nnoremap <localleader>ri :TSImport<CR>
+nnoremap <buffer><localleader>rr :TSRename<CR>
+nnoremap <buffer><localleader>ri :TSImport<CR>
+nnoremap <buffer><localleader>rI :TSSortImports<CR>
+nnoremap <buffer><localleader>re :TSExtractFunction<CR>
 
 " (h) help
-nnoremap <localleader>hd :TSDoc<CR>
-nnoremap <localleader>ht :TSType<CR>
-
-" (s) search
-" Search symbol
-nnoremap <localleader>ss :TSSearchFZF<CR>
-" Search reference
-nnoremap <localleader>sr :TSRefs<CR>
+nnoremap <buffer><localleader>hd :TSDoc<CR>
+nnoremap <buffer><localleader>ht :TSType<CR>
 
 " (S) server
-nnoremap <localleader>Sr :TSRestart<CR>
-nnoremap <localleader>Sp :TSReloadProject<CR>
-nnoremap <localleader>Se :TSEditConfig<CR>
+nnoremap <buffer><localleader>Sr :TSRestart<CR>
+nnoremap <buffer><localleader>Sp :TSReloadProject<CR>
+nnoremap <buffer><localleader>Se :TSEditConfig<CR>
