@@ -1,0 +1,64 @@
+#
+# Behaviour
+#
+
+# Enable vi-style navigation
+set editing-mode vi
+set show-mode-in-prompt on
+set vi-cmd-mode-string "[n] "
+set vi-ins-mode-string "[i] "
+
+# Disable the bell
+set bell-style none
+
+# Enable bracketed paste mode
+set enable-bracketed-paste on
+
+# Reduce wait time for mappings
+set keyseq-timeout 50
+
+#
+# Look & Feel
+#
+
+# Enable colors
+set colored-stats on
+
+# Add filetype suffix
+set visible-stats on
+
+# Mark symlinked directories
+set mark-symlinked-directories On
+
+# Color the common prefix
+set colored-completion-prefix on
+
+#
+# Completion
+#
+
+# Blink the matching parenthesis when typing
+set blink-matching-paren on
+
+# Complete the word correctly at any cursor position
+set skip-completed-text on
+
+# Show all completions immediately
+set show-all-if-ambiguous on
+
+# Match case-insensitive
+set completion-ignore-case on
+
+#
+# Mappings
+#
+
+# Up/Down arrows match history with prefix
+"\e[A":history-search-backward
+"\e[B":history-search-forward
+
+# Tab brings completion menu
+TAB:menu-complete
+
+# Expand !! when pressing space
+Space:magic-space

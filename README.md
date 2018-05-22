@@ -8,5 +8,5 @@ Installation process relies on [GNU Stow](https://www.gnu.org/software/stow/) fo
 
 ```bash
 git clone https://github.com/mkrawiec/dotfiles ~/dotfiles
-~/dotfiles/install.sh neovim tmux fish #or other presets
+~/dotfiles/install.sh neovim tmux bash #or other presets
 ```

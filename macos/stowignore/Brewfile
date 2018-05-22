@@ -24,7 +24,7 @@ brew 'reattach-to-user-namespace'
 brew 'colordiff'
 
 # toolbox
-brew 'fish'
+brew 'bash'
 brew 'git'
 brew 'stow'
 brew 'the_silver_searcher'
