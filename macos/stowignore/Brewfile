@@ -5,6 +5,8 @@ tap 'neovim/neovim'
 tap 'caskroom/fonts'
 
 # basic utils
+brew 'bash'
+brew 'bash-completion'
 brew 'coreutils'
 brew 'findutils', args: ['with-default-names']
 brew 'diffutils', args: ['with-default-names']
@@ -24,7 +26,6 @@ brew 'reattach-to-user-namespace'
 brew 'colordiff'
 
 # toolbox
-brew 'bash'
 brew 'git'
 brew 'stow'
 brew 'the_silver_searcher'

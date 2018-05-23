@@ -43,8 +43,11 @@ set blink-matching-paren on
 # Complete the word correctly at any cursor position
 set skip-completed-text on
 
-# Show all completions immediately
+# Show all ambiguous completions immediately
 set show-all-if-ambiguous on
+
+# First completion inserts common prefix instead of a match
+set menu-complete-display-prefix on
 
 # Match case-insensitive
 set completion-ignore-case on
