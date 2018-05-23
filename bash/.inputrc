@@ -5,8 +5,6 @@
 # Enable vi-style navigation
 set editing-mode vi
 set show-mode-in-prompt on
-set vi-cmd-mode-string "[n] "
-set vi-ins-mode-string "[i] "
 
 # Disable the bell
 set bell-style none

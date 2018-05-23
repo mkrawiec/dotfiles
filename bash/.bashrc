@@ -17,9 +17,6 @@ HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
 HISTSIZE=500000
 HISTFILESIZE=100000
 
-# Record each line as it gets issued
-PROMPT_COMMAND='history -a'
-
 # Trim long pwd in prompt
 PROMPT_DIRTRIM=2
 

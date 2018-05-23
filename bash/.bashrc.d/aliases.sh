@@ -58,7 +58,7 @@ elif [ `uname -s` == 'Darwin' ]; then
   alias vi='nvim'
   alias vim='nvim'
 
-  alias zup='brew update; brew upgrade --cleanup && brew cask upgrade && softwareupdate -l'
+  alias zup='brew update && brew upgrade --cleanup && brew cask upgrade && softwareupdate -l'
   alias zin='brew install'
   alias zrm='brew remove'
   alias zcl='brew cleanup'
