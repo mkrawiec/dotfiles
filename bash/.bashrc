@@ -20,6 +20,9 @@ HISTFILESIZE=100000
 # Trim long pwd in prompt
 PROMPT_DIRTRIM=2
 
+# Evaluate custom dircolors
+eval `dircolors ~/.dircolors`
+
 if [ -d ~/.bashrc.d ]; then
   for file in ~/.bashrc.d/*; do
     source $file
