@@ -4,18 +4,22 @@ LYELLOW='\033[01;33m'
 LBLUE='\033[01;34m'
 LPURPLE='\033[01;35m'
 LCYAN='\033[01;36m'
-NOCOLOR='\e[0m'
-RESET='\e[0m\2'
+LWHITE='\033[01;37m'
+RESET='\e[0m'
+
+CHAR_NORMAL_MODE=$'\u2298'
+CHAR_INSERT_MODE=$'\u279C'
+CHAR_GIT_BRANCH=$'\uE0A0'
 
 prompt_command()
 {
   # Last command status indicates the glyph color
   if [ $? == 0 ]; then
-    bind "set vi-cmd-mode-string \1$LGREEN⊘\1$RESET"
-    bind "set vi-ins-mode-string \1$LGREEN➜\1$RESET"
+    bind "set vi-cmd-mode-string \1$LGREEN\2$CHAR_NORMAL_MODE\1$RESET\2"
+    bind "set vi-ins-mode-string \1$LGREEN\2$CHAR_INSERT_MODE\1$RESET\2"
   else
-    bind "set vi-cmd-mode-string \1$LRED⊘\1$RESET"
-    bind "set vi-ins-mode-string \1$LRED➜\1$RESET"
+    bind "set vi-cmd-mode-string \1$LRED\2$CHAR_NORMAL_MODE\1$RESET\2"
+    bind "set vi-ins-mode-string \1$LRED\2$CHAR_INSERT_MODE\1$RESET\2"
   fi
 
   # Record each line as it gets issued
@@ -24,10 +28,9 @@ prompt_command()
 
 prompt()
 {
-  echo -n "$LBLUE\w$NOCOLOR "
-  echo -n '$(__git_ps1 "on $LPURPLE %s")'
-  echo
-  echo -n " $RESET"
+  echo -n "\n$LBLUE\w"
+  echo -n '$(__git_ps1 "$LWHITE on $LPURPLE$CHAR_GIT_BRANCH %s$RESET")'
+  echo -n "\n "
 }
 
 GIT_PS1_SHOWDIRTYSTATE=1
