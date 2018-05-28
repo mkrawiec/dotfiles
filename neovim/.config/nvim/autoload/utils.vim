@@ -7,7 +7,7 @@ fun! utils#ToggleTerm()
   if l:win_number > 0
     exe l:win_number . 'wincmd c'
   else
-    split | exe 'resize' . &previewheight
+    botright split | exe 'resize' . &previewheight
 
     " check if buffer exists
     if bufexists(l:buffer_name)
