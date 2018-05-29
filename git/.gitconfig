@@ -7,31 +7,30 @@
 [push]
     default = current
 [alias]
+    # Basic
     a = add
-    ap = add -p
     c = commit
+    ca = commit --amend --verbose
     cm = commit -m
-    cam = commit -am
-    m = commit --amend --verbose
-
-    d = diff
-    ds = diff --staged
-    dm = diff master
-    dd = diff develop
-
-    s = status -s
     co = checkout
     cob = checkout -b
-
+    d = diff
+    ds = diff --staged
     f = fetch --prune
+    l = log
+    pf = pull --ff-only
     ph = push
-    pl = pull
-    pr = pull --rebase
-
+    pr = pull --rebase --autostash
     r = rebase
     ro = rebase -s recursive -X ours
     rt = rebase -s recursive -X theirs
+    s = status
 
-    name=rev-parse --abbrev-ref HEAD
-    recent=branch --sort=committerdate --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))'
+    # Info
+    ib = !git --no-pager diff --shortstat
+    il = !git --no-pager log -1 --oneline --shortstat --no-decorate
+
+    # Meta
+    name = rev-parse --abbrev-ref HEAD
+    recent = branch --sort=committerdate --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))'
     alias = config --get-regexp ^alias\\.

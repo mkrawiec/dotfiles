@@ -14,7 +14,7 @@ fif() { grep -rinw $1 -e $2; }
 alias fifh='fif .'
 
 # Git
-alias g='git'
+alias g='git'; __git_complete g __git_main
 alias gcd='cd `git rev-parse --show-toplevel`'
 
 # Docker
@@ -39,6 +39,7 @@ alias serve='python3 -m SimpleHTTPServer'
 
 # Linux specific
 if [ `uname -s` == 'Linux' ]; then
+  alias open='xdg-open'
   alias xcopy='xclip'
   alias xpaste='xclip -o'
   alias sd='sudo systemctl'
