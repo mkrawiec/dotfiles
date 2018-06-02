@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-npm_bin=$(npm bin)
-bin_name=$1
-
-echo $(PATH=$npm_bin /usr/bin/which $bin_name)

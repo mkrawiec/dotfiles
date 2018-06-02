@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=udiskie
-GenericName=Udiskie automount daemon
-Comment=Udiskie automount daemon
-Categories=Utility;
-TryExec=start-udiskie
-Exec=start-udiskie

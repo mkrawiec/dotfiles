@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=rofi
-GenericName=Rofi launcher daemon
-Comment=Rofi launcher daemon
-Categories=Utility;
-TryExec=rofi
-Exec=rofi

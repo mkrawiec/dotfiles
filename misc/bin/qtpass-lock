@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-qtpass && gpg-connect-agent reloadagent /bye > /dev/null
