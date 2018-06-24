@@ -14,7 +14,7 @@ fif() { grep -rinw $1 -e $2; }
 alias fifh='fif .'
 
 # Git
-alias g='git'; __git_complete g __git_main
+alias g='git'; complete -o default -o nospace -F _git g
 alias gcd='cd `git rev-parse --show-toplevel`'
 
 # Docker
@@ -29,9 +29,7 @@ npmv() { npm info $1 dist-tags; }
 
 # Multimedia
 alias songdownload='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0'
-alias playstream='livestreamer -p mpv --player-continuous-http --hls-segment-threads 4'
-splayhq() { splay $argv[1] best; }
-splaylq() { splay $argv[1] worst; }
+playstream() { streamlink --player-continuous-http --hls-segment-threads 4 $1 best; }
 
 # Etc
 alias myip='curl -s http://ip-api.com/json | python3 -m json.tool'

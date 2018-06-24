@@ -8,27 +8,36 @@
     default = current
 [alias]
     # Basic
+    ss = status --short --branch
     a = add
     c = commit
-    ca = commit --amend --verbose
     cm = commit -m
+    ce = commit --amend --no-edit
+    ca = commit --amend --verbose
     co = checkout
     cob = checkout -b
-    d = diff
-    ds = diff --staged
-    f = fetch --prune
-    l = log
-    pf = pull --ff-only
+
+    # Pull/Push
+    ff = fetch --prune
+    pp = !git pull --ff-only origin $(git name)
     ph = push
     pr = pull --rebase --autostash
+
+    # Diff
+    d = diff
+    ds = diff --staged
+
+    # Rebase
     r = rebase
     ro = rebase -s recursive -X ours
     rt = rebase -s recursive -X theirs
-    s = status
 
-    # Info
-    ib = !git --no-pager diff --shortstat
-    il = !git --no-pager log -1 --oneline --shortstat --no-decorate
+    # Log
+    l = log
+    ll = log --graph --format=format:\"%C(yellow)%h%C(red)%d%C(reset) - %C(bold green)(%ar)%C(reset) %s %C(blue)<%an>%C(reset)\"
+    llm = !git ll master..HEAD
+    llom = !git ll origin/master..HEAD
+    ls = !git --no-pager log -1 --oneline --shortstat --no-decorate
 
     # Meta
     name = rev-parse --abbrev-ref HEAD

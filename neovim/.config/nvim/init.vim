@@ -31,5 +31,5 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'leafgarland/typescript-vim'
 
   " TypeScript
-  Plug 'mhartington/nvim-typescript', { 'for': 'typescript', 'branch': 'python' }
+  Plug 'mhartington/nvim-typescript', { 'branch': 'python' }
 call plug#end()

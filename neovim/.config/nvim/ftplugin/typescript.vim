@@ -2,6 +2,9 @@
 " Keybindings
 "
 
+" (-) general
+nnoremap <silent><buffer><localleader>= :ALEFix<CR>
+
 " (g) goto
 nnoremap <buffer><localleader>gg :TSDef<CR>
 nnoremap <buffer><localleader>gt :TSTypeDef<CR>
