@@ -7,9 +7,6 @@ let g:airline_theme = 'hybridline'
 "
 " vim-rooter
 "
-" If no root detected change to the current dir
-let g:rooter_change_directory_for_non_project_files = 'current'
-
 " Silence directory change messages
 let g:rooter_silent_chdir = 1
 
