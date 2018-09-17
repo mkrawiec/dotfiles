@@ -8,7 +8,7 @@
     default = current
 [alias]
     # Basic
-    ss = status --short --branch
+    st = status --short
     a = add
     c = commit
     cm = commit -m
