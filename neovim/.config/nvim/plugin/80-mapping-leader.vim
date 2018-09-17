@@ -4,7 +4,7 @@ let maplocalleader = ','
 
 " (-) general
 nnoremap <leader><leader> :FzfCommands<CR>
-nnoremap <silent><leader>' :call utils#ToggleTerm()<CR>
+nnoremap <silent><leader>' :call mkrawiec#term#TogglePreview()<CR>
 
 " (b) buffers
 nnoremap <leader>bb :FzfBuffers<CR>
@@ -34,8 +34,8 @@ nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gg :Gstatus<CR>
-nnoremap <leader>gp :call utils#PullThisBranch()<CR>
-nnoremap <leader>gP :call utils#PushThisBranch()<CR>
+nnoremap <leader>gp :call mkrawiec#git#PullThisBranch()<CR>
+nnoremap <leader>gP :call mkrawiec#git#PushThisBranch()<CR>
 nnoremap <leader>gS :Gwrite<CR>
 nnoremap <leader>gl :FzfCommits<CR>
 nnoremap <leader>gL :FzfBCommits<CR>
@@ -54,6 +54,10 @@ nnoremap <leader>ss :FzfBLines<CR>
 nnoremap <leader>sb :FzfLines<CR>
 nnoremap <leader>sr :FzfHistory/<CR>
 
+" (x) execute
+vnoremap <leader>xx :call mkrawiec#utils#ExecuteSelection('terminal')<CR>
+vnoremap <leader>xh :call mkrawiec#utils#ExecuteSelection('terminal http')<CR>
+
 " (t) toggles
 nnoremap <silent><leader>tc :call deoplete#toggle()<CR>:echo deoplete#is_enabled()<CR>
 nnoremap <silent><leader>ts :set spell! spelllang=pl spell?<CR>
@@ -63,6 +67,6 @@ nnoremap <silent><leader>tp :set paste! paste?<CR>
 " (w) window
 nnoremap <leader>w <C-W>
 nnoremap <leader>wq <nop>
-nnoremap <silent><leader>wg :call utils#GoldenRatio()<CR>
+nnoremap <silent><leader>wg :call mkrawiec#utils#GoldenRatio()<CR>
 nnoremap <silent><leader>wp :lclose \| pclose \| cclose<CR>
 nnoremap <leader>wW :FzfWindows<CR>

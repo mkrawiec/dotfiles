@@ -3,9 +3,9 @@ nmap ]c <Plug>GitGutterNextHunk
 nmap [c <Plug>GitGutterPrevHunk
 
 " previous/next location
-nnoremap <silent> ]l :call utils#ExeWithFallback('lnext', 'lfirst')<CR>
-nnoremap <silent> [l :call utils#ExeWithFallback('lprev', 'lfirst')<CR>
+nnoremap <silent> ]l :call mkrawiec#utils#ExeWithFallback('lnext', 'lfirst')<CR>
+nnoremap <silent> [l :call mkrawiec#utils#ExeWithFallback('lprev', 'lfirst')<CR>
 
 " previous/next quickfix
-nnoremap <silent> ]q :call utils#ExeWithFallback('cnext', 'cfirst')<CR>
-nnoremap <silent> [q :call utils#ExeWithFallback('cprev', 'cfirst')<CR>
+nnoremap <silent> ]q :call mkrawiec#utils#ExeWithFallback('cnext', 'cfirst')<CR>
+nnoremap <silent> [q :call mkrawiec#utils#ExeWithFallback('cprev', 'cfirst')<CR>
