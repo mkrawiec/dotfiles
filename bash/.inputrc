@@ -60,6 +60,3 @@ set completion-ignore-case on
 
 # Tab brings completion menu
 TAB:menu-complete
-
-# Expand !! when pressing space
-Space:magic-space
