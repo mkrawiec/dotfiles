@@ -13,6 +13,7 @@ nnoremap <silent><leader>bD :%bd\|e #<CR>
 nnoremap <silent><leader>bn :bn<CR>
 nnoremap <silent><leader>bN :enew<CR>
 nnoremap <silent><leader>bp :bp<CR>
+nnoremap <leader>bs :call mkrawiec#utils#OpenScratch()<CR>
 nnoremap <leader>bY ggVGy
 nnoremap <leader>bP ggVGp
 

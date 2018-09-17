@@ -18,6 +18,16 @@ endf
 fun! mkrawiec#utils#ExecuteSelection(command) range
   execute a:firstline . ',' . a:lastline . 'j'
   let l:line_concat = getline('.')
-  normal u
+
+  if a:firstline != a:lastline
+    normal u
+  endif
+
   execute a:command . ' ' . l:line_concat
+endf
+
+" Open persistant scratch buffer
+fun! mkrawiec#utils#OpenScratch() abort
+  edit ~/.local/share/nvim/scratch.md
+  setlocal bufhidden=delete autowriteall
 endf
