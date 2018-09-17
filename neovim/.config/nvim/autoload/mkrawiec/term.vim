@@ -1,5 +1,5 @@
 " Toggle terminal split window
-fun! mkrawiec#term#TogglePreview()
+fun! mkrawiec#term#TogglePreview() abort
   let l:buffer_name = 'popup-term'
   let l:win_number = bufwinnr(l:buffer_name)
 

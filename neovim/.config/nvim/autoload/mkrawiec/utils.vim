@@ -1,5 +1,5 @@
 " Call another command if one failed
-fun! mkrawiec#utils#ExeWithFallback(command, fallback)
+fun! mkrawiec#utils#ExeWithFallback(command, fallback) abort
   try
     exe a:command
   catch
@@ -8,14 +8,14 @@ fun! mkrawiec#utils#ExeWithFallback(command, fallback)
 endf
 
 " Make current window golden ratio sized
-fun! mkrawiec#utils#GoldenRatio()
+fun! mkrawiec#utils#GoldenRatio() abort
   wincmd =
   execute 'resize' . (winheight(0) * 5/4)
   execute 'vertical resize' . (winwidth(0) * 5/4)
 endf
 
 " Execute visual selection with given command
-fun! mkrawiec#utils#ExecuteSelection(command) range
+fun! mkrawiec#utils#ExecuteSelection(command) abort range
   execute a:firstline . ',' . a:lastline . 'j'
   let l:line_concat = getline('.')
 
