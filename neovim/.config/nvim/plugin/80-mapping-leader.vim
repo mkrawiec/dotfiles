@@ -55,10 +55,6 @@ nnoremap <leader>ss :FzfBLines<CR>
 nnoremap <leader>sb :FzfLines<CR>
 nnoremap <leader>sr :FzfHistory/<CR>
 
-" (x) execute
-vnoremap <leader>xx :call mkrawiec#utils#ExecuteSelection('terminal')<CR>
-vnoremap <leader>xh :call mkrawiec#utils#ExecuteSelection('terminal http')<CR>
-
 " (t) toggles
 nnoremap <silent><leader>tc :call deoplete#toggle()<CR>:echo deoplete#is_enabled()<CR>
 nnoremap <silent><leader>ts :set spell! spelllang=pl spell?<CR>
