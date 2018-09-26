@@ -10,6 +10,10 @@ nnoremap <buffer><localleader>gg :TSDef<CR>
 nnoremap <buffer><localleader>gt :TSTypeDef<CR>
 nnoremap <buffer><localleader>gu :TSRefs<CR>
 
+" (i) insert
+nnoremap <silent><buffer><localleader>id odebugger<esc>
+nnoremap <silent><buffer><localleader>iD Odebugger<esc>
+
 " (r) refactor
 nnoremap <buffer><localleader>rr :TSRename<CR>
 nnoremap <buffer><localleader>ri :TSImport<CR>

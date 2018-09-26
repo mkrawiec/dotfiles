@@ -1,0 +1,33 @@
+\set QUIET 1
+
+--
+-- Repl
+--
+-- Always complete keywords uppercase
+\set COMP_KEYWORD_CASE upper
+
+-- Prevent Ctrl-D from exiting psql
+\set IGNOREEOF 5
+
+--
+-- History
+--
+\set HISTSIZE 2000
+\set HISTCONTROL ignoredups
+
+--
+-- Display
+--
+\pset pager off
+\pset null '[NULL]'
+\timing
+
+--
+-- Table display
+--
+\pset expanded auto
+\pset linestyle unicode
+\pset border 2
+\pset format wrapped
+
+\set QUIET 0
