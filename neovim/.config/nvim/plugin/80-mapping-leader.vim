@@ -56,7 +56,6 @@ nnoremap <leader>sb :FzfLines<CR>
 nnoremap <leader>sr :FzfHistory/<CR>
 
 " (t) toggles
-nnoremap <silent><leader>tc :call deoplete#toggle()<CR>:echo deoplete#is_enabled()<CR>
 nnoremap <silent><leader>ts :set spell! spelllang=pl spell?<CR>
 nnoremap <silent><leader>tn :set invnumber invrelativenumber<CR>
 nnoremap <silent><leader>tp :set paste! paste?<CR>

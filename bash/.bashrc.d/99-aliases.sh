@@ -22,10 +22,13 @@ alias dockrm='docker rm -f `docker ps -qa`'
 alias dockrmi='docker rmi `docker images -f "dangling=true" -q`'
 alias dockip='docker inspect --format "{{ .NetworkSettings.IPAddress }}"'
 
-# Npm
+# Node
 alias npmi='npm install --save'
 alias npmii='npm install --save-dev'
 npmv() { npm info $1 dist-tags; }
+
+# Python
+pyclean() { find . -regex '^.*\(__pycache__\|\.py[co]\)$' -delete ; }
 
 # Multimedia
 alias songdownload='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0'

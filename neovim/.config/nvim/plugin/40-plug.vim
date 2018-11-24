@@ -10,6 +10,9 @@ let g:airline_theme = 'hybridline'
 " Silence directory change messages
 let g:rooter_silent_chdir = 1
 
+" Mark dir as root when finding one of these files
+let g:rooter_patterns = ['Dockerfile', '.editorconfig', '.git/']
+
 "
 " golden-ratio
 "
