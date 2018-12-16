@@ -8,7 +8,7 @@
     default = current
 [alias]
     # Basic
-    ss = status --short
+    s = !git status --short && git stats
     a = add
     c = commit
     cm = commit -m
@@ -26,6 +26,7 @@
     # Diff
     d = diff
     ds = diff --staged
+    da = !git --paginate status -vv
 
     # Rebase
     r = rebase
@@ -40,6 +41,7 @@
     ls = !git --no-pager log -1 --oneline --shortstat --no-decorate
 
     # Meta
+    stats = !git --no-pager diff --shortstat --color HEAD
     name = rev-parse --abbrev-ref HEAD
     recent = !git --no-pager branch --color=always --sort=committerdate --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))' | tail -n 10
     alias = config --get-regexp ^alias\\.
