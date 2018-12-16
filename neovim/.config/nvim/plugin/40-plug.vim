@@ -11,7 +11,7 @@ let g:airline_theme = 'hybridline'
 let g:rooter_silent_chdir = 1
 
 " Mark dir as root when finding one of these files
-let g:rooter_patterns = ['Dockerfile', '.editorconfig', '.git/']
+let g:rooter_patterns = ['Dockerfile', 'package.json', '.editorconfig', '.git/']
 
 "
 " golden-ratio

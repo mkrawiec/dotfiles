@@ -6,12 +6,6 @@ let g:ale_linters = {
 \   'python': ['pyls', 'pylint', 'prospector'],
 \}
 
-let g:ale_fixers = {
-\   'javscript': ['prettier'],
-\   'typescript': ['prettier'],
-\   'python': ['black'],
-\}
-
 " Improve performance by not linting immediately
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
