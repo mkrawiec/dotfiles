@@ -18,9 +18,6 @@ fun! mkrawiec#term#TogglePreview() abort
 
       " Disable line numbers
       setlocal nonumber norelativenumber
-
-      " Close terminal window when leaving insert mode
-      tnoremap <buffer><silent><C-[> <C-\><C-n>:call mkrawiec#term#TogglePreview()<CR>
     endif
 
     startinsert

@@ -21,6 +21,9 @@ inoremap </ </<C-x><C-o><Esc>vit<Esc>i
 " Use the same exit mapping as insert mode
 tnoremap <C-[> <C-\><C-n>
 
+nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
+
 " Add movement bindings in terminal mode
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j

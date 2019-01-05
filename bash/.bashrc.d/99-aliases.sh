@@ -38,15 +38,15 @@ playstream() { streamlink --player-continuous-http --hls-segment-threads 4 $1 be
 alias myip='curl -s http://ip-api.com/json | python3 -m json.tool'
 alias serve='python3 -m SimpleHTTPServer'
 
-# Linux specific
 if [ `uname -s` == 'Linux' ]; then
+  # Linux specific
   alias open='xdg-open'
   alias xcopy='xclip'
   alias xpaste='xclip -o'
   alias sd='sudo systemctl'
   alias sdlog='sudo journalctl -n 20 -f -u'
 
-  alias zup='sudo zypper dist-upgrade'
+  alias zup='sudo zypper dist-upgrade && sudo flatpak update'
   alias zin='sudo zypper install'
   alias zinn='sudo zypper install --force'
   alias zrm='sudo zypper remove'
@@ -55,8 +55,9 @@ if [ `uname -s` == 'Linux' ]; then
   alias zse='zypper search'
   alias zsi='zypper search -i'
   alias zwp='zypper search --provides --match-exact'
-  # macOS specific
+  zlog() { rpm -q --changelog $1 | less; }
 elif [ `uname -s` == 'Darwin' ]; then
+  # macOS specific
   alias vi='nvim'
   alias vim='nvim'
 

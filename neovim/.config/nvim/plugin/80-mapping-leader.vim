@@ -49,11 +49,10 @@ nnoremap <leader>hm :FzfMaps<CR>
 
 " (s) search
 nnoremap <leader>sa :FzfAg<CR>
-nnoremap <leader>sg :Ggrep -i<space>
 nnoremap <silent><leader>sc :noh<CR>
-nnoremap <leader>ss :FzfBLines<CR>
-nnoremap <leader>sb :FzfLines<CR>
-nnoremap <leader>sr :FzfHistory/<CR>
+nnoremap <leader>sg :copen \| Ggrep -i<space>
+nnoremap <leader>sr :FzfRg<CR>
+nnoremap <leader>ss :FzfLines<CR>
 
 " (t) toggles
 nnoremap <silent><leader>ts :set spell! spelllang=pl spell?<CR>
@@ -65,4 +64,3 @@ nnoremap <leader>w <C-W>
 nnoremap <leader>wq <nop>
 nnoremap <silent><leader>wg :call mkrawiec#utils#GoldenRatio()<CR>
 nnoremap <silent><leader>wp :lclose \| pclose \| cclose<CR>
-nnoremap <leader>wW :FzfWindows<CR>

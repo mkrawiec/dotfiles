@@ -6,7 +6,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 
   " Enhancements
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
   Plug 'jiangmiao/auto-pairs'
@@ -19,6 +18,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'w0rp/ale'
   Plug 'ajh17/VimCompletesMe'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-projectionist'
   Plug 'airblade/vim-gitgutter'
   Plug 'airblade/vim-rooter'
   Plug 'editorconfig/editorconfig-vim'
