@@ -26,7 +26,6 @@ nnoremap <silent><leader>fed :edit $MYVIMRC<CR>
 nnoremap <silent><leader>feR :source $MYVIMRC \| runtime! plugin/**/*.vim<CR>
 nnoremap <silent><leader>fs :write %<CR>
 nnoremap <silent><leader>fS :SudoWrite<CR>
-nnoremap <silent><leader>fo :silent !open %<CR>
 nnoremap <silent><leader>fy :silent let @+=expand('%:p')<CR><C-g>
 nnoremap <leader>fx :ExtEdit<space>
 
@@ -55,7 +54,7 @@ nnoremap <leader>sr :FzfRg<CR>
 nnoremap <leader>ss :FzfLines<CR>
 
 " (t) toggles
-nnoremap <silent><leader>ts :set spell! spelllang=pl spell?<CR>
+nnoremap <silent><leader>ts :setlocal spell! spelllang=pl spell?<CR>
 nnoremap <silent><leader>tn :set invnumber invrelativenumber<CR>
 nnoremap <silent><leader>tp :set paste! paste?<CR>
 

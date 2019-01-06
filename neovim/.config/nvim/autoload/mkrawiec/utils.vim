@@ -31,3 +31,9 @@ fun! mkrawiec#utils#OpenScratch() abort
   edit ~/.local/share/nvim/scratch.md
   setlocal bufhidden=delete autowriteall
 endf
+
+" Download spellcheck file
+fun! mkrawiec#utils#DownloadSpellfile(url)
+    let l:spell_dir = spellfile#WritableSpellDir()
+    exe "!cd " . l:spell_dir . ' && curl -fO '. a:url
+endf
