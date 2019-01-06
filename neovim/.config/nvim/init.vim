@@ -1,8 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
   " Themes
   Plug 'w0ng/vim-hybrid'
-  Plug 'bling/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
+  Plug 'itchyny/lightline.vim'
 
   " Enhancements
   Plug 'christoomey/vim-tmux-navigator'

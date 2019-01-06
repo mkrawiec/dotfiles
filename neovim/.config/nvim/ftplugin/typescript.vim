@@ -1,4 +1,4 @@
-call mkrawiec#ale#InitBuffer(['prettier'])
+call mkrawiec#ale#SetupMappings()
 
 " (i) insert
 nnoremap <silent><buffer><localleader>id odebugger<esc>
