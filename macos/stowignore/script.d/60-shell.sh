@@ -1,12 +1,14 @@
-# Use dark theme
+# Use dark theme with white windows
 defaults write ~/Library/Preferences/.GlobalPreferences.plist AppleInterfaceTheme -string "Dark"
 defaults write ~/Library/Preferences/.GlobalPreferences.plist AppleInterfaceStyle -string "Dark"
-
-# Disable transparency in the menu bar and elsewhere on Yosemite
-defaults write com.apple.universalaccess reduceTransparency -bool true
+defaults write -g NSRequiresAquaSystemAppearance -bool Yes
+defaults write com.apple.Spotlight NSRequiresAquaSystemAppearance -bool No
+defaults write com.apple.notificationcenterui NSRequiresAquaSystemAppearance -bool No
 
 # Speed up Mission Control animations
-defaults write com.apple.dock expose-animation-duration -float 0.1
+defaults write com.apple.dock workspaces-swoosh-animation-off -bool YES
+defaults write com.apple.dock expose-animation-duration -int 0
+defaults delete com.apple.dock expose-animation-duration
 
 # Don’t group windows by application in Mission Control
 # (i.e. use the old Exposé behavior instead)
@@ -37,4 +39,3 @@ defaults write com.apple.dock wvous-tr-corner -int 0
 defaults write com.apple.dock wvous-tr-modifier -int 0
 defaults write com.apple.dock wvous-bl-corner -int 0
 defaults write com.apple.dock wvous-bl-modifier -int 0
-

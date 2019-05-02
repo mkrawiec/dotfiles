@@ -10,9 +10,6 @@ defaults write com.apple.finder NewWindowTarget -string "PfHm"
 # Disable desktop icons
 defaults write com.apple.finder CreateDesktop -bool false
 
-# Finder: show hidden files by default
-#defaults write com.apple.finder AppleShowAllFiles -bool true
-
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
@@ -63,4 +60,3 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	General -bool true \
 	OpenWith -bool true \
 	Privileges -bool true
-
