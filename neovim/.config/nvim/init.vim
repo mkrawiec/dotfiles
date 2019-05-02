@@ -15,7 +15,6 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'w0rp/ale'
-  Plug 'ajh17/VimCompletesMe'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-projectionist'
   Plug 'airblade/vim-gitgutter'

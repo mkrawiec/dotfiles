@@ -29,6 +29,7 @@ npmv() { npm info $1 dist-tags; }
 
 # Python
 pyclean() { find . -regex '^.*\(__pycache__\|\.py[co]\)$' -delete ; }
+pyenv_on() { eval "$(pyenv init -)"; }
 
 # Multimedia
 alias songdownload='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0'
@@ -61,7 +62,7 @@ elif [ `uname -s` == 'Darwin' ]; then
   alias vi='nvim'
   alias vim='nvim'
 
-  alias zup='brew update && brew upgrade --cleanup && brew cask upgrade && softwareupdate -l'
+  alias zup='brew update && brew upgrade && brew cask upgrade && softwareupdate -l'
   alias zin='brew install'
   alias zrm='brew remove'
   alias zcl='brew cleanup'

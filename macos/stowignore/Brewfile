@@ -33,6 +33,7 @@ brew 'tmux'
 brew 'httpie'
 brew 'neovim'
 brew 'cloc'
+brew 'postgresql'
 
 # js development
 brew 'node@8'
