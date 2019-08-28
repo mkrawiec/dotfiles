@@ -1,0 +1,101 @@
+"
+" Defaults
+"
+set ignorecase
+set smartcase
+set hlsearch
+set scrolloff=3
+set clipboard=unnamedplus,unnamed
+set surround
+set commentary
+set number
+set relativenumber
+set visualbell
+set noerrorbells
+let mapleader = ' '
+
+"
+" Remappings
+"
+vnoremap < <gv
+vnoremap > >gv
+nnoremap Y y$
+nnoremap <C-w> <nop>
+nnoremap <C-6> :action GoToLastTab<CR>
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+
+"
+" Leader mappings
+"
+nnoremap - :action ActivateProjectToolWindow<CR>
+nnoremap <leader><leader> :action GotoAction<CR>
+nnoremap <leader>' :action ActivateTerminalToolWindow<CR>
+
+" (b) buffers
+nnoremap <leader>bb :action RecentLocations<CR>
+nnoremap <leader>bY ggVGy
+nnoremap <leader>bP ggVGp
+nnoremap <leader>bd :action CloseEditor<CR>
+nnoremap <leader>bD :action CloseAllEditorsButActive<CR>
+
+" (c) compile
+nnoremap <leader>cc :action RunAnything<CR>
+nnoremap <leader>cC :action Compile<CR>
+nnoremap <leader>cd :action Debug<CR>
+nnoremap <leader>ct :action RerunTests<CR>
+nnoremap <leader>cT :action RerunFailedTests<CR>
+nnoremap <leader>cr :action ShowRecentTests<CR>
+
+" (f) file
+nnoremap <leader>fb :action ShowBookmarks<CR>
+nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fr :action RecentChangedFiles<CR>
+nnoremap <leader>feR :source ~/.ideavimrc<CR>
+nnoremap <leader>fed :edit ~/.ideavimrc<CR>
+nnoremap <leader>fj :action ShowFilePath<CR>
+nnoremap <leader>fy :action CopyPaths<CR>
+nnoremap <leader>ft :action ActivateProjectToolWindow<CR>
+nnoremap <leader>fT :action SelectInProjectView<CR>
+
+" (g) git
+nnoremap <leader>gb :action Annotate<CR>
+
+" (j) jump
+nnoremap <leader>jt :action GotoTest<CR>
+
+" (s) search
+nnoremap <leader>sa :action FindInPath<CR>
+nnoremap <leader>ss :action GotoSymbol<CR>
+nnoremap <leader>sc :noh<CR>
+
+" (w) window
+nnoremap <leader>w <C-W>
+nnoremap <leader>wq <nop>
+nnoremap <leader>wp :action CloseAllNotifications<CR>:action HideAllWindows<CR>
+
+" (t) toggles
+nnoremap <leader>tf :action ToggleFullScreen<CR>
+nnoremap <leader>tp :action TogglePresentationMode<CR>
+
+"
+" Localleader mappings
+"
+nnoremap ,= :action OptimizeImports<CR>:action ReformatCode<CR>
+
+" (i) insert
+nnoremap ,id :action ToggleLineBreakpoint<CR>
+nnoremap ,ig :action Generate<CR>
+nnoremap ,ii :action ShowIntentionActions<CR>
+
+" (g) goto
+nnoremap ,gg :action GotoDefinition<CR>
+nnoremap ,gG :action QuickImplementations<CR>
+nnoremap ,gu :action FindUsages<CR>
+nnoremap ,gx :action QuickJavaDoc<CR>
+
+" (r) refactor
+nnoremap ,rr :action RenameElement<CR>
+nnoremap ,rt :action Refactorings.QuickListPopupAction<CR>
