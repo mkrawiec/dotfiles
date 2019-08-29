@@ -45,9 +45,9 @@ nnoremap <leader>bD :action CloseAllEditorsButActive<CR>
 nnoremap <leader>cc :action RunAnything<CR>
 nnoremap <leader>cC :action Compile<CR>
 nnoremap <leader>cd :action Debug<CR>
-nnoremap <leader>ct :action RerunTests<CR>
+nnoremap <leader>cr :action Run<CR>
+nnoremap <leader>ct :action ShowRecentTests<CR>
 nnoremap <leader>cT :action RerunFailedTests<CR>
-nnoremap <leader>cr :action ShowRecentTests<CR>
 
 " (f) file
 nnoremap <leader>fb :action ShowBookmarks<CR>
@@ -91,7 +91,7 @@ nnoremap ,ig :action Generate<CR>
 nnoremap ,ii :action ShowIntentionActions<CR>
 
 " (g) goto
-nnoremap ,gg :action GotoDefinition<CR>
+nnoremap ,gg :action GotoImplementation<CR>
 nnoremap ,gG :action QuickImplementations<CR>
 nnoremap ,gu :action FindUsages<CR>
 nnoremap ,gx :action QuickJavaDoc<CR>
