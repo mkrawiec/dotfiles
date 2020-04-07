@@ -1,0 +1,32 @@
+{
+  "editor.fontFamily": "Iosevka Term",
+  "editor.fontSize": 16,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "boundary",
+  "editor.suggestSelection": "first",
+  "files.simpleDialog.enable": true,
+  "java.configuration.checkProjectSettingsExclusions": false,
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/maciek/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+  "terminal.explorerKind": "external",
+  "terminal.external.linuxExec": "konsole",
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "~/.config/Code/User/init.vim",
+  "vim.visualstar": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.menuBarVisibility": "toggle",
+  "workbench.activityBar.visible": false,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#363636"
+  },
+  "workbench.editor.restoreViewState": false,
+  "workbench.editor.showIcons": false,
+  "workbench.editor.showTabs": false,
+  "workbench.iconTheme": "vs-minimal",
+  "workbench.settings.editor": "json",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.tips.enabled": false,
+  "window.zoomLevel": 0
+}
