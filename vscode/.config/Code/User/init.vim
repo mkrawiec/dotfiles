@@ -40,9 +40,10 @@ nnoremap <leader>feR workbench.action.reloadWindow
 " (g) git
 nnoremap <leader>gg workbench.view.scm
 nnoremap <leader>gc git.checkout
+nnoremap <leader>gd git.openChange
 nnoremap <leader>gi git.initialize
 nnoremap <leader>gI git.ignore
-nnoremap <leader>gb git.openChange
+nnoremap <leader>gb timeline.focus
 nnoremap <leader>gp git.pullRebase
 nnoremap <leader>gP git.push
 nnoremap <leader>gS git.stage

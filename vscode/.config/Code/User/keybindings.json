@@ -36,16 +36,6 @@
         "when": "inQuickOpen"
     },
     {
-        "key": "ctrl+n",
-        "command": "selectNextSuggestion",
-        "when": "editorTextFocus && suggestWidgetVisible"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "selectPrevSuggestion",
-        "when": "editorTextFocus && suggestWidgetVisible"
-    },
-    {
         "key": "ctrl+c",
         "command": "workbench.action.closeQuickOpen",
         "when": "inQuickOpen"
@@ -82,5 +72,50 @@
         "key": "ctrl+space",
         "command": "-editor.action.triggerSuggest",
         "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+a 1",
+        "command": "workbench.action.terminal.focusAtIndex1",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+a 2",
+        "command": "workbench.action.terminal.focusAtIndex2",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+a 3",
+        "command": "workbench.action.terminal.focusAtIndex3",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+a 4",
+        "command": "workbench.action.terminal.focusAtIndex4",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+a 5",
+        "command": "workbench.action.terminal.focusAtIndex5",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+a c",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+a x",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+a v",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "list.focusFirst",
+        "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && textInputFocus"
     }
 ]
