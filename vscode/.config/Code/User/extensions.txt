@@ -1,4 +1,6 @@
+EditorConfig.EditorConfig
 GabrielBB.vscode-lombok
+ms-python.python
 redhat.java
 VisualStudioExptTeam.vscodeintellicode
 vscodevim.vim
