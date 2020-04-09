@@ -29,12 +29,13 @@ nnoremap <leader>bd workbench.action.closeActiveEditor
 
 " (f) files
 nnoremap <leader>ff workbench.action.quickOpen
-nnoremap <leader>fr workbench.action.openRecent
 nnoremap <leader>fy workbench.action.files.copyPathOfActiveFile
-nnoremap <leader>ft workbench.files.action.showActiveFileInExplorer
-nnoremap <leader>fo revealFileInOS
+nnoremap <leader>ft workbench.view.explorer
 
-nnoremap <leader>fed workbench.action.openSettings
+" (fe) editor files
+nnoremap <leader>fed workbench.action.openSettingsJson
+nnoremap <leader>fek workbench.action.openGlobalKeybindingsFile
+nnoremap <leader>fet workbench.action.tasks.openUserTasks
 nnoremap <leader>feR workbench.action.reloadWindow
 
 " (g) git
@@ -55,14 +56,25 @@ nmap <leader>gu git.revertSelectedRanges
 nnoremap <leader>pp workbench.action.files.openFolder
 nnoremap <leader>pr workbench.action.openRecent
 nnoremap <leader>pc workbench.action.closeFolder
-nnoremap <leader>pt workbench.action.tasks.configureTaskRunner
+nnoremap <leader>pt workbench.action.tasks.openWorkspaceFileTasks
+nnoremap <leader>pl workbench.action.debug.configure
 
 " (v) shrink/grow
 nnoremap <leader>v editor.action.smartSelect.grow
 nnoremap <leader>V editor.action.smartSelect.shrink
 
+" (r) run
+nnoremap <leader>r: workbench.debug.action.focusRepl
+nnoremap <leader>rr workbench.action.debug.run
+nnoremap <leader>rd workbench.action.debug.start
+nnoremap <leader>rb workbench.action.tasks.build
+nnoremap <leader>rT workbench.action.tasks.runTask
+nnoremap <leader>rt workbench.action.tasks.test
+nnoremap <leader>rk workbench.action.debug.terminateThread
+
 " (s) search
 nnoremap <leader>sa workbench.action.findInFiles
+nnoremap <leader>se search.action.openNewEditor
 nnoremap <leader>sr workbench.action.replaceInFiles
 nnoremap <leader>sc :noh<CR>
 
@@ -73,3 +85,6 @@ nnoremap <leader>ws <C-w>s
 nnoremap <leader>wv <C-w>v
 nnoremap <leader>wc <C-w>c
 nnoremap <leader>wo <C-w>o
+nnoremap <leader>ww <C-w>w
+nnoremap <leader>wg workbench.action.increaseViewSize
+nnoremap <leader>wG workbench.action.decreaseViewSize

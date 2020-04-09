@@ -1,6 +1,7 @@
 {
   "breadcrumbs.symbolPath": "off",
   "git.autoStash": true,
+  "git.fetchOnPull": true,
   "git.openDiffOnClick": false,
   "editor.fontFamily": "Iosevka Term",
   "editor.fontSize": 16,
@@ -11,27 +12,32 @@
   "editor.suggestSelection": "first",
   "explorer.openEditors.visible": 0,
   "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "*.vim": "vimrc"
+  },
   "files.hotExit": "onExitAndWindowClose",
   "files.simpleDialog.enable": true,
   "java.configuration.checkProjectSettingsExclusions": false,
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/maciek/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
   "search.smartCase": true,
   "search.collapseResults": "alwaysExpand",
+  "task.problemMatchers.neverPrompt": {
+    "shell": true
+  },
   "telemetry.enableTelemetry": false,
   "vim.hlsearch": true,
   "vim.leader": "<space>",
-  "vim.useSystemClipboard": true ,
+  "vim.useSystemClipboard": true,
   "vim.vimrc.enable": true,
   "vim.vimrc.path": "~/.config/Code/User/init.vim",
   "vim.visualstar": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.menuBarVisibility": "toggle",
+  "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
   "workbench.colorCustomizations": {
     "statusBar.background": "#363636"
   },
-  "window.closeWhenEmpty": true,
-  "window.zoomLevel": 0,
   "workbench.editor.enablePreview": false,
   "workbench.editor.restoreViewState": false,
   "workbench.editor.showIcons": false,

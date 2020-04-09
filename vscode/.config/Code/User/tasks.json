@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "vscode: extensions export",
+      "type": "shell",
+      "command": "code --list-extensions > ~/dotfiles/vscode/stowignore/extensions.txt"
+    },
+    {
+      "label": "vscode: extensions import",
+      "type": "shell",
+      "command": "cat ~/dotfiles/vscode/stowignore/extensions.txt | xargs -L 1 code --install-extension"
+    }
+  ]
+}
