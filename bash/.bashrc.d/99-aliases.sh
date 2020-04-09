@@ -47,7 +47,7 @@ if [ `uname -s` == 'Linux' ]; then
   alias sd='sudo systemctl'
   alias sdlog='sudo journalctl -n 20 -f -u'
 
-  alias zup='sudo zypper dist-upgrade && sudo flatpak update'
+  alias zup='sudo zypper dist-upgrade; sudo flatpak update'
   alias zin='sudo zypper install'
   alias zinn='sudo zypper install --force'
   alias zrm='sudo zypper remove'

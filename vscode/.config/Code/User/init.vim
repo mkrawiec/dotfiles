@@ -8,8 +8,8 @@ nnoremap <leader>= editor.action.formatDocument
 nnoremap - breadcrumbs.focusAndSelect
 
 " (][) pairs
-nmap ]s workbench.action.editor.nextChange
-nmap [s workbench.action.editor.previousChange
+nmap ]c workbench.action.editor.nextChange
+nmap [c workbench.action.editor.previousChange
 nmap ]l editor.action.marker.next
 nmap [l editor.action.marker.prev
 nmap ]q editor.action.marker.nextInFiles
@@ -44,11 +44,10 @@ nnoremap <leader>gc git.checkout
 nnoremap <leader>gd git.openChange
 nnoremap <leader>gi git.initialize
 nnoremap <leader>gI git.ignore
-nnoremap <leader>gb timeline.focus
+nnoremap <leader>gl timeline.focus
 nnoremap <leader>gp git.pullRebase
 nnoremap <leader>gP git.push
 nnoremap <leader>gS git.stage
-nnoremap <leader>gU git.revert
 nmap <leader>gs git.stageSelectedRanges
 nmap <leader>gu git.revertSelectedRanges
 

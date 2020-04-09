@@ -15,9 +15,6 @@ xmap s <Plug>VSurround
 " Use <leader>w instead
 nnoremap <C-w> <nop>
 
-" Auto close tags with </ and insert within
-inoremap </ </<C-x><C-o><Esc>vit<Esc>i
-
 " Move cursor by display lines when wrapping
 nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
 nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')

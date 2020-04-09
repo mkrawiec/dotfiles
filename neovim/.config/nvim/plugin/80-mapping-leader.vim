@@ -10,15 +10,12 @@ nnoremap <silent><leader>' :call mkrawiec#term#TogglePreview()<CR>
 nnoremap <leader>bb :FzfBuffers<CR>
 nnoremap <silent><leader>bd :bp\|bd #<CR>
 nnoremap <silent><leader>bD :%bd\|e #<CR>
-nnoremap <silent><leader>bn :bn<CR>
 nnoremap <silent><leader>bN :enew<CR>
-nnoremap <silent><leader>bp :bp<CR>
 nnoremap <leader>bs :call mkrawiec#utils#OpenScratch()<CR>
 nnoremap <leader>bY ggVGy
 nnoremap <leader>bP ggVGp
 
 " (f) files
-nnoremap <leader>fb :FzfMarks<CR>
 nnoremap <leader>ff :FzfFiles<CR>
 nnoremap <leader>fF :FzfGFiles<CR>
 nnoremap <leader>fr :FzfHistory<CR>
@@ -37,10 +34,9 @@ nnoremap <leader>gg :Gstatus<CR>
 nnoremap <leader>gp :call mkrawiec#git#PullThisBranch()<CR>
 nnoremap <leader>gP :call mkrawiec#git#PushThisBranch()<CR>
 nnoremap <leader>gS :Gwrite<CR>
-nnoremap <leader>gl :FzfCommits<CR>
-nnoremap <leader>gL :FzfBCommits<CR>
-nmap <leader>gs <Plug>GitGutterStageHunk
-nmap <leader>gu <Plug>GitGutterUndoHunk
+nnoremap <leader>gl :FzfBCommits<CR>
+nmap <leader>gs <Plug>(GitGutterStageHunk)
+nmap <leader>gu <Plug>(GitGutterUndoHunk)
 
 " (h) help
 nnoremap <leader>ht :FzfHelptags<CR>
