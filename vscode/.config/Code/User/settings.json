@@ -3,6 +3,7 @@
   "git.autoStash": true,
   "git.fetchOnPull": true,
   "git.openDiffOnClick": false,
+  "editor.semanticHighlighting.enabled": false,
   "editor.fontFamily": "Iosevka Term",
   "editor.fontSize": 16,
   "editor.hideCursorInOverviewRuler": true,
@@ -16,11 +17,13 @@
     "*.vim": "vimrc"
   },
   "files.hotExit": "onExitAndWindowClose",
+  "files.insertFinalNewline": true,
   "files.simpleDialog.enable": true,
   "java.configuration.checkProjectSettingsExclusions": false,
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/maciek/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
-  "search.smartCase": true,
   "search.collapseResults": "alwaysExpand",
+  "search.quickOpen.includeHistory": false,
+  "search.smartCase": true,
   "task.problemMatchers.neverPrompt": {
     "shell": true
   },
@@ -35,9 +38,7 @@
   "window.menuBarVisibility": "toggle",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#363636"
-  },
+  "workbench.colorTheme": "Tokyo Night",
   "workbench.editor.enablePreview": false,
   "workbench.editor.restoreViewState": false,
   "workbench.editor.showIcons": false,

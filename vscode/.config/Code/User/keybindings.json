@@ -1,140 +1,138 @@
 [
-    // Window navigation
-    {
-        "key": "ctrl+h",
-        "command": "workbench.action.navigateLeft"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.navigateRight"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.navigateUp"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.navigateDown"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.closeSidebar",
-        "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.closeSidebar",
-        "when": "sideBarFocus && activeViewlet == 'workbench.view.explorer'"
-    },
-    // List navigation
-    {
-        "key": "ctrl+n",
-        "command": "list.focusDown",
-        "when": "listFocus && !inputFocus"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "list.focusUp",
-        "when": "listFocus && !inputFocus"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "workbench.action.quickOpenSelectNext",
-        "when": "inQuickOpen"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "workbench.action.quickOpenSelectPrevious",
-        "when": "inQuickOpen"
-    },
-    {
-        "key": "ctrl+c",
-        "command": "workbench.action.closeQuickOpen",
-        "when": "inQuickOpen"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "list.focusFirst",
-        "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && textInputFocus"
-    },
-    {
-        "key": "ctrl+6",
-        "command": "-workbench.action.focusSixthEditorGroup"
-    },
-    {
-        "key": "ctrl+6",
-        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor"
-    },
-    {
-        "key": "-",
-        "command": "breadcrumbs.focusPreviousWithPicker",
-        "when": "breadcrumbsActive && breadcrumbsVisible && listFocus"
-    },
-    {
-        "key": "ctrl+x ctrl+o",
-        "command": "editor.action.triggerSuggest",
-        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+space",
-        "command": "-editor.action.triggerSuggest",
-        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
-    },
-    // Terminal
-    {
-        "key": "ctrl+a 1",
-        "command": "workbench.action.terminal.focusAtIndex1",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+a 2",
-        "command": "workbench.action.terminal.focusAtIndex2",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+a 3",
-        "command": "workbench.action.terminal.focusAtIndex3",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+a 4",
-        "command": "workbench.action.terminal.focusAtIndex4",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+a 5",
-        "command": "workbench.action.terminal.focusAtIndex5",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+a c",
-        "command": "workbench.action.terminal.new",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+a v",
-        "command": "workbench.action.terminal.split",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+a x",
-        "command": "workbench.action.terminal.kill",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "workbench.action.terminal.focusPreviousPane",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.terminal.focusNextPane",
-        "when": "terminalFocus"
-    },
-    // Panel
-    {
-        "key": "ctrl+a z",
-        "command": "workbench.action.toggleMaximizedPanel",
-        "when": "panelFocus"
-    }
+  // Window navigation
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.closeSidebar",
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.closeSidebar",
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.explorer'"
+  },
+  // List navigation
+  {
+    "key": "ctrl+n",
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "list.focusUp",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "workbench.action.closeQuickOpen",
+    "when": "inQuickOpen"
+  },
+  // Alter between buffers
+  {
+    "key": "ctrl+6",
+    "command": "-workbench.action.focusSixthEditorGroup"
+  },
+  {
+    "key": "ctrl+6",
+    "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+  },
+  // Breadcrumbs
+  {
+    "key": "-",
+    "command": "breadcrumbs.focusPreviousWithPicker",
+    "when": "breadcrumbsActive && breadcrumbsVisible && listFocus"
+  },
+  // Autocomplate
+  {
+    "key": "ctrl+x ctrl+o",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "-editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  // Terminal
+  {
+    "key": "ctrl+a 1",
+    "command": "workbench.action.terminal.focusAtIndex1",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+a 2",
+    "command": "workbench.action.terminal.focusAtIndex2",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+a 3",
+    "command": "workbench.action.terminal.focusAtIndex3",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+a 4",
+    "command": "workbench.action.terminal.focusAtIndex4",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+a 5",
+    "command": "workbench.action.terminal.focusAtIndex5",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+a c",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+a v",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+a x",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  // Panel
+  {
+    "key": "ctrl+a z",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "panelFocus"
+  }
 ]

@@ -3,7 +3,7 @@ nnoremap Y y$
 vnoremap > editor.action.indentLines
 vnoremap < editor.action.outdentLines
 nnoremap <leader><leader> workbench.action.showCommands
-nnoremap <leader>' workbench.action.terminal.toggleTerminal
+nnoremap <leader>' workbench.action.togglePanel
 nnoremap <leader>= editor.action.formatDocument
 nnoremap - breadcrumbs.focusAndSelect
 
@@ -85,5 +85,6 @@ nnoremap <leader>wv <C-w>v
 nnoremap <leader>wc <C-w>c
 nnoremap <leader>wo <C-w>o
 nnoremap <leader>ww <C-w>w
+nnoremap <leader>wj workbench.action.openView
 nnoremap <leader>wg workbench.action.increaseViewSize
 nnoremap <leader>wG workbench.action.decreaseViewSize

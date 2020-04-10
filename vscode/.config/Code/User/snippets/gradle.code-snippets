@@ -1,7 +1,7 @@
 {
-    "gradle eclipse apt": {
-        "prefix": "vsplugin",
-        "scope": "groovy",
-        "body": "id 'com.diffplug.eclipse.apt' version '3.22.0'"
-    }
+  "gradle eclipse apt": {
+    "prefix": "vsplugin",
+    "scope": "groovy",
+    "body": "id 'com.diffplug.eclipse.apt' version '3.22.0'"
+  }
 }
