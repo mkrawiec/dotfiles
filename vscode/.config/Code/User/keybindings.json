@@ -1,4 +1,10 @@
 [
+  // Return to editor from any other view
+  {
+    "key": "ctrl+[",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "!editorFocus && !terminalFocus"
+  },
   // Window navigation
   {
     "key": "ctrl+h",
@@ -37,6 +43,7 @@
     "command": "list.focusUp",
     "when": "listFocus && !inputFocus"
   },
+  // Quick open
   {
     "key": "ctrl+n",
     "command": "workbench.action.quickOpenSelectNext",
@@ -66,6 +73,11 @@
     "key": "-",
     "command": "breadcrumbs.focusPreviousWithPicker",
     "when": "breadcrumbsActive && breadcrumbsVisible && listFocus"
+  },
+  {
+    "key": "ctrl+shift+;",
+    "command": "-breadcrumbs.focus",
+    "when": "breadcrumbsPossible"
   },
   // Autocomplate
   {
@@ -134,5 +146,15 @@
     "key": "ctrl+a z",
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "panelFocus"
+  },
+  // When all editors closed <space><space> opens empty file
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "space space",
+    "command": "workbench.action.files.newUntitledFile",
+    "when": "activeEditorGroupEmpty"
   }
 ]

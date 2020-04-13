@@ -1,26 +1,30 @@
 {
   "breadcrumbs.symbolPath": "off",
-  "git.autoStash": true,
-  "git.fetchOnPull": true,
-  "git.openDiffOnClick": false,
-  "editor.semanticHighlighting.enabled": false,
+  "debug.toolBarLocation": "docked",
   "editor.fontFamily": "Iosevka Term",
   "editor.fontSize": 16,
   "editor.hideCursorInOverviewRuler": true,
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "boundary",
+  "editor.rulers": [
+    80
+  ],
+  "editor.semanticHighlighting.enabled": false,
   "editor.suggestSelection": "first",
+  "explorer.enableDragAndDrop": false,
   "explorer.openEditors.visible": 0,
   "extensions.ignoreRecommendations": true,
   "files.associations": {
     "*.vim": "vimrc"
   },
+  "files.enableTrash": false,
   "files.hotExit": "onExitAndWindowClose",
   "files.insertFinalNewline": true,
   "files.simpleDialog.enable": true,
-  "java.configuration.checkProjectSettingsExclusions": false,
-  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/maciek/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+  "git.autoStash": true,
+  "git.fetchOnPull": true,
+  "git.openDiffOnClick": false,
   "search.collapseResults": "alwaysExpand",
   "search.quickOpen.includeHistory": false,
   "search.smartCase": true,
@@ -35,7 +39,8 @@
   "vim.vimrc.path": "~/.config/Code/User/init.vim",
   "vim.visualstar": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.menuBarVisibility": "toggle",
+  "window.enableMenuBarMnemonics": false,
+  "window.menuBarVisibility": "hidden",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Tokyo Night",
@@ -48,5 +53,15 @@
   "workbench.settings.editor": "json",
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.tips.enabled": false
+  "workbench.tips.enabled": false,
+  // Language-Specific
+  "java.configuration.checkProjectSettingsExclusions": false,
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/maciek/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+  "[java]": {
+    "editor.rulers": [
+      100,
+      120
+    ]
+  },
+  "python.jediEnabled": false,
 }

@@ -31,25 +31,33 @@ nnoremap <leader>bd workbench.action.closeActiveEditor
 nnoremap <leader>ff workbench.action.quickOpen
 nnoremap <leader>fy workbench.action.files.copyPathOfActiveFile
 nnoremap <leader>ft workbench.view.explorer
+nnoremap <leader>fs workbench.action.files.save
 
 " (fe) editor files
 nnoremap <leader>fed workbench.action.openSettingsJson
 nnoremap <leader>fek workbench.action.openGlobalKeybindingsFile
-nnoremap <leader>fet workbench.action.tasks.openUserTasks
 nnoremap <leader>feR workbench.action.reloadWindow
 
 " (g) git
 nnoremap <leader>gg workbench.view.scm
 nnoremap <leader>gc git.checkout
 nnoremap <leader>gd git.openChange
-nnoremap <leader>gi git.initialize
-nnoremap <leader>gI git.ignore
 nnoremap <leader>gl timeline.focus
 nnoremap <leader>gp git.pullRebase
 nnoremap <leader>gP git.push
 nnoremap <leader>gS git.stage
 nmap <leader>gs git.stageSelectedRanges
 nmap <leader>gu git.revertSelectedRanges
+
+" (j) jump
+nnoremap <leader>jd editor.action.goToTypeDefinition
+nnoremap <leader>ji editor.action.goToImplementation
+nnoremap <leader>jr editor.action.goToReferences
+
+" (i) code interactions
+nnoremap <leader>ig editor.action.sourceAction
+nnoremap <leader>ii editor.action.quickFix
+nnoremap <leader>ir editor.action.rename
 
 " (p) project
 nnoremap <leader>pp workbench.action.files.openFolder
@@ -63,18 +71,16 @@ nnoremap <leader>v editor.action.smartSelect.grow
 nnoremap <leader>V editor.action.smartSelect.shrink
 
 " (r) run
-nnoremap <leader>r: workbench.debug.action.focusRepl
-nnoremap <leader>rr workbench.action.debug.run
-nnoremap <leader>rd workbench.action.debug.start
 nnoremap <leader>rb workbench.action.tasks.build
-nnoremap <leader>rT workbench.action.tasks.runTask
-nnoremap <leader>rt workbench.action.tasks.test
+nnoremap <leader>rd workbench.action.debug.restart
+nnoremap <leader>rr workbench.action.debug.run
 nnoremap <leader>rk workbench.action.debug.terminateThread
+nnoremap <leader>rt workbench.action.tasks.test
+nnoremap <leader>rT workbench.action.tasks.runTask
 
 " (s) search
-nnoremap <leader>sa workbench.action.findInFiles
+nnoremap <leader>sa workbench.action.replaceInFiles
 nnoremap <leader>se search.action.openNewEditor
-nnoremap <leader>sr workbench.action.replaceInFiles
 nnoremap <leader>sc :noh<CR>
 
 " (w) window
