@@ -38,7 +38,7 @@ display_yes_no()
 # create symlinks using gnu stow
 stow_files()
 {
-    stow --ignore=$STOW_IGNORE $@
+    stow --no-folding --ignore=$STOW_IGNORE $@
 }
 
 # run install script for individual dirs

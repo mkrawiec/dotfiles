@@ -24,7 +24,7 @@ nnoremap <leader>bD workbench.action.closeOtherEditors
 nnoremap <leader>bN workbench.action.files.newUntitledFile
 nnoremap <leader>bP ggVGp
 nnoremap <leader>bY ggVGy
-nnoremap <leader>bb workbench.action.showAllEditors
+nnoremap <leader>bb workbench.action.showAllEditorsByMostRecentlyUsed
 nnoremap <leader>bd workbench.action.closeActiveEditor
 
 " (f) files
@@ -40,7 +40,6 @@ nnoremap <leader>feR workbench.action.reloadWindow
 
 " (g) git
 nnoremap <leader>gg workbench.view.scm
-nnoremap <leader>gc git.checkout
 nnoremap <leader>gd git.openChange
 nnoremap <leader>gl timeline.focus
 nnoremap <leader>gp git.pullRebase
@@ -54,10 +53,11 @@ nnoremap <leader>jd editor.action.goToTypeDefinition
 nnoremap <leader>ji editor.action.goToImplementation
 nnoremap <leader>jr editor.action.goToReferences
 
-" (i) code interactions
+" (i) insert/interact
 nnoremap <leader>ig editor.action.sourceAction
 nnoremap <leader>ii editor.action.quickFix
 nnoremap <leader>ir editor.action.rename
+nnoremap <leader>id editor.debug.action.toggleBreakpoint
 
 " (p) project
 nnoremap <leader>pp workbench.action.files.openFolder

@@ -1,5 +1,6 @@
 {
   "breadcrumbs.symbolPath": "off",
+  "debug.openDebug": "openOnDebugBreak",
   "debug.toolBarLocation": "docked",
   "editor.fontFamily": "Iosevka Term",
   "editor.fontSize": 16,
@@ -44,7 +45,7 @@
   "window.restoreWindows": "none",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Tokyo Night",
+  "workbench.colorTheme": "Dracula",
   "workbench.editor.enablePreview": false,
   "workbench.editor.restoreViewState": false,
   "workbench.editor.showIcons": false,
