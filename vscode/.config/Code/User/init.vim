@@ -63,34 +63,26 @@ nnoremap <leader>id editor.debug.action.toggleBreakpoint
 nnoremap <leader>pp workbench.action.files.openFolder
 nnoremap <leader>pr workbench.action.openRecent
 nnoremap <leader>pc workbench.action.closeFolder
-nnoremap <leader>pt workbench.action.tasks.openWorkspaceFileTasks
-nnoremap <leader>pl workbench.action.debug.configure
-
-" (v) shrink/grow
-nnoremap <leader>v editor.action.smartSelect.grow
-nnoremap <leader>V editor.action.smartSelect.shrink
 
 " (r) run
 nnoremap <leader>rb workbench.action.tasks.build
 nnoremap <leader>rd workbench.action.debug.restart
 nnoremap <leader>rr workbench.action.debug.run
-nnoremap <leader>rk workbench.action.debug.terminateThread
+nnoremap <leader>rk workbench.action.debug.stop
 nnoremap <leader>rt workbench.action.tasks.test
 nnoremap <leader>rT workbench.action.tasks.runTask
 
 " (s) search
-nnoremap <leader>sa workbench.action.replaceInFiles
-nnoremap <leader>se search.action.openNewEditor
+nnoremap <leader>sa search.action.openNewEditor
 nnoremap <leader>sc :noh<CR>
 
 " (w) window
-nnoremap <leader>wp workbench.action.closeSidebar
 nnoremap <leader>w= <C-w>=
+nnoremap <leader>wc <C-w>c
+nnoremap <leader>wg workbench.action.maximizeEditor
+nnoremap <leader>wj workbench.action.openView
+nnoremap <leader>wo workbench.action.joinAllGroups
+nnoremap <leader>wp workbench.action.closeSidebar
 nnoremap <leader>ws <C-w>s
 nnoremap <leader>wv <C-w>v
-nnoremap <leader>wc <C-w>c
-nnoremap <leader>wo <C-w>o
 nnoremap <leader>ww <C-w>w
-nnoremap <leader>wj workbench.action.openView
-nnoremap <leader>wg workbench.action.increaseViewSize
-nnoremap <leader>wG workbench.action.decreaseViewSize

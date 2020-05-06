@@ -11,9 +11,7 @@
   "editor.rulers": [
     80
   ],
-  "editor.semanticHighlighting.enabled": false,
   "editor.suggestSelection": "first",
-  "explorer.enableDragAndDrop": false,
   "explorer.openEditors.visible": 0,
   "extensions.ignoreRecommendations": true,
   "files.associations": {
@@ -25,7 +23,6 @@
   "files.simpleDialog.enable": true,
   "git.autoStash": true,
   "git.fetchOnPull": true,
-  "git.openDiffOnClick": false,
   "search.collapseResults": "alwaysExpand",
   "search.quickOpen.includeHistory": false,
   "search.smartCase": true,
@@ -33,6 +30,7 @@
     "shell": true
   },
   "telemetry.enableTelemetry": false,
+  "terminal.integrated.fontSize": 16,
   "vim.hlsearch": true,
   "vim.leader": "<space>",
   "vim.useSystemClipboard": true,
@@ -65,5 +63,6 @@
       120
     ]
   },
+  "java.semanticHighlighting.enabled": true,
   "python.jediEnabled": false,
 }
