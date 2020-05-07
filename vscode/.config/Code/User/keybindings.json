@@ -131,6 +131,16 @@
     "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus"
   },
+  {
+    "key": "ctrl+a shift+0",
+    "command": "workbench.action.nextPanelView",
+    "when": "panelFocus"
+  },
+  {
+    "key": "ctrl+a shift+9",
+    "command": "workbench.action.previousPanelView",
+    "when": "panelFocus"
+  },
   // Panel
   {
     "key": "ctrl+a z",
@@ -151,6 +161,11 @@
   {
     "key": "ctrl+n",
     "command": "search.action.focusNextSearchResult",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "search.action.focusPreviousSearchResult",
     "when": "inSearchEditor"
   },
   {
