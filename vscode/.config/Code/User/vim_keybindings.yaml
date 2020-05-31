@@ -1,0 +1,95 @@
+---
+nnoremap:
+  Y: _y$_
+  <leader><leader>: workbench.action.showCommands
+  <leader>': workbench.action.togglePanel
+  <leader>=: editor.action.formatDocument
+  -: breadcrumbs.focusAndSelect
+
+  # (b) buffer
+  <leader>bD: workbench.action.closeOtherEditors
+  <leader>bN: workbench.action.files.newUntitledFile
+  <leader>bP: _ggVGp_
+  <leader>bY: _ggVGy_
+  <leader>bb: workbench.action.showAllEditorsByMostRecentlyUsed
+  <leader>bd: workbench.action.closeActiveEditor
+
+  # (f) files
+  <leader>fD: fileutils.removeFile
+  <leader>ff: workbench.action.quickOpen
+  <leader>fn: fileutils.newFile
+  <leader>fr: fileutils.renameFile
+  <leader>fs: workbench.action.files.save
+  <leader>ft: workbench.view.explorer
+  <leader>fy: workbench.action.files.copyPathOfActiveFile
+
+  # (fe) editor files
+  <leader>fed: workbench.action.openSettingsJson
+  <leader>fek: workbench.action.openGlobalKeybindingsFile
+  <leader>feR: workbench.action.reloadWindow
+
+  # (g) git
+  <leader>gg: workbench.view.scm
+  <leader>gd: git.openChange
+  <leader>gl: timeline.focus
+  <leader>gS: git.stage
+
+  # (j) jump
+  <leader>jd: editor.action.goToTypeDefinition
+  <leader>ji: editor.action.goToImplementation
+  <leader>jr: editor.action.goToReferences
+
+  # (i) insert/interact
+  <leader>ig: editor.action.sourceAction
+  <leader>ii: editor.action.quickFix
+  <leader>ir: editor.action.rename
+  <leader>id: editor.debug.action.toggleBreakpoint
+
+  # (p) project
+  <leader>pp: workbench.action.files.openFolder
+  <leader>pr: workbench.action.openRecent
+  <leader>pc: workbench.action.closeFolder
+
+  # (r) run
+  <leader>rb: workbench.action.tasks.build
+  <leader>rd: workbench.action.debug.restart
+  <leader>rr: workbench.action.debug.run
+  <leader>rk: workbench.action.debug.stop
+  <leader>rt: workbench.action.tasks.test
+  <leader>rT: workbench.action.tasks.runTask
+
+  # (s) search
+  <leader>sa: search.action.openNewEditor
+  <leader>sc: :noh
+
+  # (w) window
+  <leader>w=: _<C-w>=_
+  <leader>wc: _<C-w>c_
+  <leader>wg: workbench.action.maximizeEditor
+  <leader>wj: workbench.action.openView
+  <leader>wo:
+   - workbench.action.joinAllGroups
+   - workbench.action.closeSidebar
+   - workbench.action.closePanel
+  <leader>wp: workbench.action.closeSidebar
+  <leader>ws: _<C-w>s_
+  <leader>wv: _<C-w>v_
+  <leader>ww: _<C-w>w_
+
+vnoremap:
+  ">": editor.action.indentLines
+  "<": editor.action.outdentLines
+
+nmap:
+  "]c": workbench.action.editor.nextChange
+  "[c": workbench.action.editor.previousChange
+  "]l": editor.action.marker.next
+  "[l": editor.action.marker.prev
+  "]q": editor.action.marker.nextInFiles
+  "[q": editor.action.marker.prevInFiles
+  "]b": workbench.action.nextEditorInGroup
+  "[b": workbench.action.previousEditorInGroup
+  "]m": merge-conflict.next
+  "[m": merge-conflict.previous
+  <leader>gs: git.stageSelectedRanges
+  <leader>gu: git.revertSelectedRanges
