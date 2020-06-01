@@ -1,3 +1,4 @@
+# Run 'codeconf' to generate settings.json from this file
 ---
 nnoremap:
   Y: _y$_
@@ -35,6 +36,7 @@ nnoremap:
   <leader>gS: git.stage
 
   # (j) jump
+  <leader>ja: alternate.alternateFile
   <leader>jd: editor.action.goToTypeDefinition
   <leader>ji: editor.action.goToImplementation
   <leader>jr: editor.action.goToReferences

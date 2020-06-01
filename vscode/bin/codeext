@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+#
+# Import/export vscode extensions to a file
+# Usage: codeext import|export
+#
+
+declare -r EXTENSIONS_FILE=~/dotfiles/vscode/stowignore/extensions.txt
+
+extensions_import() {
+  cat $EXTENSIONS_FILE | xargs -L 1 code --install-extension
+}
+
+extensions_export() {
+  code --list-extensions > $EXTENSIONS_FILE
+}
+
+case $1 in
+    import) extensions_import ;;
+    export) extensions_export ;;
+    *) echo 'invalid argument'; exit 1 ;;
+esac

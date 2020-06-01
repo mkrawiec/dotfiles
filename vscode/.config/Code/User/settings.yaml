@@ -1,3 +1,4 @@
+# Run 'codeconf' to generate settings.json from this file
 ---
 breadcrumbs.symbolPath: 'off'
 debug.openDebug: openOnDebugBreak

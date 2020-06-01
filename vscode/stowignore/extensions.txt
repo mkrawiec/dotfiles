@@ -6,5 +6,5 @@ redhat.java
 sleistner.vscode-fileutils
 VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-java-debug
-vscjava.vscode-java-test
 vscodevim.vim
+will-wow.vscode-alternate-file
