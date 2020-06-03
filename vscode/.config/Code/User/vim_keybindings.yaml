@@ -82,7 +82,7 @@ vnoremap:
   ">": editor.action.indentLines
   "<": editor.action.outdentLines
 
-nmap:
+noremap:
   "]c": workbench.action.editor.nextChange
   "[c": workbench.action.editor.previousChange
   "]l": editor.action.marker.next

@@ -9,6 +9,7 @@ import re
 import json
 import platform
 from os import path
+from collections import defaultdict
 
 CONFIG_PATH = {
     "Linux": "~/.config/Code/User",
@@ -19,7 +20,7 @@ INPUT_SETTINGS = "settings.yaml"
 INPUT_KEYBINDINGS = "vim_keybindings.yaml"
 NON_COMMAND_DELIMITER = "_"
 
-output_object = {}
+output_object = defaultdict(list)
 
 
 def load_keybindings():
@@ -31,7 +32,12 @@ def load_keybindings():
         convert_keybinding_section(
             contents["vnoremap"], "vim.visualModeKeyBindingsNonRecursive"
         )
-        convert_keybinding_section(contents["nmap"], "vim.normalModeKeyBindings")
+        convert_keybinding_section(
+            contents["noremap"], "vim.normalModeKeyBindingsNonRecursive"
+        )
+        convert_keybinding_section(
+            contents["noremap"], "vim.visualModeKeyBindingsNonRecursive"
+        )
 
 
 def load_settings():
@@ -52,7 +58,7 @@ def convert_keybinding_section(keybindings, result_key):
             result["commands"] = convert_binding(binding)
         results.append(result)
 
-    output_object.update({result_key: results})
+    output_object[result_key].extend(results)
 
 
 def split_keystr(text):

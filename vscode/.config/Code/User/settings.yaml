@@ -40,7 +40,6 @@ window.menuBarVisibility: hidden
 window.restoreWindows: none
 workbench.activityBar.visible: false
 workbench.colorTheme: Dracula
-workbench.editor.enablePreview: false
 workbench.editor.restoreViewState: false
 workbench.editor.showIcons: false
 workbench.editor.showTabs: false
