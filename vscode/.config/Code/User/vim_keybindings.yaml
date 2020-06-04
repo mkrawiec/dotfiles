@@ -34,6 +34,7 @@ nnoremap:
   <leader>gd: git.openChange
   <leader>gl: timeline.focus
   <leader>gS: git.stage
+  <leader>gb: annotator.annotate
 
   # (j) jump
   <leader>ja: alternate.alternateFile

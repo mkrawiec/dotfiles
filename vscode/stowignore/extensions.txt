@@ -3,6 +3,7 @@ EditorConfig.EditorConfig
 GabrielBB.vscode-lombok
 ms-python.python
 redhat.java
+ryu1kn.annotator
 sleistner.vscode-fileutils
 VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-java-debug
