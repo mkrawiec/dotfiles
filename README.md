@@ -1,6 +1,12 @@
 # dotfiles
 
-![](https://cloud.githubusercontent.com/assets/142805/25564634/ca1bb1a4-2db7-11e7-8bc9-da64f9f496dd.png)
+## Showcase
+
+## Neovim
+![](https://user-images.githubusercontent.com/142805/84323886-e9314680-ab77-11ea-9638-324e8bb733e4.png)
+
+## VSCode
+![](https://user-images.githubusercontent.com/142805/84323883-e7678300-ab77-11ea-8b50-bfe1897828b1.png)
 
 ## Installation
 

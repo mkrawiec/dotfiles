@@ -19,12 +19,14 @@ nnoremap <leader>bP ggVGp
 nnoremap <leader>ff :FzfFiles<CR>
 nnoremap <leader>fF :FzfGFiles<CR>
 nnoremap <leader>fr :FzfHistory<CR>
-nnoremap <silent><leader>fed :edit $MYVIMRC<CR>
-nnoremap <silent><leader>feR :source $MYVIMRC \| runtime! plugin/**/*.vim<CR>
 nnoremap <silent><leader>fs :write %<CR>
 nnoremap <silent><leader>fS :SudoWrite<CR>
 nnoremap <silent><leader>fy :silent let @+=expand('%:p')<CR><C-g>
 nnoremap <leader>fx :ExtEdit<space>
+
+" (fe) editor files
+nnoremap <silent><leader>fed :edit $MYVIMRC<CR>
+nnoremap <silent><leader>feR :source $MYVIMRC \| runtime! plugin/**/*.vim<CR>
 
 " (g) git
 nnoremap <leader>gb :Gblame<CR>

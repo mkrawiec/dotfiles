@@ -67,7 +67,7 @@ nnoremap:
 
   # (w) window
   <leader>w=: _<C-w>=_
-  <leader>wc: _<C-w>c_
+  <leader>wc: workbench.action.closeEditorsAndGroup
   <leader>wg: workbench.action.maximizeEditor
   <leader>wj: workbench.action.openView
   <leader>wo:
