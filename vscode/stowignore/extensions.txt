@@ -1,11 +1,10 @@
 dracula-theme.theme-dracula
 EditorConfig.EditorConfig
-GabrielBB.vscode-lombok
-ms-python.python
-redhat.java
-ryu1kn.annotator
+kahole.magit
+msjsdiag.debugger-for-chrome
 sleistner.vscode-fileutils
+usernamehw.errorlens
 VisualStudioExptTeam.vscodeintellicode
-vscjava.vscode-java-debug
 vscodevim.vim
+VSpaceCode.whichkey
 will-wow.vscode-alternate-file

@@ -5,6 +5,10 @@ debug.openDebug: openOnDebugBreak
 debug.toolBarLocation: docked
 editor.fontFamily: Iosevka Term
 editor.fontSize: 16
+editor.gotoLocation.multipleDeclarations: "goto"
+editor.gotoLocation.multipleDefinitions: "goto"
+editor.gotoLocation.multipleImplementations: "goto"
+editor.gotoLocation.multipleTypeDefinitions: "goto"
 editor.hideCursorInOverviewRuler: true
 editor.lineNumbers: relative
 editor.minimap.enabled: false

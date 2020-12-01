@@ -30,17 +30,21 @@ nnoremap:
   <leader>feR: workbench.action.reloadWindow
 
   # (g) git
-  <leader>gg: workbench.view.scm
+  <leader>gg: magit.status
   <leader>gd: git.openChange
   <leader>gl: timeline.focus
   <leader>gS: git.stage
-  <leader>gb: annotator.annotate
+  <leader>gb: magit.blame-file
 
   # (j) jump
   <leader>ja: alternate.alternateFile
-  <leader>jd: editor.action.goToTypeDefinition
+  <leader>jj: editor.action.revealDefinition
+  <leader>jt: editor.action.goToTypeDefinition
   <leader>ji: editor.action.goToImplementation
-  <leader>jr: editor.action.goToReferences
+  <leader>jr: references-view.findReferences
+  <leader>js: workbench.action.gotoSymbol
+  <leader>jS: workbench.action.showAllSymbols
+  <leader>jw: workbench.action.openView
 
   # (i) insert/interact
   <leader>ig: editor.action.sourceAction
@@ -69,12 +73,14 @@ nnoremap:
   <leader>w=: _<C-w>=_
   <leader>wc: workbench.action.closeEditorsAndGroup
   <leader>wg: workbench.action.maximizeEditor
-  <leader>wj: workbench.action.openView
   <leader>wo:
    - workbench.action.joinAllGroups
    - workbench.action.closeSidebar
    - workbench.action.closePanel
-  <leader>wp: workbench.action.closeSidebar
+  <leader>wp:
+   - workbench.action.closeSidebar
+   - workbench.action.closePanel
+   - notifications.hideToasts
   <leader>ws: _<C-w>s_
   <leader>wv: _<C-w>v_
   <leader>ww: _<C-w>w_

@@ -69,6 +69,11 @@
     "command": "-breadcrumbs.focus",
     "when": "breadcrumbsPossible"
   },
+  {
+    "key": "ctrl+c",
+    "command": "breadcrumbs.selectEditor",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+  },
   // Autocomplate
   {
     "key": "ctrl+x ctrl+o",
@@ -168,14 +173,29 @@
     "command": "search.action.focusPreviousSearchResult",
     "when": "inSearchEditor"
   },
+  // Magit
   {
-    "key": "ctrl+[",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "inSearchEditor && inputFocus"
+    "key": "l",
+    "command": "-magit.logging",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
   },
   {
-    "key": "ctrl+c",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "inSearchEditor && inputFocus"
+    "key": "k",
+    "command": "-magit.discard-at-point",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "key": "alt+x g",
+    "command": "-magit.status"
+  },
+  {
+    "key": "shift+r",
+    "command": "magit.refresh",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "key": "g",
+    "command": "-magit.refresh",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
   },
 ]
