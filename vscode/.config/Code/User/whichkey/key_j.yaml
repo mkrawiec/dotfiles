@@ -1,0 +1,33 @@
+---
+key: j
+name: Jump...
+type: bindings
+bindings:
+  - key: a
+    name: Alternate file
+    type: command
+    command: alternate.alternateFile
+  - key: j
+    name: Definition
+    type: command
+    command: editor.action.revealDefinition
+  - key: t
+    name: Type definition
+    type: command
+    command: editor.action.goToTypeDefinition
+  - key: i
+    name: Implementation
+    type: command
+    command: editor.action.goToImplementation
+  - key: r
+    name: References
+    type: command
+    command: references-view.findReferences
+  - key: s
+    name: Symbol
+    type: command
+    command: workbench.action.showAllSymbols
+  - key: w
+    name: Window
+    type: command
+    command: workbench.action.openView

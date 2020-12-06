@@ -1,0 +1,17 @@
+---
+key: p
+name: Project...
+type: bindings
+bindings:
+  - key: p
+    name: Open
+    type: command
+    command: workbench.action.files.openFolder
+  - key: r
+    name: Recent
+    type: command
+    command: workbench.action.openRecent
+  - key: c
+    name: Close
+    type: command
+    command: workbench.action.closeFolder

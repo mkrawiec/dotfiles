@@ -1,9 +1,23 @@
 [
-  // Return to editor from any other view
+  // Global keybindings
   {
     "key": "ctrl+[",
     "command": "workbench.action.focusActiveEditorGroup",
-    "when": "!editorFocus && !terminalFocus"
+    "when": "!editorFocus && !terminalFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+[",
+    "command": "workbench.action.blur",
+    "when": "!editorFocus && !terminalFocus && inputFocus"
+  },
+  {
+    "key": "space",
+    "command": "whichkey.show",
+    "when": "!inputFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
   },
   // Window navigation
   {
@@ -152,16 +166,6 @@
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "panelFocus"
   },
-  // When all editors closed <space><space> opens empty file
-  {
-    "key": "ctrl+n",
-    "command": "-workbench.action.files.newUntitledFile"
-  },
-  {
-    "key": "space space",
-    "command": "workbench.action.files.newUntitledFile",
-    "when": "activeEditorGroupEmpty"
-  },
   // Search editor
   {
     "key": "ctrl+n",
@@ -185,6 +189,11 @@
     "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
   },
   {
+    "key": "shift+d",
+    "command": "magit.discard-at-point",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
     "key": "alt+x g",
     "command": "-magit.status"
   },
@@ -196,6 +205,26 @@
   {
     "key": "g",
     "command": "-magit.refresh",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "magit.move-next-entity",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-magit.move-next-entity",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "magit.move-previous-entity",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "-magit.move-previous-entity",
     "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
   },
 ]

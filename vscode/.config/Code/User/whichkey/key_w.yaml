@@ -1,0 +1,43 @@
+---
+key: w
+name: Window...
+type: bindings
+bindings:
+  - key: '='
+    name: Reset sizes
+    type: command
+    command: workbench.action.evenEditorWidths
+  - key: c
+    name: Close
+    type: command
+    command: workbench.action.closeEditorsAndGroup
+  - key: g
+    name: Golden ratio
+    type: command
+    command: workbench.action.maximizeEditor
+  - key: o
+    name: Close others
+    type: commands
+    commands:
+    - workbench.action.joinAllGroups
+    - workbench.action.closeSidebar
+    - workbench.action.closePanel
+  - key: p
+    name: Close sidebars
+    type: commands
+    commands:
+    - workbench.action.closeSidebar
+    - workbench.action.closePanel
+    - notifications.hideToasts
+  - key: s
+    name: Split
+    type: command
+    command: workbench.action.splitEditorDown
+  - key: v
+    name: Split vertically
+    type: command
+    command: workbench.action.splitEditor
+  - key: w
+    name: Focus next window
+    type: command
+    command: workbench.action.focusNextGroup

@@ -1,0 +1,16 @@
+---
+key: s
+name: Search...
+type: bindings
+bindings:
+  - key: a
+    name: Search editor
+    type: command
+    command: search.action.openNewEditor
+  - key: c
+    name: Clear highlight
+    type: command
+    command: vim.remap
+    args:
+      commands:
+      - command: ':noh'

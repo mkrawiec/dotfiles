@@ -1,0 +1,53 @@
+---
+key: f
+name: Files...
+type: bindings
+bindings:
+  - key: D
+    name: Delete file
+    type: command
+    command: fileutils.removeFile
+  - key: e
+    name: Editor files...
+    type: bindings
+    bindings:
+    - key: d
+      name: Open settings.json
+      type: command
+      command: workbench.action.openSettingsJson
+    - key: k
+      name: Open keybindings.json
+      type: command
+      command: workbench.action.openGlobalKeybindingsFile
+    - key: R
+      name: Reload window
+      type: command
+      command: workbench.action.reloadWindow
+  - key: f
+    name: Choose file
+    type: command
+    command: workbench.action.quickOpen
+  - key: l
+    name: Change file language
+    type: command
+    command: workbench.action.editor.changeLanguageMode
+  - key: n
+    name: New file
+    type: command
+    command: fileutils.newFile
+  - key: r
+    name: Rename file
+    type: command
+    command: fileutils.renameFile
+  - key: s
+    name: Save file
+    type: command
+    command: workbench.action.files.save
+  - key: t
+    name: Open explorer
+    type: command
+    command: workbench.view.explorer
+  - key: y
+    name: Yank file path
+    type: command
+    command: workbench.action.files.copyPathOfActiveFile

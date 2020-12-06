@@ -1,0 +1,37 @@
+---
+key: g
+name: Git...
+type: bindings
+bindings:
+  - key: b
+    name: Blame
+    type: command
+    command: magit.blame-file
+  - key: d
+    name: Diff
+    type: command
+    command: git.openChange
+  - key: g
+    name: Status
+    type: command
+    command: magit.status
+  - key: l
+    name: Log
+    type: command
+    command: timeline.focus
+  - key: s
+    name: Stage range
+    type: command
+    command: git.stageSelectedRanges
+  - key: S
+    name: Stage file
+    type: command
+    command: magit.stage-file
+  - key: s
+    name: Unstage range
+    type: command
+    command: git.revertSelectedRanges
+  - key: U
+    name: Unstage file
+    type: command
+    command: magit.unstage-file

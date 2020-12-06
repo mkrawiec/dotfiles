@@ -29,6 +29,7 @@ git.autoStash: true
 git.fetchOnPull: true
 search.collapseResults: alwaysExpand
 search.quickOpen.includeHistory: false
+search.searchEditor.reusePriorSearchConfiguration: true
 search.smartCase: true
 task.problemMatchers.neverPrompt:
   shell: true
@@ -44,6 +45,7 @@ window.menuBarVisibility: hidden
 window.restoreWindows: none
 workbench.activityBar.visible: false
 workbench.colorTheme: Dracula
+workbench.editor.enablePreviewFromQuickOpen: false
 workbench.editor.restoreViewState: false
 workbench.editor.showIcons: false
 workbench.editor.showTabs: false
@@ -53,10 +55,7 @@ workbench.settings.editor: json
 workbench.settings.enableNaturalLanguageSearch: false
 workbench.startupEditor: newUntitledFile
 workbench.tips.enabled: false
-java.configuration.checkProjectSettingsExclusions: false
 "[java]":
   editor.rulers:
   - 100
   - 120
-java.semanticHighlighting.enabled: true
-python.jediEnabled: false

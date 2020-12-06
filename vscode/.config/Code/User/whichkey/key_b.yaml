@@ -1,0 +1,25 @@
+---
+key: b
+name: Buffers...
+type: bindings
+bindings:
+  - key: b
+    name: Choose buffer
+    type: command
+    command: workbench.action.showAllEditorsByMostRecentlyUsed
+  - key: d
+    name: Close active buffer
+    type: command
+    command: workbench.action.closeActiveEditor
+  - key: D
+    name: Close other buffers
+    type: command
+    command: workbench.action.closeOtherEditors
+  - key: N
+    name: New buffer
+    type: command
+    command: workbench.action.files.newUntitledFile
+  - key: u
+    name: Reopen closed buffer
+    type: command
+    command: workbench.action.reopenClosedEditor

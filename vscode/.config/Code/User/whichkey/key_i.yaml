@@ -1,0 +1,25 @@
+---
+key: i
+name: Interact...
+type: bindings
+bindings:
+  - key: d
+    name: Toggle breakpoint
+    type: command
+    command: editor.debug.action.toggleBreakpoint
+  - key: g
+    name: Source action
+    type: command
+    command: editor.action.sourceAction
+  - key: i
+    name: Quick fix
+    type: command
+    command: editor.action.quickFix
+  - key: r
+    name: Rename
+    type: command
+    command: editor.action.rename
+  - key: y
+    name: Yank problem message
+    type: command
+    command: errorLens.copyProblemMessage

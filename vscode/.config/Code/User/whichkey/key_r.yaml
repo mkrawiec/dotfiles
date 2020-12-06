@@ -1,0 +1,37 @@
+---
+key: r
+name: Run...
+type: bindings
+bindings:
+  - key: t
+    name: Task...
+    type: bindings
+    bindings:
+    - key: t
+      name: Choose
+      type: command
+      command: workbench.action.tasks.runTask
+    - key: s
+      name: Spec
+      type: command
+      command: workbench.action.tasks.test
+    - key: b
+      name: Build
+      type: command
+      command: workbench.action.tasks.build
+  - key: d
+    name: Debug...
+    type: bindings
+    bindings:
+    - key: d
+      name: Debug
+      type: command
+      command: workbench.action.debug.restart
+    - key: r
+      name: Run
+      type: command
+      command: workbench.action.debug.restart
+    - key: k
+      name: Kill
+      type: command
+      command: workbench.action.debug.stop

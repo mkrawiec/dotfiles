@@ -1,0 +1,13 @@
+---
+- key: ' '
+  name: Show commands
+  type: command
+  command: workbench.action.showCommands
+- key: "'"
+  name: Toggle terminal
+  type: command
+  command: workbench.action.togglePanel
+- key: '='
+  name: Format document
+  type: command
+  command: editor.action.formatDocument

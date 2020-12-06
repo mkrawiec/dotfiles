@@ -8,7 +8,7 @@ import yaml
 import re
 import json
 import platform
-from os import path
+from os import path, scandir
 from collections import defaultdict
 
 CONFIG_PATH = {
@@ -18,13 +18,14 @@ CONFIG_PATH = {
 OUTPUT = "settings.json"
 INPUT_SETTINGS = "settings.yaml"
 INPUT_KEYBINDINGS = "vim_keybindings.yaml"
+INPUT_WHICHKEY_DIR = "whichkey"
 NON_COMMAND_DELIMITER = "_"
 
 output_object = defaultdict(list)
 
 
 def load_keybindings():
-    with vsopen(INPUT_KEYBINDINGS) as f:
+    with open_config(INPUT_KEYBINDINGS) as f:
         contents = yaml.safe_load(f)
         convert_keybinding_section(
             contents["nnoremap"], "vim.normalModeKeyBindingsNonRecursive"
@@ -41,9 +42,25 @@ def load_keybindings():
 
 
 def load_settings():
-    with vsopen(INPUT_SETTINGS) as f:
+    with open_config(INPUT_SETTINGS) as f:
         contents = yaml.safe_load(f)
         output_object.update(contents)
+
+
+def load_whichkey():
+    whichkey_bindings = output_object["whichkey.bindings"]
+
+    files = sorted(scandir(get_config_path(INPUT_WHICHKEY_DIR)), key=lambda x: x.name)
+    for entry in files:
+        if not entry.path.endswith(".yaml"):
+            continue
+
+        with open(entry.path) as f:
+            contents = yaml.safe_load(f)
+            if type(contents) is list:
+                whichkey_bindings += contents
+            else:
+                whichkey_bindings.append(contents)
 
 
 def convert_keybinding_section(keybindings, result_key):
@@ -82,16 +99,21 @@ def parse_binding(binding):
 
 
 def save_settings():
-    with vsopen(OUTPUT, "w") as outfile:
+    with open_config(OUTPUT, "w") as outfile:
         json.dump(output_object, outfile)
 
 
-def vsopen(file, mode="r"):
+def open_config(file, mode="r"):
+    return open(get_config_path(file), mode)
+
+
+def get_config_path(file):
     basedir = path.expanduser(CONFIG_PATH[platform.system()])
-    return open(path.join(basedir, file), mode)
+    return path.join(basedir, file)
 
 
 if __name__ == "__main__":
     load_settings()
     load_keybindings()
+    load_whichkey()
     save_settings()
