@@ -7,6 +7,10 @@ bindings:
     name: Alternate file
     type: command
     command: alternate.alternateFile
+  - key: A
+    name: Alternate file (create)
+    type: command
+    command: alternate.createAlternateFile
   - key: j
     name: Definition
     type: command

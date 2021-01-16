@@ -19,6 +19,19 @@ bindings:
     name: New buffer
     type: command
     command: workbench.action.files.newUntitledFile
+  - key: P
+    name: Paste clipboard to buffer
+    type: commands
+    commands:
+    - editor.action.selectAll
+    - editor.action.clipboardPasteAction
+  - key: Y
+    name: Yank buffer to clipboard
+    type: commands
+    commands:
+    - editor.action.selectAll
+    - editor.action.clipboardCopyAction
+    - extension.vim_escape
   - key: u
     name: Reopen closed buffer
     type: command

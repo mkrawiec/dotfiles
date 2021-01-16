@@ -15,6 +15,7 @@ editor.minimap.enabled: false
 editor.renderWhitespace: boundary
 editor.rulers:
 - 80
+editor.scrollbar.horizontal: hidden
 editor.suggestSelection: first
 explorer.openEditors.visible: 0
 extensions.ignoreRecommendations: true
@@ -36,6 +37,7 @@ task.problemMatchers.neverPrompt:
 telemetry.enableTelemetry: false
 terminal.integrated.fontSize: 16
 terminal.integrated.scrollback: 10000
+vim.highlightedyank.enable: true
 vim.hlsearch: true
 vim.leader: "<space>"
 vim.useSystemClipboard: true
@@ -45,7 +47,6 @@ window.menuBarVisibility: hidden
 window.restoreWindows: none
 workbench.activityBar.visible: false
 workbench.colorTheme: Dracula
-workbench.editor.enablePreviewFromQuickOpen: false
 workbench.editor.restoreViewState: false
 workbench.editor.showIcons: false
 workbench.editor.showTabs: false

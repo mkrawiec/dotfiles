@@ -7,6 +7,10 @@ bindings:
     name: Toggle breakpoint
     type: command
     command: editor.debug.action.toggleBreakpoint
+  - key: D
+    name: Remove all breakpoints
+    type: command
+    command: workbench.debug.viewlet.action.removeAllBreakpoints
   - key: g
     name: Source action
     type: command

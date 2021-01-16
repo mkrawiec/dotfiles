@@ -19,6 +19,22 @@ bindings:
     name: Log
     type: command
     command: timeline.focus
+  - key: m
+    name: Merge conflicts...
+    type: bindings
+    bindings:
+    - key: b
+      name: Accept both
+      type: command
+      command: merge-conflict.accept.both
+    - key: c
+      name: Accept current
+      type: command
+      command: merge-conflict.accept.current
+    - key: i
+      name: Accept incoming
+      type: command
+      command: merge-conflict.accept.incoming
   - key: s
     name: Stage range
     type: command
@@ -27,8 +43,8 @@ bindings:
     name: Stage file
     type: command
     command: magit.stage-file
-  - key: s
-    name: Unstage range
+  - key: u
+    name: Revert range
     type: command
     command: git.revertSelectedRanges
   - key: U

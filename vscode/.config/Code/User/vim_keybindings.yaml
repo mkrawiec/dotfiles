@@ -3,6 +3,7 @@
 nnoremap:
   Y: _y$_
   -: breadcrumbs.focusAndSelect
+  "``": workbench.action.navigateLast
 
 vnoremap:
   ">": editor.action.indentLines
