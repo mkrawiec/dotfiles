@@ -92,7 +92,7 @@
   {
     "key": "ctrl+x ctrl+o",
     "command": "editor.action.triggerSuggest",
-    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+    "when": "editorHasCompletionItemProvider && editorFocus && !editorReadonly"
   },
   {
     "key": "ctrl+space",
@@ -123,6 +123,16 @@
   {
     "key": "ctrl+a 5",
     "command": "workbench.action.terminal.focusAtIndex5",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+a w",
+    "command": "workbench.action.quickOpenTerm",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+a ,",
+    "command": "workbench.action.terminal.rename",
     "when": "terminalFocus"
   },
   {
@@ -167,6 +177,21 @@
     "when": "panelFocus"
   },
   // Search editor
+  {
+    "key": "ctrl+c",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "inSearchEditor && searchInputBoxFocus"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "search.action.focusQueryEditorWidget",
+    "when": "inSearchEditor && !searchInputBoxFocus"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "search.searchEditor.action.deleteFileResults",
+    "when": "inSearchEditor"
+  },
   {
     "key": "ctrl+n",
     "command": "search.action.focusNextSearchResult",

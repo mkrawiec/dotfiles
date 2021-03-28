@@ -1,8 +1,10 @@
-dracula-theme.theme-dracula
 EditorConfig.EditorConfig
+GitHub.github-vscode-theme
 kahole.magit
+mkrawiec.config-extension
 msjsdiag.debugger-for-chrome
 sleistner.vscode-fileutils
+streetsidesoftware.code-spell-checker
 usernamehw.errorlens
 VisualStudioExptTeam.vscodeintellicode
 vscodevim.vim

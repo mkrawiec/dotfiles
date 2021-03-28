@@ -3,6 +3,8 @@
 breadcrumbs.symbolPath: 'off'
 debug.openDebug: openOnDebugBreak
 debug.toolBarLocation: docked
+cSpell.enabled: false
+cSpell.showStatus: false
 editor.fontFamily: Iosevka Term
 editor.fontSize: 16
 editor.gotoLocation.multipleDeclarations: "goto"
@@ -29,6 +31,7 @@ fileutils.typeahead.enabled: false
 git.autoStash: true
 git.fetchOnPull: true
 search.collapseResults: alwaysExpand
+search.mode: reuseEditor
 search.quickOpen.includeHistory: false
 search.searchEditor.reusePriorSearchConfiguration: true
 search.smartCase: true
@@ -46,7 +49,9 @@ window.enableMenuBarMnemonics: false
 window.menuBarVisibility: hidden
 window.restoreWindows: none
 workbench.activityBar.visible: false
-workbench.colorTheme: Dracula
+workbench.colorTheme: GitHub Dark
+workbench.editor.decorations.colors: true
+workbench.editor.enablePreviewFromCodeNavigation: true
 workbench.editor.restoreViewState: false
 workbench.editor.showIcons: false
 workbench.editor.showTabs: false

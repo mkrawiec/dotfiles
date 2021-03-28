@@ -38,7 +38,7 @@ playstream() { streamlink --player-continuous-http --hls-segment-threads 4 $1 be
 
 # Etc
 alias myip='curl -s http://ip-api.com/json | python3 -m json.tool'
-alias serve='python3 -m SimpleHTTPServer'
+alias serve='python3 -m http.server 3000'
 
 if [ `uname -s` == 'Linux' ]; then
   # Linux specific

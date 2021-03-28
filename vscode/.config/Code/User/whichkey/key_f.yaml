@@ -43,6 +43,10 @@ bindings:
     name: Save file
     type: command
     command: workbench.action.files.save
+  - key: S
+    name: Save all files
+    type: command
+    command: workbench.action.files.saveAll
   - key: t
     name: Open explorer
     type: command

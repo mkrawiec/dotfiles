@@ -6,7 +6,7 @@ bindings:
   - key: b
     name: Choose buffer
     type: command
-    command: workbench.action.showAllEditorsByMostRecentlyUsed
+    command: workbench.action.showEditorsInActiveGroup
   - key: d
     name: Close active buffer
     type: command

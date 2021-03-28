@@ -6,7 +6,7 @@ bindings:
   - key: a
     name: Search editor
     type: command
-    command: search.action.openNewEditor
+    command: workbench.action.findInFiles
   - key: c
     name: Clear highlight
     type: command
