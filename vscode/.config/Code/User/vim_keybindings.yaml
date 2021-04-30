@@ -15,11 +15,11 @@ noremap:
   "]b": workbench.action.nextEditorInGroup
   "[c": workbench.action.editor.previousChange
   "]c": workbench.action.editor.nextChange
-  "[C": merge-conflict.previous
-  "]C": merge-conflict.next
   "[d": editor.debug.action.goToPreviousBreakpoint
   "]d": editor.debug.action.goToNextBreakpoint
   "[l": editor.action.marker.prev
   "]l": editor.action.marker.next
+  "[m": merge-conflict.previous
+  "]m": merge-conflict.next
   "[q": editor.action.marker.prevInFiles
   "]q": editor.action.marker.nextInFiles

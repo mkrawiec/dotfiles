@@ -6,7 +6,7 @@
 - key: "'"
   name: Toggle terminal
   type: command
-  command: workbench.action.togglePanel
+  command: workbench.action.terminal.focus
 - key: '='
   name: Format document
   type: command

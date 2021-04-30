@@ -14,3 +14,7 @@ bindings:
     args:
       commands:
       - command: ':noh'
+  - key: s
+    name: Search symbol
+    type: command
+    command: workbench.action.showAllSymbols

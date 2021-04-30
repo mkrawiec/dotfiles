@@ -1,23 +1,17 @@
 [
   // Global keybindings
   {
-    "key": "ctrl+[",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "!editorFocus && !terminalFocus && !inputFocus"
-  },
-  {
-    "key": "ctrl+[",
-    "command": "workbench.action.blur",
-    "when": "!editorFocus && !terminalFocus && inputFocus"
-  },
-  {
     "key": "space",
     "command": "whichkey.show",
-    "when": "!inputFocus"
+    "when": "!inputFocus && !listFocus"
   },
   {
     "key": "ctrl+n",
     "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-workbench.action.quickOpen"
   },
   // Window navigation
   {
@@ -63,6 +57,16 @@
     "command": "workbench.action.closeQuickOpen",
     "when": "inQuickOpen"
   },
+  {
+    "key": "ctrl+[",
+    "command": "workbench.action.closeQuickOpen",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "workbench.action.alternativeAcceptSelectedQuickOpenItem",
+    "when": "inQuickOpen"
+  },
   // Alter between buffers
   {
     "key": "ctrl+6",
@@ -77,11 +81,6 @@
     "key": "-",
     "command": "breadcrumbs.focusPreviousWithPicker",
     "when": "breadcrumbsActive && breadcrumbsVisible && listFocus"
-  },
-  {
-    "key": "ctrl+shift+;",
-    "command": "-breadcrumbs.focus",
-    "when": "breadcrumbsPossible"
   },
   {
     "key": "ctrl+c",
@@ -160,20 +159,15 @@
     "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus"
   },
-  {
-    "key": "ctrl+a shift+0",
-    "command": "workbench.action.nextPanelView",
-    "when": "panelFocus"
-  },
-  {
-    "key": "ctrl+a shift+9",
-    "command": "workbench.action.previousPanelView",
-    "when": "panelFocus"
-  },
   // Panel
   {
-    "key": "ctrl+a z",
-    "command": "workbench.action.toggleMaximizedPanel",
+    "key": "ctrl+a q",
+    "command": "workbench.action.closePanel",
+    "when": "panelFocus"
+  },
+  {
+    "key": "ctrl+a ctrl+a",
+    "command": "whichkey.show",
     "when": "panelFocus"
   },
   // Search editor

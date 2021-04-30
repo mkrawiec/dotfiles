@@ -15,7 +15,7 @@ bindings:
     name: Close other buffers
     type: command
     command: workbench.action.closeOtherEditors
-  - key: N
+  - key: n
     name: New buffer
     type: command
     command: workbench.action.files.newUntitledFile

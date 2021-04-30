@@ -27,10 +27,6 @@ bindings:
     name: References
     type: command
     command: references-view.findReferences
-  - key: s
-    name: Symbol
-    type: command
-    command: workbench.action.showAllSymbols
   - key: w
     name: Window
     type: command

@@ -1,16 +1,16 @@
 # Run 'codeconf' to generate settings.json from this file
 ---
 breadcrumbs.symbolPath: 'off'
-debug.openDebug: openOnDebugBreak
+debug.openDebug: neverOpen
 debug.toolBarLocation: docked
 cSpell.enabled: false
 cSpell.showStatus: false
 editor.fontFamily: Iosevka Term
 editor.fontSize: 16
-editor.gotoLocation.multipleDeclarations: "goto"
-editor.gotoLocation.multipleDefinitions: "goto"
-editor.gotoLocation.multipleImplementations: "goto"
-editor.gotoLocation.multipleTypeDefinitions: "goto"
+editor.gotoLocation.multipleDeclarations: goto
+editor.gotoLocation.multipleDefinitions: goto
+editor.gotoLocation.multipleImplementations: goto
+editor.gotoLocation.multipleTypeDefinitions: goto
 editor.hideCursorInOverviewRuler: true
 editor.lineNumbers: relative
 editor.minimap.enabled: false
@@ -22,14 +22,15 @@ editor.suggestSelection: first
 explorer.openEditors.visible: 0
 extensions.ignoreRecommendations: true
 files.associations:
-  "*.vim": vimrc
+  '*.vim': vimrc
 files.enableTrash: false
 files.hotExit: onExitAndWindowClose
 files.insertFinalNewline: true
 files.simpleDialog.enable: true
-fileutils.typeahead.enabled: false
 git.autoStash: true
 git.fetchOnPull: true
+rest-client.enableTelemetry: false
+rest-client.previewResponseInUntitledDocument: true
 search.collapseResults: alwaysExpand
 search.mode: reuseEditor
 search.quickOpen.includeHistory: false
@@ -39,29 +40,34 @@ task.problemMatchers.neverPrompt:
   shell: true
 telemetry.enableTelemetry: false
 terminal.integrated.fontSize: 16
+terminal.integrated.rendererType: experimentalWebgl
 terminal.integrated.scrollback: 10000
 vim.highlightedyank.enable: true
 vim.hlsearch: true
-vim.leader: "<space>"
+vim.leader: '<space>'
 vim.useSystemClipboard: true
 vim.visualstar: true
+whichkey.delay: 400
+whichkey.sortOrder: alphabetically
 window.enableMenuBarMnemonics: false
 window.menuBarVisibility: hidden
 window.restoreWindows: none
 workbench.activityBar.visible: false
 workbench.colorTheme: GitHub Dark
-workbench.editor.decorations.colors: true
 workbench.editor.enablePreviewFromCodeNavigation: true
 workbench.editor.restoreViewState: false
 workbench.editor.showIcons: false
 workbench.editor.showTabs: false
+workbench.enableExperiments: false
 workbench.iconTheme: vs-minimal
 workbench.list.automaticKeyboardNavigation: false
+workbench.panel.opensMaximized: always
 workbench.settings.editor: json
 workbench.settings.enableNaturalLanguageSearch: false
+workbench.sideBar.location: right
 workbench.startupEditor: newUntitledFile
 workbench.tips.enabled: false
-"[java]":
+'[java]':
   editor.rulers:
   - 100
   - 120

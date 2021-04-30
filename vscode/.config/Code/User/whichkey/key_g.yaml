@@ -31,6 +31,10 @@ bindings:
       name: Accept current
       type: command
       command: merge-conflict.accept.current
+    - key: d
+      name: Diff conflict
+      type: command
+      command: merge-conflict.compare
     - key: i
       name: Accept incoming
       type: command

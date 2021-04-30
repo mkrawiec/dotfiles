@@ -37,7 +37,30 @@ bindings:
     name: Split vertically
     type: command
     command: workbench.action.splitEditor
-  - key: w
-    name: Focus next window
-    type: command
-    command: workbench.action.focusNextGroup
+  - key: e
+    name: Enlarge window
+    type: transient
+    command: workbench.action.increaseViewSize
+    bindings:
+    - key: e
+      name: Enlarge window
+      type: command
+      command: workbench.action.increaseViewSize
+    - key: E
+      name: Shrink window
+      type: command
+      command: workbench.action.decreaseViewSize
+  - key: E
+    name: Shrink window
+    type: transient
+    command: workbench.action.decreaseViewSize
+    bindings:
+    - key: e
+      name: Enlarge window
+      type: command
+      command: workbench.action.increaseViewSize
+    - key: E
+      name: Shrink window
+      type: command
+      command: workbench.action.decreaseViewSize
+

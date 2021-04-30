@@ -3,15 +3,19 @@ key: p
 name: Project...
 type: bindings
 bindings:
+  - key: c
+    name: Close project
+    type: command
+    command: workbench.action.closeFolder
   - key: p
-    name: Open
+    name: Open project
     type: command
     command: workbench.action.files.openFolder
   - key: r
-    name: Recent
+    name: Recent projects
     type: command
     command: workbench.action.openRecent
-  - key: c
-    name: Close
+  - key: s
+    name: Open project settings
     type: command
-    command: workbench.action.closeFolder
+    command: workbench.action.openWorkspaceSettingsFile

@@ -5,8 +5,10 @@ type: bindings
 bindings:
   - key: D
     name: Delete file
-    type: command
-    command: fileutils.removeFile
+    type: commands
+    commands:
+    - revealInExplorer
+    - deleteFile
   - key: e
     name: Editor files...
     type: bindings
@@ -28,17 +30,19 @@ bindings:
     type: command
     command: workbench.action.quickOpen
   - key: l
-    name: Change file language
+    name: Locate file
     type: command
-    command: workbench.action.editor.changeLanguageMode
-  - key: n
-    name: New file
-    type: command
-    command: fileutils.newFile
+    command: revealFileInOS
   - key: r
-    name: Rename file
+    name: Open recent
     type: command
-    command: fileutils.renameFile
+    command: workbench.action.openRecent
+  - key: R
+    name: Rename file
+    type: commands
+    commands:
+    - revealInExplorer
+    - renameFile
   - key: s
     name: Save file
     type: command
