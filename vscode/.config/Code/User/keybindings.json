@@ -1,6 +1,10 @@
 [
   // Global keybindings
   {
+    "key": "capslock",
+    "command": "whichkey.show"
+  },
+  {
     "key": "space",
     "command": "whichkey.show",
     "when": "!inputFocus && !listFocus"
@@ -140,7 +144,7 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+a v",
+    "key": "ctrl+a s",
     "command": "workbench.action.terminal.split",
     "when": "terminalFocus"
   },
@@ -150,24 +154,24 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+h",
+    "key": "ctrl+k",
     "command": "workbench.action.terminal.focusPreviousPane",
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+l",
+    "key": "ctrl+j",
     "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus"
   },
   // Panel
   {
-    "key": "ctrl+a q",
-    "command": "workbench.action.closePanel",
+    "key": "ctrl+a z",
+    "command": "workbench.action.toggleMaximizedPanel",
     "when": "panelFocus"
   },
   {
-    "key": "ctrl+a ctrl+a",
-    "command": "whichkey.show",
+    "key": "ctrl+a q",
+    "command": "workbench.action.closePanel",
     "when": "panelFocus"
   },
   // Search editor
@@ -180,11 +184,6 @@
     "key": "ctrl+i",
     "command": "search.action.focusQueryEditorWidget",
     "when": "inSearchEditor && !searchInputBoxFocus"
-  },
-  {
-    "key": "ctrl+u",
-    "command": "search.searchEditor.action.deleteFileResults",
-    "when": "inSearchEditor"
   },
   {
     "key": "ctrl+n",

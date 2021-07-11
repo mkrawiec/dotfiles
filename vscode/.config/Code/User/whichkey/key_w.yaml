@@ -16,14 +16,15 @@ bindings:
     type: command
     command: workbench.action.maximizeEditor
   - key: o
-    name: Close others
+    name: Close other windows
     type: commands
     commands:
     - workbench.action.joinAllGroups
     - workbench.action.closeSidebar
     - workbench.action.closePanel
+    - notifications.hideToasts
   - key: p
-    name: Close sidebars
+    name: Close non-editor windows
     type: commands
     commands:
     - workbench.action.closeSidebar
@@ -63,4 +64,9 @@ bindings:
       name: Shrink window
       type: command
       command: workbench.action.decreaseViewSize
-
+  - key: l
+    name: Toggle layout
+    type: commands
+    commands:
+    - workbench.action.toggleEditorGroupLayout
+    - workbench.action.focusFirstEditorGroup

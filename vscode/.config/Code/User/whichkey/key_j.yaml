@@ -31,3 +31,17 @@ bindings:
     name: Window
     type: command
     command: workbench.action.openView
+  - key: p
+    name: Focus sidebar
+    type: commands
+    commands:
+    - workbench.action.focusSideBar
+    - workbench.action.focusSideBar
+  - key: d
+    name: Debug console
+    type: command
+    command: workbench.panel.repl.view.focus
+  - key: c
+    name: Terminal
+    type: command
+    command: workbench.action.terminal.focus

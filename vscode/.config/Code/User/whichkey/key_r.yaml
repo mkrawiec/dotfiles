@@ -11,10 +11,6 @@ bindings:
     name: Debug...
     type: bindings
     bindings:
-    - key: c
-      name: Console
-      type: command
-      command: workbench.panel.repl.view.focus
     - key: d
       name: Debug
       type: command

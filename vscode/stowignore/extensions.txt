@@ -1,5 +1,4 @@
 EditorConfig.EditorConfig
-GitHub.github-vscode-theme
 humao.rest-client
 kahole.magit
 mkrawiec.config-extension

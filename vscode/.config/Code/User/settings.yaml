@@ -40,7 +40,6 @@ task.problemMatchers.neverPrompt:
   shell: true
 telemetry.enableTelemetry: false
 terminal.integrated.fontSize: 16
-terminal.integrated.rendererType: experimentalWebgl
 terminal.integrated.scrollback: 10000
 vim.highlightedyank.enable: true
 vim.hlsearch: true
@@ -52,16 +51,22 @@ whichkey.sortOrder: alphabetically
 window.enableMenuBarMnemonics: false
 window.menuBarVisibility: hidden
 window.restoreWindows: none
+window.dialogStyle: custom
 workbench.activityBar.visible: false
-workbench.colorTheme: GitHub Dark
+workbench.colorCustomizations:
+  statusBar.background: "#1a1a1a"
+  statusBar.noFolderBackground: "#1a1a1a"
+  statusBar.debuggingBackground: "#943131"
 workbench.editor.enablePreviewFromCodeNavigation: true
 workbench.editor.restoreViewState: false
 workbench.editor.showIcons: false
 workbench.editor.showTabs: false
+workbench.editor.untitled.hint: hidden
 workbench.enableExperiments: false
 workbench.iconTheme: vs-minimal
 workbench.list.automaticKeyboardNavigation: false
-workbench.panel.opensMaximized: always
+workbench.panel.opensMaximized: never
+workbench.panel.defaultLocation: right
 workbench.settings.editor: json
 workbench.settings.enableNaturalLanguageSearch: false
 workbench.sideBar.location: right
@@ -71,3 +76,6 @@ workbench.tips.enabled: false
   editor.rulers:
   - 100
   - 120
+'[python]':
+  editor.rulers:
+  - 88
