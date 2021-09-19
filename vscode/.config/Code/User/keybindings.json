@@ -102,77 +102,16 @@
     "command": "-editor.action.triggerSuggest",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
   },
-  // Terminal
-  {
-    "key": "ctrl+a 1",
-    "command": "workbench.action.terminal.focusAtIndex1",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+a 2",
-    "command": "workbench.action.terminal.focusAtIndex2",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+a 3",
-    "command": "workbench.action.terminal.focusAtIndex3",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+a 4",
-    "command": "workbench.action.terminal.focusAtIndex4",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+a 5",
-    "command": "workbench.action.terminal.focusAtIndex5",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+a w",
-    "command": "workbench.action.quickOpenTerm",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+a ,",
-    "command": "workbench.action.terminal.rename",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+a c",
-    "command": "workbench.action.terminal.new",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+a s",
-    "command": "workbench.action.terminal.split",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+a x",
-    "command": "workbench.action.terminal.kill",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "workbench.action.terminal.focusPreviousPane",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "workbench.action.terminal.focusNextPane",
-    "when": "terminalFocus"
-  },
   // Panel
-  {
-    "key": "ctrl+a z",
-    "command": "workbench.action.toggleMaximizedPanel",
-    "when": "panelFocus"
-  },
   {
     "key": "ctrl+a q",
     "command": "workbench.action.closePanel",
     "when": "panelFocus"
+  },
+  {
+    "key": "q",
+    "command": "workbench.action.closeSidebar",
+    "when": "sideBarFocus && listFocus"
   },
   // Search editor
   {

@@ -25,6 +25,10 @@ bindings:
     commands:
     - editor.action.selectAll
     - editor.action.clipboardPasteAction
+  - key: r
+    name: Open recent buffer
+    type: command
+    command: workbench.action.openPreviousEditorFromHistory
   - key: Y
     name: Yank buffer to clipboard
     type: commands

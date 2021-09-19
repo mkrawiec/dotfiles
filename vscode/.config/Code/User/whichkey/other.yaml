@@ -4,9 +4,12 @@
   type: command
   command: workbench.action.showCommands
 - key: "'"
-  name: Toggle terminal
-  type: command
-  command: workbench.action.terminal.focus
+  name: Split terminal
+  type: commands
+  commands:
+  - workbench.action.newGroupRight
+  - workbench.action.createTerminalEditor
+  - workbench.action.maximizeEditor
 - key: '='
   name: Format document
   type: command

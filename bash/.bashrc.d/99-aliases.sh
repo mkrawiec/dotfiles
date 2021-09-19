@@ -15,7 +15,8 @@ fif() { grep -rinw $1 -e $2; }
 alias fifh='fif .'
 
 # Git
-alias g='git'; complete -o default -o nospace -F _git g
+alias g='git'
+__git_complete g __git_main
 alias gcd='cd `git rev-parse --show-toplevel`'
 
 # Docker
