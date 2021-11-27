@@ -2,7 +2,14 @@
   // Global keybindings
   {
     "key": "capslock",
-    "command": "whichkey.show"
+    "command": "whichkey.show",
+    "when": "!whichkeyVisible"
+  },
+  {
+    "key": "capslock",
+    "command": "whichkey.triggerKey",
+    "args": "capslock",
+    "when": "whichkeyVisible"
   },
   {
     "key": "space",
@@ -111,7 +118,28 @@
   {
     "key": "q",
     "command": "workbench.action.closeSidebar",
-    "when": "sideBarFocus && listFocus"
+    "when": "sideBarFocus && listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "workbench.action.closeSidebar",
+    "when": "sideBarFocus && inputFocus"
+  },
+  // Explorer
+  {
+    "key": "z",
+    "command": "workbench.files.action.collapseExplorerFolders",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "workbench.files.action.createFolderFromExplorer",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "f",
+    "command": "workbench.files.action.createFileFromExplorer",
+    "when": "filesExplorerFocus && !inputFocus"
   },
   // Search editor
   {

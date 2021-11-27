@@ -19,26 +19,18 @@ bindings:
     name: Log
     type: command
     command: timeline.focus
-  - key: m
-    name: Merge conflicts...
-    type: bindings
-    bindings:
-    - key: b
-      name: Accept both
-      type: command
-      command: merge-conflict.accept.both
-    - key: c
-      name: Accept current
-      type: command
-      command: merge-conflict.accept.current
-    - key: d
-      name: Diff conflict
-      type: command
-      command: merge-conflict.compare
-    - key: i
-      name: Accept incoming
-      type: command
-      command: merge-conflict.accept.incoming
+  - key: '/'
+    name: Accept both
+    type: command
+    command: merge-conflict.accept.both
+  - key: ','
+    name: Accept current
+    type: command
+    command: merge-conflict.accept.current
+  - key: '.'
+    name: Accept incoming
+    type: command
+    command: merge-conflict.accept.incoming
   - key: s
     name: Stage range
     type: command

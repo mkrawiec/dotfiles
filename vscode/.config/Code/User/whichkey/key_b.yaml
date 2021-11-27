@@ -29,6 +29,10 @@ bindings:
     name: Open recent buffer
     type: command
     command: workbench.action.openPreviousEditorFromHistory
+  - key: t
+    name: New terminal buffer
+    type: command
+    command: workbench.action.createTerminalEditor
   - key: Y
     name: Yank buffer to clipboard
     type: commands

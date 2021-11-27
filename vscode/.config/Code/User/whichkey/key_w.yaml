@@ -51,22 +51,19 @@ bindings:
       name: Shrink window
       type: command
       command: workbench.action.decreaseViewSize
-  - key: E
-    name: Shrink window
-    type: transient
-    command: workbench.action.decreaseViewSize
-    bindings:
-    - key: e
-      name: Enlarge window
-      type: command
-      command: workbench.action.increaseViewSize
-    - key: E
-      name: Shrink window
-      type: command
-      command: workbench.action.decreaseViewSize
+  - key: h
+    name: Move left
+    type: command
+    command: workbench.action.moveEditorToLeftGroup
+  - key: j
+    name: Move below
+    type: command
+    command: workbench.action.moveEditorToBelowGroup
+  - key: k
+    name: Move above
+    type: command
+    command: workbench.action.moveEditorToAboveGroup
   - key: l
-    name: Toggle layout
-    type: commands
-    commands:
-    - workbench.action.toggleEditorGroupLayout
-    - workbench.action.focusFirstEditorGroup
+    name: Move right
+    type: command
+    command: workbench.action.moveEditorToRightGroup

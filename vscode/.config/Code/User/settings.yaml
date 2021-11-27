@@ -12,6 +12,7 @@ editor.gotoLocation.multipleDeclarations: goto
 editor.gotoLocation.multipleDefinitions: goto
 editor.gotoLocation.multipleImplementations: goto
 editor.gotoLocation.multipleTypeDefinitions: goto
+editor.guides.bracketPairs: true
 editor.hideCursorInOverviewRuler: true
 editor.lineNumbers: relative
 editor.minimap.enabled: false
@@ -30,8 +31,9 @@ files.insertFinalNewline: true
 files.simpleDialog.enable: true
 git.autoStash: true
 git.fetchOnPull: true
+magit.display-buffer-function: same-column
 rest-client.enableTelemetry: false
-rest-client.previewResponseInUntitledDocument: true
+rest-client.previewColumn: current
 search.collapseResults: alwaysExpand
 search.mode: reuseEditor
 search.quickOpen.includeHistory: false
@@ -40,7 +42,7 @@ search.smartCase: true
 task.autoDetect: 'off'
 task.problemMatchers.neverPrompt:
   shell: true
-telemetry.enableTelemetry: false
+telemetry.telemetryLevel: 'off'
 terminal.integrated.defaultLocation: editor
 terminal.integrated.fontSize: 16
 terminal.integrated.scrollback: 10000
@@ -73,7 +75,7 @@ workbench.panel.opensMaximized: never
 workbench.settings.editor: json
 workbench.settings.enableNaturalLanguageSearch: false
 workbench.sideBar.location: right
-workbench.startupEditor: newUntitledFile
+workbench.startupEditor: none
 workbench.tips.enabled: false
 '[java]':
   editor.rulers:

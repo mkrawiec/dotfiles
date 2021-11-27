@@ -3,12 +3,15 @@
   name: Show commands
   type: command
   command: workbench.action.showCommands
+- key: 'capslock'
+  name: Show commands
+  type: command
+  command: workbench.action.showCommands
 - key: "'"
   name: Split terminal
   type: commands
   commands:
-  - workbench.action.newGroupRight
-  - workbench.action.createTerminalEditor
+  - workbench.action.createTerminalEditorSide
   - workbench.action.maximizeEditor
 - key: '='
   name: Format document
