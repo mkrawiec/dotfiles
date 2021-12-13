@@ -1,0 +1,72 @@
+{
+  "afterAll": {
+    "body": "afterAll(() => {\n\t$0\n});",
+    "description": "afterAll function is called once after all specs",
+    "prefix": "jaa",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact"
+  },
+  "afterEach": {
+    "body": "afterEach(() => {\n\t$0\n});",
+    "description": "afterEach function is called once after each spec",
+    "prefix": "jae",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact"
+  },
+  "beforeAll": {
+    "body": "beforeAll(() => {\n\t$0\n});",
+    "description": "beforeAll function is called once before all specs",
+    "prefix": "jba",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact"
+  },
+  "beforeEach": {
+    "body": "beforeEach(() => {\n\t$0\n});",
+    "description": "beforeEach function is called once before each spec",
+    "prefix": "jbe",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact"
+  },
+  "describe": {
+    "body": "describe('${1:Name of the group}', () => {\n\t$0\n});",
+    "description": "creates a describe block",
+    "prefix": "jde",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact"
+  },
+  "describe.each": {
+    "body": [
+      "describe.each([${1:[1, 2], [2, 4]}])(",
+      "\t'${2:double(%d)}',",
+      "\t(${3:input, expected}) => {",
+      "\t\ttest(`returns \\${expected}`, () => {",
+      "\t\t\t${4:expect(double(input)).toBe(expected);}",
+      "\t\t});",
+      "\t}",
+      ");"
+    ],
+    "description": "creates a describe block with different test data sets",
+    "prefix": "jdee",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact"
+  },
+  "it": {
+    "body": "it('${1:}', () => {\n\t$0\n});",
+    "description": "creates an it block",
+    "prefix": "jit",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact"
+  },
+  "it.each": {
+    "body": [
+      "it.each([${1:[1, 2], [2, 4]}])(",
+      "\t'${2:double(%d)}',",
+      "\t(${3:input, expected}) => {",
+      "\t\t${0:expect(double(input)).toBe(expected);}",
+      "\t}",
+      ");"
+    ],
+    "description": "creates an it block with different test data sets",
+    "prefix": "jite",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact"
+  },
+  "it:async": {
+    "body": "it('${1:}', async () => {\n\t$0\n});",
+    "description": "creates an it block with async callback function",
+    "prefix": "jita",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact"
+  },
+}
