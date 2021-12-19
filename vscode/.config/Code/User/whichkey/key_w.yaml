@@ -38,19 +38,6 @@ bindings:
     name: Split vertically
     type: command
     command: workbench.action.splitEditor
-  - key: e
-    name: Enlarge window
-    type: transient
-    command: workbench.action.increaseViewSize
-    bindings:
-    - key: e
-      name: Enlarge window
-      type: command
-      command: workbench.action.increaseViewSize
-    - key: E
-      name: Shrink window
-      type: command
-      command: workbench.action.decreaseViewSize
   - key: h
     name: Move left
     type: command

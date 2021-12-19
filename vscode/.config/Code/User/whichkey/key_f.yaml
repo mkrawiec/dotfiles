@@ -29,14 +29,6 @@ bindings:
     name: Choose file
     type: command
     command: workbench.action.quickOpen
-  - key: l
-    name: Locate file
-    type: command
-    command: revealFileInOS
-  - key: r
-    name: Open recent
-    type: command
-    command: workbench.action.openRecent
   - key: R
     name: Rename file
     type: commands

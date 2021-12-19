@@ -21,6 +21,12 @@
     ],
     "main": "./out/extension.js",
     "contributes": {
+        "commands": [
+            {
+                "command": "mkrawiec.showSidebarMenu",
+                "title": "Show sidebar menu"
+            }
+        ],
         "keybindings": [
             { "command": "", "key": "contextmenu" },
             { "command": "", "key": "spaceescape" },

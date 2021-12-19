@@ -19,6 +19,14 @@ bindings:
     name: New buffer
     type: command
     command: workbench.action.files.newUntitledFile
+  - key: i
+    name: Pin buffer
+    type: command
+    command: workbench.action.pinEditor
+  - key: I
+    name: Unpin buffer
+    type: command
+    command: workbench.action.unpinEditor
   - key: P
     name: Paste clipboard to buffer
     type: commands
@@ -29,10 +37,6 @@ bindings:
     name: Open recent buffer
     type: command
     command: workbench.action.openPreviousEditorFromHistory
-  - key: t
-    name: New terminal buffer
-    type: command
-    command: workbench.action.createTerminalEditor
   - key: Y
     name: Yank buffer to clipboard
     type: commands

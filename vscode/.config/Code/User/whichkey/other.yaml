@@ -3,16 +3,10 @@
   name: Show commands
   type: command
   command: workbench.action.showCommands
-- key: 'capslock'
-  name: Show commands
-  type: command
-  command: workbench.action.showCommands
 - key: "'"
   name: Split terminal
-  type: commands
-  commands:
-  - workbench.action.createTerminalEditorSide
-  - workbench.action.maximizeEditor
+  type: command
+  command: workbench.action.createTerminalEditorSide
 - key: '='
   name: Format document
   type: command
