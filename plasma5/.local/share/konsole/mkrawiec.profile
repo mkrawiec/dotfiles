@@ -1,6 +1,8 @@
 [Appearance]
-ColorScheme=Dracula
-Font=Iosevka Fixed,12,-1,5,50,0,0,0,0,0,Regular
+BoldIntense=true
+ColorScheme=vscode
+Font=Iosevka Fixed,12,-1,5,50,0,0,0,0,0
+UseFontLineChararacters=false
 
 [Cursor Options]
 CursorShape=0

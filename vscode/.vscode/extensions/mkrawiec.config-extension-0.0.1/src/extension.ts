@@ -2,7 +2,7 @@ import * as vscode from "vscode";
 
 const { commands } = vscode;
 
-const baseActions = [
+const sidebarBaseActions = [
   {
     key: "q",
     name: "Close sidebar",
@@ -31,8 +31,9 @@ const baseActions = [
   },
 ]
 
-const viewletActions: Record<string, any[]> = {
+const actionContexts: Record<string, any[]> = {
   "explorer": [
+    ...sidebarBaseActions,
     {
       key: "d",
       name: "Create directory",
@@ -59,6 +60,7 @@ const viewletActions: Record<string, any[]> = {
     },
   ],
   "search": [
+    ...sidebarBaseActions,
     {
       key: "i",
       name: "Focus input",
@@ -83,13 +85,27 @@ const viewletActions: Record<string, any[]> = {
       type: "command",
       command: "workbench.action.replaceInFiles",
     },
+  ],
+  "terminal": [
+    {
+      key: "q",
+      name: "Close terminal",
+      type: "command",
+      command: "workbench.action.closeEditorsInGroup",
+    },
+    {
+      key: "s",
+      name: "Split",
+      type: "command",
+      command: "workbench.action.splitEditorDown"
+    },
   ]
 }
 
 export function activate(context: vscode.ExtensionContext) {
   const showSidebarMenu = (viewlet: string) => {
-    const thisViewletActions = viewletActions[viewlet]
-    const actions = (thisViewletActions != null) ? [...baseActions, ...thisViewletActions] : baseActions;
+    const thisContextActions = actionContexts[viewlet]
+    const actions = (thisContextActions != null) ? thisContextActions : sidebarBaseActions;
 
     commands.executeCommand("whichkey.show", actions)
   };

@@ -2,8 +2,6 @@ EditorConfig.EditorConfig
 humao.rest-client
 kahole.magit
 mkrawiec.config-extension
-msjsdiag.debugger-for-chrome
-streetsidesoftware.code-spell-checker
 usernamehw.errorlens
 VisualStudioExptTeam.vscodeintellicode
 vscodevim.vim

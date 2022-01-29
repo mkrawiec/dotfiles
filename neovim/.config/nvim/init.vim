@@ -1,6 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
   " Themes
-  Plug 'dracula/vim'
+  Plug 'noahfrederick/vim-noctu'
   Plug 'itchyny/lightline.vim'
 
   " Enhancements

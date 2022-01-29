@@ -44,7 +44,16 @@ task.problemMatchers.neverPrompt:
   shell: true
 telemetry.telemetryLevel: 'off'
 terminal.integrated.defaultLocation: editor
+terminal.integrated.defaultProfile.linux: "toolbox"
 terminal.integrated.fontSize: 16
+terminal.integrated.profiles.linux:
+  toolbox:
+    path: "flatpak-spawn"
+    args:
+    - "--host"
+    - "--env=TERM=xterm-256color"
+    - "toolbox"
+    - "-un"
 terminal.integrated.scrollback: 10000
 vim.highlightedyank.enable: true
 vim.hlsearch: true

@@ -6,13 +6,14 @@
 #
 
 declare -r EXTENSIONS_FILE=~/dotfiles/vscode/stowignore/extensions.txt
+declare -r CODE=codium
 
 extensions_import() {
-  cat $EXTENSIONS_FILE | xargs -L 1 code --install-extension
+  cat $EXTENSIONS_FILE | xargs -L 1 $CODE --install-extension
 }
 
 extensions_export() {
-  code --list-extensions > $EXTENSIONS_FILE
+  $CODE --list-extensions > $EXTENSIONS_FILE
 }
 
 case $1 in

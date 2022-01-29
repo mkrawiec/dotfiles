@@ -1,6 +1,9 @@
 # Set default editor
 export EDITOR='nvim'
 
+# Ensure SHELL is set
+export SHELL=/usr/bin/bash
+
 # Forgive spelling errors in cd
 shopt -s cdspell
 

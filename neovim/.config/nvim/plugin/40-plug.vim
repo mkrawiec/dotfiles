@@ -38,7 +38,7 @@ command! -nargs=1 Nread :call mkrawiec#utils#DownloadSpellfile("<args>")
 " lightline.vim
 "
 let g:lightline = {
-      \ 'colorscheme': 'dracula',
+      \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]

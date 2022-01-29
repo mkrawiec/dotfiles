@@ -12,7 +12,7 @@ from os import path, scandir
 from collections import defaultdict
 
 CONFIG_PATH = {
-    "Linux": "~/.config/Code/User",
+    "Linux": "~/.var/app/com.vscodium.codium/config/VSCodium/User/",
     "Darwin": "~/Library/Application Support/Code/User",
 }
 OUTPUT = "settings.json"

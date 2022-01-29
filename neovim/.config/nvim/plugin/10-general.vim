@@ -15,9 +15,7 @@ set clipboard+=unnamedplus " Always use system clipboard
 "
 " Colorscheme
 "
-set termguicolors
-set background=dark
-colorscheme dracula
+colorscheme noctu
 
 "
 " Indentation & folding

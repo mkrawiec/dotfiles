@@ -28,7 +28,11 @@ prompt_command()
 
 prompt()
 {
-  echo -n "\n$LBLUE\w"
+  if [ -f /run/.containerenv ]; then
+    echo -n "\n$LCYAN⬢ \w"
+  else
+    echo -n "\n$LBLUE\w"
+  fi
   echo -n '$(__git_ps1 "$LWHITE on $LPURPLE$CHAR_GIT_BRANCH %s$RESET")'
   echo -n "\n "
 }

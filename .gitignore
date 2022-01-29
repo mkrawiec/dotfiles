@@ -1,6 +1,11 @@
 neovim/.config/nvim/autoload/plug.vim*
 neovim/.config/nvim/spell/
 
+vscode/.config/Code/User/settings.json
+vscode/.config/Code/User/*Storage
+vscode/.vscode/extensions/*
+!vscode/.vscode/extensions/mkrawiec*
+
 .directory
 *.py[cod]
 

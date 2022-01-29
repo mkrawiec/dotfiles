@@ -3,20 +3,22 @@ key: g
 name: Git...
 type: bindings
 bindings:
+  - key: b
+    name: Blame
+    type: command
+    command: magit.blame-file
   - key: d
     name: Diff
-    type: commands
-    commands:
-    - git.refresh
-    - git.openChange
+    type: command
+    command: magit.diff-file
   - key: g
     name: Status
     type: command
-    command: workbench.view.scm
+    command: magit.status
   - key: l
     name: Log
     type: command
-    command: timeline.focus
+    command: magit.log-file
   - key: '/'
     name: Accept both
     type: command

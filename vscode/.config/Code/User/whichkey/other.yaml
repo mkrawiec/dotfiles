@@ -5,8 +5,11 @@
   command: workbench.action.showCommands
 - key: "'"
   name: Split terminal
-  type: command
-  command: workbench.action.createTerminalEditorSide
+  type: commands
+  commands:
+  - workbench.action.createTerminalEditorSide
+  - workbench.action.focusNextGroup
+  - workbench.action.focusPreviousGroup
 - key: '='
   name: Format document
   type: command
