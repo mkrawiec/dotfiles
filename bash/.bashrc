@@ -4,6 +4,9 @@ export EDITOR='nvim'
 # Ensure SHELL is set
 export SHELL=/usr/bin/bash
 
+# Add local binaries to PATH
+export PATH=~/bin:~/.local/bin:$PATH
+
 # Forgive spelling errors in cd
 shopt -s cdspell
 

@@ -33,7 +33,9 @@ prompt()
   else
     echo -n "\n$LBLUE\w"
   fi
-  echo -n '$(__git_ps1 "$LWHITE on $LPURPLE$CHAR_GIT_BRANCH %s$RESET")'
+  if [ -f /etc/bash_completion.d/git-prompt.sh ]; then
+    echo -n '$(__git_ps1 "$LWHITE on $LPURPLE$CHAR_GIT_BRANCH %s$RESET")'
+  fi
   echo -n "\n "
 }
 

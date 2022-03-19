@@ -16,13 +16,15 @@ alias fifh='fif .'
 
 # Git
 alias g='git'
-__git_complete g __git_main
+if [ -f /etc/bash_completion.d/git.sh ]; then
+    __git_complete g __git_main
+fi
 alias gcd='cd `git rev-parse --show-toplevel`'
 
 # Docker
-alias dockrm='docker rm -f `docker ps -qa`'
-alias dockrmi='docker rmi `docker images -f "dangling=true" -q`'
-alias dockip='docker inspect --format "{{ .NetworkSettings.IPAddress }}"'
+alias dockrm='podman container prune'
+alias dockrmi='podman image prune'
+alias dockip='podman inspect --format "{{ .NetworkSettings.IPAddress }}"'
 
 # Node
 alias npmi='npm install --save'
@@ -48,13 +50,10 @@ if [ `uname -s` == 'Linux' ]; then
   alias xpaste='xclip -o'
   alias sd='sudo systemctl'
   alias sdlog='sudo journalctl -n 20 -f -u'
+  alias box='toolbox -nu'
 
-  alias zup='sudo zypper dup; sudo flatpak update'
   alias zin='sudo zypper install'
-  alias zinn='sudo zypper install --force'
   alias zrm='sudo zypper remove'
-  alias zcl='sudo zypper clean --all'
-  alias zi='zypper info'
   alias zse='zypper search'
   alias zsi='zypper search -i'
   alias zwp='zypper search --provides --match-exact'

@@ -2,5 +2,5 @@
 
 find ~/.ssh/ \
     -type f ! -name "*.pub" \
-    -name "id_rsa*" \
+    -name "id_*" \
     -exec ssh-add '{}' \; > /dev/null
