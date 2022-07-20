@@ -5,6 +5,6 @@ endf
 
 " Get git branch
 fun! mkrawiec#lightlime#GitBranch() abort
-  let l:branch = fugitive#head()
+  let l:branch = FugitiveHead()
   return l:branch !=# '' ? ' '.branch : ''
 endf

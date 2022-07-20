@@ -1,0 +1,21 @@
+#!/usr/sbin/nft -f
+
+flush ruleset
+
+define WLAN = wlan0
+
+table ip6 filter {
+    chain output6 {
+        type filter hook output priority 0; policy drop;
+    }
+}
+
+table ip filter {
+    chain output4 {
+        type filter hook output priority 0; policy drop;
+        oifname lo accept;
+        oifname tun0 accept;
+        oifname $WLAN udp dport 1194 accept;
+        meta nftrace set 1;
+    }
+}

@@ -11,7 +11,7 @@ const sidebarBaseActions = [
   },
   {
     key: "e",
-    name: "Expand",
+    name: "Expand sidebar",
     type: "commands",
     commands: [
       "workbench.action.increaseViewSize",
@@ -21,7 +21,7 @@ const sidebarBaseActions = [
   },
   {
     key: "E",
-    name: "Collapse",
+    name: "Shrink sidebar",
     type: "commands",
     commands: [
       "workbench.action.decreaseViewSize",
@@ -39,6 +39,18 @@ const actionContexts: Record<string, any[]> = {
       name: "Create directory",
       type: "command",
       command: "workbench.files.action.createFolderFromExplorer",
+    },
+    {
+      key: "D",
+      name: "Delete file",
+      type: "command",
+      command: "deleteFile",
+    },
+    {
+      key: "r",
+      name: "Rename file",
+      type: "command",
+      command: "renameFile",
     },
     {
       key: "f",
@@ -96,8 +108,17 @@ const actionContexts: Record<string, any[]> = {
     {
       key: "s",
       name: "Split",
+      type: "commands",
+      commands: [
+        "workbench.action.terminal.split",
+        "workbench.action.moveActiveEditorGroupDown"
+      ]
+    },
+    {
+      key: " ",
+      name: "Show commands",
       type: "command",
-      command: "workbench.action.splitEditorDown"
+      command: "workbench.action.showCommands",
     },
   ]
 }

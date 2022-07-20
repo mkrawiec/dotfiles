@@ -22,6 +22,7 @@ bindings:
     - workbench.action.joinAllGroups
     - workbench.action.closeSidebar
     - workbench.action.closePanel
+    - workbench.action.closeAuxiliaryBar
     - notifications.hideToasts
   - key: p
     name: Close non-editor windows
@@ -29,6 +30,7 @@ bindings:
     commands:
     - workbench.action.closeSidebar
     - workbench.action.closePanel
+    - workbench.action.closeAuxiliaryBar
     - notifications.hideToasts
   - key: s
     name: Split
