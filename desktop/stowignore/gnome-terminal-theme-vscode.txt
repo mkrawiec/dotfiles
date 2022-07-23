@@ -1,9 +1,13 @@
 [legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
-background-color='rgb(35,34,34)'
+background-color='rgb(30,30,30)'
+bold-color-same-as-fg=true
+bold-is-bright=true
+cursor-colors-set=false
 cursor-shape='block'
 default-size-columns=120
 default-size-rows=30
+foreground-color='rgb(204,204,204)'
+highlight-colors-set=false
+palette=['rgb(0,0,0)', 'rgb(205,49,49)', 'rgb(13,188,121)', 'rgb(229,229,16)', 'rgb(36,114,200)', 'rgb(188,63,188)', 'rgb(17,168,205)', 'rgb(229,229,229)', 'rgb(102,102,102)', 'rgb(241,76,76)', 'rgb(35,209,139)', 'rgb(245,245,67)', 'rgb(59,142,234)', 'rgb(214,112,214)', 'rgb(41,184,219)', 'rgb(229,229,229)']
 scrollbar-policy='never'
-foreground-color='rgb(196,193,193)'
-palette=['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(34,209,139)', 'rgb(196,160,0)', 'rgb(51,142,250)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
 use-theme-colors=false

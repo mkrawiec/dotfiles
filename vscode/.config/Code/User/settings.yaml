@@ -52,8 +52,9 @@ terminal.integrated.profiles.linux:
     args:
     - "--host"
     - "--env=TERM=xterm-256color"
-    - "toolbox"
-    - "-un"
+    - "distrobox"
+    - "enter"
+    - "distrobox-sid"
 terminal.integrated.scrollback: 10000
 vim.highlightedyank.enable: true
 vim.hlsearch: true

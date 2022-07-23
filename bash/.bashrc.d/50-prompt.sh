@@ -29,11 +29,11 @@ prompt_command()
 prompt()
 {
   if [ -f /run/.containerenv ]; then
-    echo -n "\n$LCYAN⬢ \w"
+    echo -n "\n$LCYAN🗿 \w"
   else
     echo -n "\n$LBLUE\w"
   fi
-  if [ -f /etc/bash_completion.d/git-prompt.sh ]; then
+  if [ -f /usr/lib/git-core/git-sh-prompt ]; then
     echo -n '$(__git_ps1 "$LWHITE on $LPURPLE$CHAR_GIT_BRANCH %s$RESET")'
   fi
   echo -n "\n "
