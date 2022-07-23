@@ -50,7 +50,7 @@ if [ `uname -s` == 'Linux' ]; then
   alias xpaste='xclip -o'
   alias sd='sudo systemctl'
   alias sdlog='sudo journalctl -n 20 -f -u'
-  alias box='toolbox -nu'
+  alias box='distrobox enter distrobox-sid'
 
   alias zin='sudo zypper install'
   alias zrm='sudo zypper remove'

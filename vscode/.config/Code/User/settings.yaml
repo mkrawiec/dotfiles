@@ -6,7 +6,7 @@ debug.toolBarLocation: docked
 cSpell.enabled: false
 cSpell.showStatus: false
 editor.bracketPairColorization.enabled: true
-editor.fontFamily: Iosevka Term
+editor.fontFamily: Iosevka
 editor.fontSize: 16
 editor.gotoLocation.multipleDeclarations: goto
 editor.gotoLocation.multipleDefinitions: goto
