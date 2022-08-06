@@ -3,22 +3,14 @@ key: g
 name: Git...
 type: bindings
 bindings:
-  - key: b
-    name: Blame
-    type: command
-    command: magit.blame-file
   - key: d
     name: Diff
     type: command
-    command: magit.diff-file
-  - key: g
-    name: Status
-    type: command
-    command: magit.status
+    command: git.openChange
   - key: l
     name: Log
     type: command
-    command: magit.log-file
+    command: timeline.focus
   - key: '/'
     name: Accept both
     type: command
@@ -37,8 +29,10 @@ bindings:
     command: git.stageSelectedRanges
   - key: S
     name: Stage file
-    type: command
-    command: magit.stage-file
+    type: commands
+    commands:
+      - workbench.action.files.save
+      - git.stage
   - key: u
     name: Revert range
     type: command
@@ -46,4 +40,4 @@ bindings:
   - key: U
     name: Unstage file
     type: command
-    command: magit.unstage-file
+    command: git.unstage

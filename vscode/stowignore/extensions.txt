@@ -1,6 +1,5 @@
 EditorConfig.EditorConfig
 humao.rest-client
-kahole.magit
 mkrawiec.config-extension
 usernamehw.errorlens
 VisualStudioExptTeam.vscodeintellicode
