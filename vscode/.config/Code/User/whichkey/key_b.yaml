@@ -19,10 +19,6 @@ bindings:
     name: New buffer
     type: command
     command: workbench.action.files.newUntitledFile
-  - key: k
-    name: Keep buffer
-    type: command
-    command: workbench.action.keepEditor
   - key: i
     name: Pin buffer
     type: command

@@ -1,6 +1,7 @@
 EditorConfig.EditorConfig
 humao.rest-client
 mkrawiec.config-extension
+sirmspencer.vscode-autohide
 usernamehw.errorlens
 VisualStudioExptTeam.vscodeintellicode
 vscodevim.vim

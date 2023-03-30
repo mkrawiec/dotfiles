@@ -5,11 +5,12 @@
   command: workbench.action.showCommands
 - key: "'"
   name: Split terminal
-  type: commands
-  commands:
-  - workbench.action.createTerminalEditorSide
-  - workbench.action.focusNextGroup
-  - workbench.action.focusPreviousGroup
+  type: command
+  command: workbench.action.togglePanel
+- key: '`'
+  name: Keep buffer
+  type: command
+  command: workbench.action.keepEditor
 - key: '='
   name: Format document
   type: command

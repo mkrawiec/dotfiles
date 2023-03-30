@@ -1,10 +1,9 @@
 # Run 'codeconf' to generate settings.json from this file
 ---
+autoHide.autoHidePanel: false
 breadcrumbs.symbolPath: 'off'
 debug.openDebug: neverOpen
 debug.toolBarLocation: docked
-cSpell.enabled: false
-cSpell.showStatus: false
 editor.bracketPairColorization.enabled: true
 editor.fontFamily: Iosevka
 editor.fontSize: 16
@@ -32,7 +31,6 @@ files.insertFinalNewline: true
 files.simpleDialog.enable: true
 git.autoStash: true
 git.fetchOnPull: true
-magit.display-buffer-function: same-column
 rest-client.enableTelemetry: false
 rest-client.previewColumn: current
 search.collapseResults: alwaysExpand
@@ -43,9 +41,9 @@ task.autoDetect: 'off'
 task.problemMatchers.neverPrompt:
   shell: true
 telemetry.telemetryLevel: 'off'
-terminal.integrated.defaultLocation: editor
 terminal.integrated.defaultProfile.linux: "toolbox"
 terminal.integrated.fontSize: 16
+terminal.integrated.tabs.enabled: false
 terminal.integrated.profiles.linux:
   toolbox:
     path: "flatpak-spawn"
@@ -81,10 +79,11 @@ workbench.editor.showTabs: false
 workbench.editor.untitled.hint: hidden
 workbench.enableExperiments: false
 workbench.iconTheme: vs-minimal
-workbench.list.automaticKeyboardNavigation: false
+workbench.panel.defaultLocation: right
 workbench.panel.opensMaximized: never
 workbench.settings.editor: json
 workbench.settings.enableNaturalLanguageSearch: false
+workbench.sideBar.location: right
 workbench.startupEditor: none
 workbench.tips.enabled: false
 '[java]':

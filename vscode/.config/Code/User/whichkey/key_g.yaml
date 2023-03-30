@@ -3,6 +3,10 @@ key: g
 name: Git...
 type: bindings
 bindings:
+  - key: c
+    name: Checkout
+    type: command
+    command: git.checkout
   - key: d
     name: Diff
     type: command
