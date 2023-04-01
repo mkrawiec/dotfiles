@@ -6,7 +6,7 @@
 - key: "'"
   name: Split terminal
   type: command
-  command: workbench.action.togglePanel
+  command: workbench.action.terminal.focus
 - key: '`'
   name: Keep buffer
   type: command

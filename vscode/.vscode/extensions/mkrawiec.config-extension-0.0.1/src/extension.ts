@@ -103,7 +103,7 @@ const actionContexts: Record<string, any[]> = {
       key: "q",
       name: "Close terminal",
       type: "command",
-      command: "workbench.action.closeEditorsInGroup",
+      command: "workbench.action.closePanel",
     },
     {
       key: "s",
@@ -123,6 +123,21 @@ const actionContexts: Record<string, any[]> = {
   ]
 }
 
+const autoHidePanels = (context: vscode.ExtensionContext) => {
+  const closeFn = () => {
+    vscode.commands.executeCommand("workbench.action.closePanel")
+    vscode.commands.executeCommand("workbench.action.closeSidebar")
+    vscode.commands.executeCommand("workbench.action.closeAuxiliaryBar")
+  }
+
+  closeFn()
+  context.subscriptions.push(vscode.window.onDidChangeTextEditorSelection(e => {
+    if (e.kind == 1) {
+      setTimeout(closeFn, 300)
+    }
+  }));
+}
+
 export function activate(context: vscode.ExtensionContext) {
   const showSidebarMenu = (viewlet: string) => {
     const thisContextActions = actionContexts[viewlet]
@@ -134,6 +149,8 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     commands.registerCommand("mkrawiec.showSidebarMenu", showSidebarMenu)
   );
+
+  autoHidePanels(context)
 }
 
 export function deactivate() { }

@@ -1,6 +1,5 @@
 # Run 'codeconf' to generate settings.json from this file
 ---
-autoHide.autoHidePanel: false
 breadcrumbs.symbolPath: 'off'
 debug.openDebug: neverOpen
 debug.toolBarLocation: docked

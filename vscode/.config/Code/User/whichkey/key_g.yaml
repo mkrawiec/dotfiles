@@ -11,22 +11,14 @@ bindings:
     name: Diff
     type: command
     command: git.openChange
+  - key: g
+    name: Show scm
+    type: command
+    command: workbench.scm.focus
   - key: l
     name: Log
     type: command
     command: timeline.focus
-  - key: '/'
-    name: Accept both
-    type: command
-    command: merge-conflict.accept.both
-  - key: ','
-    name: Accept current
-    type: command
-    command: merge-conflict.accept.current
-  - key: '.'
-    name: Accept incoming
-    type: command
-    command: merge-conflict.accept.incoming
   - key: s
     name: Stage range
     type: command
