@@ -92,10 +92,28 @@ const actionContexts: Record<string, any[]> = {
       command: "search.action.refreshSearchResults",
     },
     {
-      key: "r",
-      name: "Replace",
+      key: "n",
+      name: "Next input",
       type: "command",
-      command: "workbench.action.replaceInFiles",
+      command: "search.focus.nextInputBox",
+    },
+    {
+      key: "p",
+      name: "Previous input",
+      type: "command",
+      command: "search.focus.previousInputBox",
+    },
+    {
+      key: "c",
+      name: "Toggle case sensitivity",
+      type: "command",
+      command: "toggleSearchCaseSensitive",
+    },
+    {
+      key: "r",
+      name: "Toggle regex",
+      type: "command",
+      command: "toggleSearchRegex",
     },
   ],
   "terminal": [
@@ -127,12 +145,11 @@ const autoHidePanels = (context: vscode.ExtensionContext) => {
   const closeFn = () => {
     vscode.commands.executeCommand("workbench.action.closePanel")
     vscode.commands.executeCommand("workbench.action.closeSidebar")
-    vscode.commands.executeCommand("workbench.action.closeAuxiliaryBar")
   }
 
   closeFn()
   context.subscriptions.push(vscode.window.onDidChangeTextEditorSelection(e => {
-    if (e.kind == 1) {
+    if ([vscode.TextEditorSelectionChangeKind.Mouse, vscode.TextEditorSelectionChangeKind.Keyboard].includes(e.kind as any)) {
       setTimeout(closeFn, 300)
     }
   }));
@@ -147,11 +164,10 @@ export function activate(context: vscode.ExtensionContext) {
   };
 
   context.subscriptions.push(
-    commands.registerCommand("mkrawiec.showSidebarMenu", showSidebarMenu)
+    commands.registerCommand("mkrawiec.showSidebarMenu", showSidebarMenu),
   );
 
   autoHidePanels(context)
 }
 
 export function deactivate() { }
-

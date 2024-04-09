@@ -1,8 +1,9 @@
-EditorConfig.EditorConfig
+editorconfig.editorconfig
 humao.rest-client
 mkrawiec.config-extension
 usernamehw.errorlens
-VisualStudioExptTeam.vscodeintellicode
+visualstudioexptteam.vscodeintellicode
 vscodevim.vim
-VSpaceCode.whichkey
+vspacecode.whichkey
+waderyan.gitblame
 will-wow.vscode-alternate-file

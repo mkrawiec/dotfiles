@@ -18,9 +18,9 @@ editor.renderWhitespace: boundary
 editor.rulers:
 - 80
 editor.scrollbar.horizontal: hidden
+editor.stickyScroll.enabled: false
 editor.suggestSelection: first
 explorer.compactFolders: false
-explorer.openEditors.visible: 0
 extensions.ignoreRecommendations: true
 files.associations:
   '*.vim': vimrc
@@ -32,7 +32,7 @@ git.autoStash: true
 git.fetchOnPull: true
 rest-client.enableTelemetry: false
 rest-client.previewColumn: current
-search.collapseResults: alwaysExpand
+search.collapseResults: alwaysCollapse
 search.quickOpen.includeHistory: false
 search.searchEditor.reusePriorSearchConfiguration: true
 search.smartCase: true
@@ -44,6 +44,7 @@ terminal.integrated.defaultProfile.linux: "toolbox"
 terminal.integrated.fontSize: 16
 terminal.integrated.tabs.enabled: false
 terminal.integrated.profiles.linux:
+  # flatpak-spawn --host distrobox enter distrobox-sid -e nvim
   toolbox:
     path: "flatpak-spawn"
     args:
@@ -60,24 +61,23 @@ vim.useSystemClipboard: true
 vim.visualstar: true
 whichkey.delay: 400
 whichkey.sortOrder: alphabetically
+window.commandCenter: false
+window.dialogStyle: custom
 window.enableMenuBarMnemonics: false
 window.menuBarVisibility: hidden
 window.restoreWindows: none
-window.dialogStyle: custom
-workbench.activityBar.visible: false
-workbench.colorCustomizations:
-  statusBar.background: "#1a1a1a"
-  statusBar.noFolderBackground: "#1a1a1a"
-  statusBar.debuggingBackground: "#943131"
+window.titleBarStyle: custom # until they allow to disable the titlebar
+workbench.activityBar.location: hidden
+workbench.editor.empty.hint: hidden
 workbench.editor.enablePreviewFromCodeNavigation: true
 workbench.editor.enablePreviewFromQuickOpen: true
 workbench.editor.restoreViewState: false
 workbench.editor.sharedViewState: true
 workbench.editor.showIcons: false
-workbench.editor.showTabs: false
-workbench.editor.untitled.hint: hidden
+workbench.editor.showTabs: none
 workbench.enableExperiments: false
 workbench.iconTheme: vs-minimal
+workbench.layoutControl.enabled: false
 workbench.panel.defaultLocation: right
 workbench.panel.opensMaximized: never
 workbench.settings.editor: json

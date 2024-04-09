@@ -11,6 +11,10 @@ bindings:
     name: Alternate file (create)
     type: command
     command: alternate.createAlternateFile
+  - key: c
+    name: Call hirearchy
+    type: command
+    command: references-view.showCallHierarchy
   - key: j
     name: Definition
     type: command

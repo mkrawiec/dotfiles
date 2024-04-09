@@ -4,9 +4,17 @@ name: Search...
 type: bindings
 bindings:
   - key: a
-    name: Search editor
+    name: Search in files
     type: command
     command: workbench.action.findInFiles
+  - key: n
+    name: Next result
+    type: command
+    command: search.action.focusNextSearchResult
+  - key: p
+    name: Previous result
+    type: command
+    command: search.action.focusPreviousSearchResult
   - key: c
     name: Clear highlight
     type: command

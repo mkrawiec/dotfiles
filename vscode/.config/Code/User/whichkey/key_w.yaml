@@ -14,7 +14,7 @@ bindings:
   - key: g
     name: Golden ratio
     type: command
-    command: workbench.action.maximizeEditor
+    command: workbench.action.minimizeOtherEditors
   - key: o
     name: Close other windows
     type: commands
