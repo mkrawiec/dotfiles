@@ -1,0 +1,12 @@
+import = ["~/.config/alacritty/rose-pine-moon.toml"]
+
+[window]
+decorations = "None"
+startup_mode = "Maximized"
+
+[font]
+size = 13
+
+[font.normal]
+family = "Iosevka"
+style = "Regular"
