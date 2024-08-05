@@ -1,0 +1,16 @@
+[
+  {
+    "label": "toolbox: enter",
+    "tags": ["toolbox"],
+    "use_new_terminal": true,
+    "reveal": "always",
+    "command": "box"
+  },
+  {
+    "label": "httpyac: run current line",
+    "tags": ["httpyac"],
+    "use_new_terminal": false,
+    "reveal": "always",
+    "command": "box -- httpyac --env int --line $ZED_ROW $ZED_FILE"
+  }
+]

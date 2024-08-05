@@ -1,0 +1,88 @@
+[
+  {
+    "bindings": {
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "menu f": "project_panel::NewFile",
+      "menu d": "project_panel::NewDirectory",
+      "menu r": "project_panel::Rename"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "menu c": "workspace::NewTerminal",
+      "menu x": "pane::CloseActiveItem",
+      "menu q": "terminal_panel::ToggleFocus",
+      "menu t": "task::Spawn",
+      "menu f": "workspace::ToggleZoom",
+      "menu p": "pane::ActivatePrevItem",
+      "menu n": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "BufferSearchBar",
+    "bindings": {
+      "menu q": "buffer_search::Dismiss",
+      "menu r": "search::ToggleReplace"
+    }
+  },
+  {
+    "context": "EmptyPane || (Editor && vim_mode != insert)",
+    "bindings": {
+      "space space": "command_palette::Toggle",
+      "space '": ["task::Spawn", { "task_name": "toolbox: enter" }],
+      // (w) window
+      "space w o": "workspace::CloseAllDocks",
+      "space w p": "workspace::ClearAllNotifications",
+      "space w g": "workspace::ToggleZoom",
+      "space w s": "pane::SplitDown",
+      "space w v": "pane::SplitRight",
+      "space w c": "pane::CloseAllItems",
+      // (f) file
+      "space f e d": "zed::OpenSettings",
+      "space f e k": "zed::OpenKeymap",
+      "space f e t": "zed::OpenTasks",
+      "space f e T": "zed::OpenLocalTasks",
+      "space f f": "file_finder::Toggle",
+      "space f t": "pane::RevealInProjectPanel",
+      "space f s": "workspace::Save",
+      "space f S": "workspace::SaveAll",
+      "space f y": "editor::CopyPath",
+      // (b) buffer
+      "space b b": "tab_switcher::Toggle",
+      "space b d": "pane::CloseActiveItem",
+      "space b D": "pane::CloseInactiveItems",
+      "space b u": "pane::ReopenClosedItem",
+      "space b n": "workspace::NewFile",
+      // (j) jump
+      "space j j": "editor::GoToDefinition",
+      "space j t": "editor::GoToTypeDefinition",
+      "space j r": "editor::FindAllReferences",
+      "space j s": "outline::Toggle",
+      "space j a": "assistant::ToggleFocus",
+      // (p) project
+      "space p r": "projects::OpenRecent",
+      "space p p": "workspace::Open",
+      // (s) search
+      "space s a": "pane::DeploySearch",
+      "space s s": "project_symbols::Toggle",
+      // (i) interact
+      "space i i": "assistant::InlineAssist",
+      "space i g": "editor::ToggleCodeActions",
+      "space i r": "editor::Rename",
+      // (h) http
+      "space h h": ["task::Spawn", { "task_name": "httpyac: run current line" }],
+      // (t) toggle
+      "space t l": "language_selector::Toggle",
+      "space t c": "theme_selector::Toggle"
+    }
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "scrollbar": {
+    "show": "never"
+  },
+  "collaboration_panel": {
+    "dock": "right",
+    "button": false
+  },
+  "chat_panel": {
+    "button": false
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "terminal": {
+    "button": false,
+    "dock": "right"
+  },
+  "project_panel": {
+    "dock": "right",
+    "indent_size": 7,
+    "auto_fold_dirs": true
+  },
+  "vim_mode": true,
+  "buffer_font_family": "Iosevka",
+  "relative_line_numbers": true,
+  "tab_bar": {
+    "show": false
+  },
+  "toolbar": {
+    "quick_actions": false
+  },
+  "vim": { "use_smartcase_find": true },
+  "ui_font_size": 16,
+  "format_on_save": "off",
+  "buffer_font_size": 16,
+  "restore_on_startup": "none",
+  "theme": {
+    "mode": "dark",
+    "light": "One Dark",
+    "dark": "One Dark"
+  }
+}
