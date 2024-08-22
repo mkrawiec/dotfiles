@@ -4,16 +4,27 @@
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+
+      // hack bindings to map multiple actions to a key
+      "ctrl-! w": "workspace::CloseAllDocks",
+      "ctrl-! n": "workspace::ClearAllNotifications",
+      "ctrl-! c": "editor::Copy",
+      "ctrl-! p": "editor::Paste",
+      "ctrl-! t": "project_panel::ToggleFocus",
+      "ctrl-! r": "pane::RevealInProjectPanel"
     }
   },
   {
     "context": "ProjectPanel",
     "bindings": {
-      "menu f": "project_panel::NewFile",
+      "menu c": "project_panel::NewFile",
       "menu d": "project_panel::NewDirectory",
-      "menu r": "project_panel::Rename"
-    }
+      "menu r": "project_panel::Rename",
+      "menu o": "project_panel::RevealInFileManager",
+      "menu z": "project_panel::CollapseAllEntries",
+      "menu f": ["workspace::SendKeystrokes", "ctrl-! t ctrl-! r"]
+   }
   },
   {
     "context": "Terminal",
@@ -22,9 +33,16 @@
       "menu x": "pane::CloseActiveItem",
       "menu q": "terminal_panel::ToggleFocus",
       "menu t": "task::Spawn",
-      "menu f": "workspace::ToggleZoom",
+      "menu z": "workspace::ToggleZoom",
       "menu p": "pane::ActivatePrevItem",
       "menu n": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "ProjectSearchBar",
+    "bindings": {
+      "menu q": "pane::CloseActiveItem",
+      "menu r": "search::ToggleReplace"
     }
   },
   {
@@ -35,14 +53,14 @@
     }
   },
   {
-    "context": "EmptyPane || (Editor && vim_mode != insert)",
+    "context": "EmptyPane || (Editor && vim_mode != insert && mode == full && !Pane)",
     "bindings": {
       "space space": "command_palette::Toggle",
-      "space '": ["task::Spawn", { "task_name": "toolbox: enter" }],
+      "space '": "terminal_panel::ToggleFocus",
       // (w) window
-      "space w o": "workspace::CloseAllDocks",
+      "space w o": ["workspace::SendKeystrokes", "ctrl-! w ctrl-! n ctrl-w o"],
       "space w p": "workspace::ClearAllNotifications",
-      "space w g": "workspace::ToggleZoom",
+      "space w z": "workspace::ToggleZoom",
       "space w s": "pane::SplitDown",
       "space w v": "pane::SplitRight",
       "space w c": "pane::CloseAllItems",
@@ -51,11 +69,14 @@
       "space f e k": "zed::OpenKeymap",
       "space f e t": "zed::OpenTasks",
       "space f e T": "zed::OpenLocalTasks",
+      "space f e R": "workspace::Reload",
       "space f f": "file_finder::Toggle",
       "space f t": "pane::RevealInProjectPanel",
       "space f s": "workspace::Save",
       "space f S": "workspace::SaveAll",
       "space f y": "editor::CopyPath",
+      "space f Y": ["workspace::SendKeystrokes", "i ctrl-a ctrl-! c escape"],
+      "space f P": ["workspace::SendKeystrokes", "i ctrl-a ctrl-! p escape"],
       // (b) buffer
       "space b b": "tab_switcher::Toggle",
       "space b d": "pane::CloseActiveItem",
@@ -71,15 +92,21 @@
       // (p) project
       "space p r": "projects::OpenRecent",
       "space p p": "workspace::Open",
+      // (r) run
+      "space r r": "task::Rerun",
+      "space r t": "task::Spawn",
+      "space r f": "editor::Format",
       // (s) search
       "space s a": "pane::DeploySearch",
       "space s s": "project_symbols::Toggle",
+      "space s c": ["workspace::SendKeystrokes", "escape"],
       // (i) interact
-      "space i i": "assistant::InlineAssist",
-      "space i g": "editor::ToggleCodeActions",
+      "space i i": "editor::ToggleCodeActions",
+      "space i g": "assistant::InlineAssist",
       "space i r": "editor::Rename",
       // (h) http
       "space h h": ["task::Spawn", { "task_name": "httpyac: run current line" }],
+      "space h e": ["task::Spawn", { "task_name": "httpyac: edit configuration" }],
       // (t) toggle
       "space t l": "language_selector::Toggle",
       "space t c": "theme_selector::Toggle"

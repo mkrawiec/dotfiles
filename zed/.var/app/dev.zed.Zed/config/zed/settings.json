@@ -1,43 +1,53 @@
 {
-  "scrollbar": {
-    "show": "never"
+  "assistant": {
+    "version": "2",
+    "provider": {
+      "default_model": "gpt-4o",
+      "name": "openai"
+    }
   },
-  "collaboration_panel": {
-    "dock": "right",
-    "button": false
-  },
+  "buffer_font_family": "Iosevka",
+  "buffer_font_size": 16,
   "chat_panel": {
     "button": false
   },
+  "collaboration_panel": {
+    "button": false,
+    "dock": "right"
+  },
+  "format_on_save": "off",
   "outline_panel": {
     "dock": "right"
+  },
+  "project_panel": {
+    "auto_fold_dirs": true,
+    "dock": "right",
+    "indent_size": 7
+  },
+  "relative_line_numbers": true,
+  "restore_on_startup": "none",
+  "scrollbar": {
+    "show": "never"
+  },
+  "tab_bar": {
+    "show": false
   },
   "terminal": {
     "button": false,
     "dock": "right"
   },
-  "project_panel": {
-    "dock": "right",
-    "indent_size": 7,
-    "auto_fold_dirs": true
-  },
-  "vim_mode": true,
-  "buffer_font_family": "Iosevka",
-  "relative_line_numbers": true,
-  "tab_bar": {
-    "show": false
+  "theme": {
+    "dark": "One Dark",
+    "light": "One Dark",
+    "mode": "dark"
   },
   "toolbar": {
     "quick_actions": false
   },
-  "vim": { "use_smartcase_find": true },
   "ui_font_size": 16,
-  "format_on_save": "off",
-  "buffer_font_size": 16,
-  "restore_on_startup": "none",
-  "theme": {
-    "mode": "dark",
-    "light": "One Dark",
-    "dark": "One Dark"
-  }
+  // "use_system_path_prompts": false,
+  "vim": {
+    "use_smartcase_find": true
+  },
+  "vim_mode": true
 }

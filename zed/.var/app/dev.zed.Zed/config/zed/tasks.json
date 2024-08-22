@@ -12,5 +12,26 @@
     "use_new_terminal": false,
     "reveal": "always",
     "command": "box -- httpyac --env int --line $ZED_ROW $ZED_FILE"
+  },
+  {
+    "label": "httpyac: edit configuration",
+    "tags": ["httpyac"],
+    "use_new_terminal": false,
+    "reveal": "always",
+    "command": "vi $ZED_WORKTREE_ROOT/httpyac.config.js"
+  },
+  {
+    "label": "tmux: attach",
+    "tags": ["tmux"],
+    "use_new_terminal": true,
+    "reveal": "always",
+    "command": "box -- tmux a"
+  },
+  {
+    "label": "tmux: start new session",
+    "tags": ["tmux"],
+    "use_new_terminal": true,
+    "reveal": "always",
+    "command": "box -- tmux"
   }
 ]
