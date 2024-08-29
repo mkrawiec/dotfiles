@@ -10,6 +10,11 @@ vim.opt.cursorline = true
 vim.opt.virtualedit = "onemore"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.shortmess:append("c")
+vim.opt.breakindent = true
+
+-- Waits
+vim.opt.updatetime = 250
+vim.opt.timeoutlen = 300
 
 -- Windows
 vim.opt.splitright = true

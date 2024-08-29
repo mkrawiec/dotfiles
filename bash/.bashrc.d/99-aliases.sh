@@ -23,9 +23,9 @@ fi
 alias gcd='cd `git rev-parse --show-toplevel`'
 
 # Docker
-alias dockrm='docker container prune'
-alias dockrmi='docker image prune'
-alias dockip='docker inspect --format "{{ .NetworkSettings.IPAddress }}"'
+alias dockrm='podman container prune'
+alias dockrmi='podman image prune'
+alias dockip='podman inspect --format "{{ .NetworkSettings.IPAddress }}"'
 
 # Node
 alias npmi='npm install --save'
@@ -47,8 +47,8 @@ alias serve='python3 -m http.server 3000'
 if [ `uname -s` == 'Linux' ]; then
   # Linux specific
   alias open='xdg-open'
-  alias xcopy='xclip'
-  alias xpaste='xclip -o'
+  alias xcopy='wl-copy'
+  alias xpaste='wl-paste'
   alias sd='sudo systemctl'
   alias sdlog='sudo journalctl -n 20 -f -u'
   alias box='distrobox enter distrobox-sid'
