@@ -1,5 +1,9 @@
 {
   "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    },
     "version": "2",
     "provider": {
       "default_model": "gpt-4o",

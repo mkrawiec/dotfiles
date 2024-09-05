@@ -59,7 +59,7 @@
       "space '": "terminal_panel::ToggleFocus",
       // (w) window
       "space w o": ["workspace::SendKeystrokes", "ctrl-! w ctrl-! n ctrl-w o"],
-      "space w p": "workspace::ClearAllNotifications",
+      "space w p": ["workspace::SendKeystrokes", "ctrl-! w ctrl-! n"],
       "space w z": "workspace::ToggleZoom",
       "space w s": "pane::SplitDown",
       "space w v": "pane::SplitRight",
