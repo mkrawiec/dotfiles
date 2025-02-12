@@ -11,6 +11,8 @@
     "tags": ["httpyac"],
     "use_new_terminal": false,
     "reveal": "always",
+    "show_command": false,
+    "show_summary": false,
     "command": "box -- httpyac --env int --line $ZED_ROW $ZED_FILE"
   },
   {
@@ -18,6 +20,8 @@
     "tags": ["httpyac"],
     "use_new_terminal": false,
     "reveal": "always",
+    "show_command": false,
+    "show_summary": false,
     "command": "vi $ZED_WORKTREE_ROOT/httpyac.config.js"
   },
   {
@@ -33,5 +37,23 @@
     "use_new_terminal": true,
     "reveal": "always",
     "command": "box -- tmux"
+  },
+  {
+    "label": "git: blame current line",
+    "tags": ["git"],
+    "use_new_terminal": false,
+    "show_command": false,
+    "show_summary": false,
+    "reveal": "always",
+    "command": "box -- git blame -p -L $ZED_ROW,$ZED_ROW $ZED_FILE"
+  },
+  {
+    "label": "git: view log of current file",
+    "tags": ["git"],
+    "use_new_terminal": false,
+    "show_command": false,
+    "show_summary": false,
+    "reveal": "always",
+    "command": "box -- git log --oneline --graph --decorate --color --stat --patch $ZED_FILE"
   }
 ]

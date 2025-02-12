@@ -18,20 +18,21 @@
   {
     "context": "ProjectPanel",
     "bindings": {
+      "menu q": "workspace::CloseAllDocks",
       "menu c": "project_panel::NewFile",
       "menu d": "project_panel::NewDirectory",
       "menu r": "project_panel::Rename",
       "menu o": "project_panel::RevealInFileManager",
       "menu z": "project_panel::CollapseAllEntries",
       "menu f": ["workspace::SendKeystrokes", "ctrl-! t ctrl-! r"]
-   }
+    }
   },
   {
     "context": "Terminal",
     "bindings": {
       "menu c": "workspace::NewTerminal",
       "menu x": "pane::CloseActiveItem",
-      "menu q": "terminal_panel::ToggleFocus",
+      "menu q": "workspace::CloseAllDocks",
       "menu t": "task::Spawn",
       "menu z": "workspace::ToggleZoom",
       "menu p": "pane::ActivatePrevItem",
@@ -53,7 +54,7 @@
     }
   },
   {
-    "context": "EmptyPane || (Editor && vim_mode != insert && mode == full && !Pane)",
+    "context": "EmptyPane || (Editor && (vim_mode == normal || vim_mode == visual) && mode == full)",
     "bindings": {
       "space space": "command_palette::Toggle",
       "space '": "terminal_panel::ToggleFocus",
@@ -68,7 +69,7 @@
       "space f e d": "zed::OpenSettings",
       "space f e k": "zed::OpenKeymap",
       "space f e t": "zed::OpenTasks",
-      "space f e T": "zed::OpenLocalTasks",
+      "space f e T": "zed::OpenProjectTasks",
       "space f e R": "workspace::Reload",
       "space f f": "file_finder::Toggle",
       "space f t": "pane::RevealInProjectPanel",
@@ -77,6 +78,13 @@
       "space f y": "editor::CopyPath",
       "space f Y": ["workspace::SendKeystrokes", "i ctrl-a ctrl-! c escape"],
       "space f P": ["workspace::SendKeystrokes", "i ctrl-a ctrl-! p escape"],
+      // (g) git
+      "space g b": ["task::Spawn", { "task_name": "git: blame current line" }],
+      "space g l": [
+        "task::Spawn",
+        { "task_name": "git: view log of current file" }
+      ],
+      "space g u": "editor::RevertSelectedHunks",
       // (b) buffer
       "space b b": "tab_switcher::Toggle",
       "space b d": "pane::CloseActiveItem",
@@ -89,6 +97,7 @@
       "space j r": "editor::FindAllReferences",
       "space j s": "outline::Toggle",
       "space j a": "assistant::ToggleFocus",
+      "space j d": "diagnostics::Deploy",
       // (p) project
       "space p r": "projects::OpenRecent",
       "space p p": "workspace::Open",
@@ -105,11 +114,26 @@
       "space i g": "assistant::InlineAssist",
       "space i r": "editor::Rename",
       // (h) http
-      "space h h": ["task::Spawn", { "task_name": "httpyac: run current line" }],
-      "space h e": ["task::Spawn", { "task_name": "httpyac: edit configuration" }],
+      "space h h": [
+        "task::Spawn",
+        { "task_name": "httpyac: run current line" }
+      ],
+      "space h e": [
+        "task::Spawn",
+        { "task_name": "httpyac: edit configuration", "reveal_target": "center" }
+      ],
       // (t) toggle
       "space t l": "language_selector::Toggle",
-      "space t c": "theme_selector::Toggle"
+      "space t c": "theme_selector::Toggle",
+      "space t h": "editor::ToggleInlayHints"
+    }
+  },
+  {
+    "context": "vim_mode == normal",
+    "bindings": {
+      "shift-y": ["workspace::SendKeystrokes", "y $"],
+      "j": ["vim::Down", { "displayLines": true }],
+      "k": ["vim::Up", { "displayLines": true }]
     }
   }
 ]
