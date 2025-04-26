@@ -28,6 +28,18 @@
     }
   },
   {
+    "context": "GitPanel",
+    "bindings": {
+      "menu q": "workspace::CloseAllDocks",
+      "menu i": "git_panel::FocusEditor",
+      "menu c": "git::Commit",
+      "menu s": "git::ToggleStaged",
+      "menu S": "git::StageAll",
+      "menu r": "git::RestoreFile",
+      "menu U": "git::UnstageAll"
+    }
+  },
+  {
     "context": "Terminal",
     "bindings": {
       "menu c": "workspace::NewTerminal",
@@ -35,8 +47,7 @@
       "menu q": "workspace::CloseAllDocks",
       "menu t": "task::Spawn",
       "menu z": "workspace::ToggleZoom",
-      "menu p": "pane::ActivatePrevItem",
-      "menu n": "pane::ActivateNextItem"
+      "menu menu": "pane::ActivateNextItem"
     }
   },
   {
@@ -65,6 +76,7 @@
       "space w s": "pane::SplitDown",
       "space w v": "pane::SplitRight",
       "space w c": "pane::CloseAllItems",
+      "space w g": "vim::MaximizePane",
       // (f) file
       "space f e d": "zed::OpenSettings",
       "space f e k": "zed::OpenKeymap",
@@ -75,13 +87,18 @@
       "space f t": "pane::RevealInProjectPanel",
       "space f s": "workspace::Save",
       "space f S": "workspace::SaveAll",
-      "space f y": "editor::CopyPath",
+      "space f y": "workspace::CopyPath",
       "space f Y": ["workspace::SendKeystrokes", "i ctrl-a ctrl-! c escape"],
       "space f P": ["workspace::SendKeystrokes", "i ctrl-a ctrl-! p escape"],
       // (g) git
-      "space g b": ["task::Spawn", { "task_name": "git: blame current line" }],
-      "space g l": ["task::Spawn", { "task_name": "git: view log of current file" }],
-      "space g u": "editor::RevertSelectedHunks",
+      "space g g": "git_panel::ToggleFocus",
+      "space g b": "git::Blame",
+      "space g s": "git::ToggleStaged",
+      "space g u": "git::Restore",
+      "space g l": [
+        "task::Spawn",
+        { "task_name": "git: view log of current file" }
+      ],
       // (b) buffer
       "space b b": "tab_switcher::Toggle",
       "space b d": "pane::CloseActiveItem",
@@ -111,12 +128,19 @@
       "space i g": "assistant::InlineAssist",
       "space i r": "editor::Rename",
       // (h) http
-      "space h h": ["task::Spawn", { "task_name": "httpyac: run current line" }],
-      "space h e": ["task::Spawn", { "task_name": "httpyac: edit configuration" }],
+      "space h h": [
+        "task::Spawn",
+        { "task_name": "httpyac: run current line" }
+      ],
+      "space h e": [
+        "task::Spawn",
+        { "task_name": "httpyac: edit configuration" }
+      ],
       // (t) toggle
       "space t l": "language_selector::Toggle",
       "space t c": "theme_selector::Toggle",
-      "space t h": "editor::ToggleInlayHints"
+      "space t h": "editor::ToggleInlayHints",
+      "space t t": "editor::ToggleTabBar"
     }
   },
   {
@@ -125,6 +149,14 @@
       "shift-y": ["workspace::SendKeystrokes", "y $"],
       "j": ["vim::Down", { "display_lines": true }],
       "k": ["vim::Up", { "display_lines": true }]
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      ">": "editor::Indent",
+      "<": "editor::Outdent",
+      "s": ["vim::PushAddSurrounds", {}]
     }
   }
 ]

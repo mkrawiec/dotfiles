@@ -34,7 +34,7 @@ npmv() { npm info $1 dist-tags; }
 
 # Python
 pyclean() { find . -regex '^.*\(__pycache__\|\.py[co]\)$' -delete ; }
-pyenv_on() { eval "$(pyenv init -)"; }
+alias activate='source .venv/bin/activate'
 
 # Multimedia
 alias songdownload='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0'
@@ -45,11 +45,20 @@ alias myip='curl -s http://ip-api.com/json | python3 -m json.tool'
 alias serve='python3 -m http.server 3000'
 
 if [ `uname -s` == 'Linux' ]; then
-  # Linux specific
+  # XDG
   alias open='xdg-open'
   alias xcopy='wl-copy'
   alias xpaste='wl-paste'
+  # Systemd
   alias sd='sudo systemctl'
   alias sdlog='sudo journalctl -n 20 -f -u'
+  # Distrobox
   alias box='distrobox enter distrobox-sid'
+  alias boxup='distrobox upgrade distrobox-sid'
+  # Apt
+  alias ain='sudo apt install --no-install-recommends'
+  alias aup='sudo apt update && sudo apt dist-upgrade'
+  alias alu='apt list --upgradable'
+  alias ali='apt list --installed | grep'
+  alias ase='apt search'
 fi

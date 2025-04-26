@@ -1,9 +1,10 @@
 {
+  "show_edit_predictions": true,
   "soft_wrap": "editor_width",
   "assistant": {
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "provider": "openai",
+      "model": "o3-mini"
     },
     "version": "2"
   },
@@ -17,6 +18,9 @@
     "dock": "right"
   },
   "format_on_save": "off",
+  "git_panel": {
+    "dock": "right"
+  },
   "outline_panel": {
     "dock": "right"
   },
@@ -54,6 +58,11 @@
     "light": "One Dark",
     "mode": "dark"
   },
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
   "toolbar": {
     "quick_actions": false
   },
@@ -63,5 +72,23 @@
     "use_smartcase_find": true,
     "use_multiline_find": true
   },
-  "vim_mode": true
+  "vim_mode": true,
+  "languages": {
+    "Python": {
+      "language_servers": ["pyright", "ruff"],
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        },
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    }
+  }
 }

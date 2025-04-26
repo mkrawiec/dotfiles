@@ -30,6 +30,7 @@
 
     # Rebase
     r = rebase
+    rr = !git rebase origin/$(git name)
     ro = rebase -s recursive -X ours
     rt = rebase -s recursive -X theirs
 
