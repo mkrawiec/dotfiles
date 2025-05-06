@@ -54,7 +54,7 @@
     "dock": "right"
   },
   "theme": {
-    "dark": "Github Dark Dimmed",
+    "dark": "Gruvbox Dark",
     "light": "One Dark",
     "mode": "dark"
   },

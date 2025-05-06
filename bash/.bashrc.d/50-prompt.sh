@@ -28,7 +28,7 @@ prompt_command()
 
 prompt()
 {
-  if [ -f /run/.containerenv ]; then
+  if [[ -f /run/.containerenv || -f /.dockerenv ]]; then
     echo -n "\n$LCYAN🗿 \w"
   else
     echo -n "\n$LBLUE\w"
