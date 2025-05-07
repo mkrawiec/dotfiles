@@ -110,7 +110,7 @@
       "space j t": "editor::GoToTypeDefinition",
       "space j r": "editor::FindAllReferences",
       "space j s": "outline::Toggle",
-      "space j a": "assistant::ToggleFocus",
+      "space j a": "agent::ToggleFocus",
       "space j d": "diagnostics::Deploy",
       // (p) project
       "space p r": "projects::OpenRecent",

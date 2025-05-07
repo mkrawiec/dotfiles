@@ -1,7 +1,7 @@
 {
   "show_edit_predictions": true,
   "soft_wrap": "editor_width",
-  "assistant": {
+  "agent": {
     "default_model": {
       "provider": "openai",
       "model": "o3-mini"
