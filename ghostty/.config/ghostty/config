@@ -1,0 +1,6 @@
+font-family = Iosevka
+theme = catppuccin-mocha
+term = xterm-256color
+cursor-style = block
+shell-integration-features = no-cursor
+cursor-invert-fg-bg = true
