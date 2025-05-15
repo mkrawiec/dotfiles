@@ -1,5 +1,0 @@
-require("mkrawiec.settings")
-require("mkrawiec.plugins")
-require("mkrawiec.mappings")
-require("mkrawiec.commands")
-require("mkrawiec.statusline")
