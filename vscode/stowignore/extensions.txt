@@ -1,9 +1,0 @@
-editorconfig.editorconfig
-humao.rest-client
-mkrawiec.config-extension
-usernamehw.errorlens
-visualstudioexptteam.vscodeintellicode
-vscodevim.vim
-vspacecode.whichkey
-waderyan.gitblame
-will-wow.vscode-alternate-file
