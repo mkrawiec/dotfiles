@@ -9,6 +9,7 @@ vim.opt.showmatch = true
 vim.opt.cursorline = true
 vim.opt.virtualedit = "onemore"
 vim.opt.clipboard = "unnamedplus"
+vim.opt.mouse = "v"
 vim.opt.shortmess:append("c")
 vim.opt.breakindent = true
 
