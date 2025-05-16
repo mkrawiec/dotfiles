@@ -7,6 +7,9 @@ export SHELL=/usr/bin/bash
 # Add local binaries to PATH
 export PATH=~/bin:~/.local/bin:$PATH
 
+# Use en_US locale
+export LC_ALL=en_US.UTF8
+
 # Forgive spelling errors in cd
 shopt -s cdspell
 
@@ -37,6 +40,4 @@ eval `dircolors ~/.dircolors`
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+eval "$(mise activate bash)"
