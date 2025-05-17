@@ -12,12 +12,14 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.mouse = "v"
 vim.opt.shortmess:append("c")
 vim.opt.breakindent = true
+vim.opt.completeopt = { "menuone", "preinsert", "fuzzy", "popup", "noinsert", "nosort" }
 
 -- Waits
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 
 -- Windows
+vim.opt.winborder = "rounded"
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.diffopt:append("vertical")
@@ -52,4 +54,4 @@ vim.opt.undofile = true
 vim.api.nvim_set_hl(0, "ExtraWhitespace", { bg = "red" })
 vim.fn.matchadd("ExtraWhitespace", [[\s\+\%#\@<!$]])
 
-vim.diagnostic.config({ virtual_text = true })
+vim.diagnostic.config({ virtual_text = { current_line = true } })

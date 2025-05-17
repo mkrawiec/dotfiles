@@ -66,7 +66,6 @@ set("n", "<leader>is", vim.lsp.buf.signature_help, { desc = "LSP: Signature Help
 -- Jump
 set("n", "<leader>jj", vim.lsp.buf.definition, { desc = "LSP: Definition" })
 set("n", "<leader>jr", vim.lsp.buf.references, { desc = "LSP: References" })
-set("n", "<leader>js", vim.lsp.buf.signature_help, { desc = "LSP: Signature" })
 set("n", "<leader>jt", vim.lsp.buf.type_definition, { desc = "LSP: Type Definition" })
 set("n", "<leader>ji", vim.lsp.buf.implementation, { desc = "LSP: Implementation" })
 
