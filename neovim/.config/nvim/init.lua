@@ -15,20 +15,20 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("mkrawiec.plugins", {
- performance = {
-  rtp = {
-   disabled_plugins = {
-    "gzip",
-    "matchit",
-    "matchparen",
-    "netrwPlugin",
-    "tarPlugin",
-    "tohtml",
-    "tutor",
-    "zipPlugin",
-   },
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        "gzip",
+        "matchit",
+        "matchparen",
+        "netrwPlugin",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin",
+      },
+    },
   },
- },
 })
 
 vim.cmd.colorscheme("catppuccin")

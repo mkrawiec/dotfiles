@@ -4,10 +4,4 @@ return {
   { "editorconfig/editorconfig-vim" },
   { "tpope/vim-fugitive" },
   { "nvim-tree/nvim-web-devicons" },
-  {
-    "lewis6991/gitsigns.nvim",
-    config = function()
-      require("gitsigns").setup()
-    end,
-  },
 }

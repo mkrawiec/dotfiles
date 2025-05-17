@@ -19,6 +19,9 @@ set("n", "j", "v:count == 0 ? 'gj' : 'j'", { noremap = true, expr = true, silent
 -- Esc to normal mode (only in terminal mode)
 set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Terminal: Normal mode" })
 
+set("n", "[d", vim.diagnostic.goto_prev, { desc = "LSP: Previous Diagnostic" })
+set("n", "]d", vim.diagnostic.goto_next, { desc = "LSP: Next Diagnostic" })
+
 -- Ctrl-h/j/k/l to move between splits from terminal mode
 set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], { desc = "Terminal: Go left" })
 set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], { desc = "Terminal: Go down" })
@@ -31,7 +34,6 @@ set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], { desc = "Terminal: Go right" })
 
 -- Buffer
 set("n", "<leader>bD", "<Cmd>%bd|e #<CR>", { desc = "Buffer: Close others" })
-set("n", "<leader>bb", "<Cmd>Telescope buffers<CR>", { desc = "Buffer: Choose" })
 set("n", "<leader>bd", "<Cmd>bp|bd #<CR>", { desc = "Buffer: Close" })
 set("n", "<leader>bn", "<Cmd>enew<CR>", { desc = "Buffer: New" })
 set("n", "<leader>bY", "ggVGy", { desc = "Buffer: Yank" })
@@ -40,7 +42,6 @@ set("n", "<leader>bP", "ggVGp", { desc = "Buffer: Paste" })
 -- File
 set("n", "<leader>fs", "<Cmd>w<CR>", { desc = "File: Save this buffer" })
 set("n", "<leader>fS", "<Cmd>wa<CR>", { desc = "File: Save all buffers" })
-set("n", "<leader>ff", "<Cmd>Telescope find_files hidden=true<CR>", { desc = "File: Choose" })
 set("n", "<leader>fed", "<Cmd>edit $MYVIMRC<CR>", { desc = "Config: Edit root" })
 set("n", "<leader>fek", function()
   vim.cmd("edit " .. vim.fn.stdpath("config") .. "/lua/mkrawiec/core/mappings.lua")
@@ -52,28 +53,32 @@ set("n", "<leader>gg", "<Cmd>vertical G<CR>", { desc = "Git: Status" })
 set("n", "<leader>gb", "<Cmd>G blame<CR>", { desc = "Git: Blame" })
 set("n", "<leader>gd", "<Cmd>Gdiff<CR>", { desc = "Git: Diff" })
 
--- LSP Interact
-set("n", "<leader>ii", "<Cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "LSP: Code Action" })
-set("n", "<leader>ir", "<Cmd>lua vim.lsp.buf.rename()<CR>", { desc = "LSP: Rename" })
-set("n", "<leader>ih", "<Cmd>lua vim.lsp.buf.hover()<CR>", { desc = "LSP: Hover" })
-
--- LSP Jump
-set("n", "<leader>jj", "<Cmd>lua vim.lsp.buf.definition()<CR>", { desc = "LSP: Definition" })
-set("n", "<leader>jr", "<Cmd>lua vim.lsp.buf.references()<CR>", { desc = "LSP: References" })
-set("n", "<leader>js", "<Cmd>lua vim.lsp.buf.signature_help()<CR>", { desc = "LSP: Signature" })
-set("n", "<leader>jt", "<Cmd>lua vim.lsp.buf.type_definition()<CR>", { desc = "LSP: Type Definition" })
-set("n", "<leader>ji", "<Cmd>lua vim.lsp.buf.implementation()<CR>", { desc = "LSP: Implementation" })
-set("n", "<leader>jm", "<Cmd>Telescope marks<CR>", { desc = "Jump: Marks" })
-
 -- Search
-set("n", "<leader>sa", "<Cmd>Telescope live_grep<CR>", { desc = "Search: Grep" })
 set("n", "<leader>sc", "<Cmd>nohlsearch<CR>", { desc = "Search: Clear highlight" })
-set("n", "<leader>sh", "<Cmd>Telescope help_tags<CR>", { desc = "Search: Help tags" })
+
+-- Interact
+set("n", "<leader>ii", vim.lsp.buf.code_action, { desc = "LSP: Code Action" })
+set("n", "<leader>ir", vim.lsp.buf.rename, { desc = "LSP: Rename" })
+set("n", "<leader>ih", vim.lsp.buf.hover, { desc = "LSP: Hover" })
+set("n", "<leader>is", vim.lsp.buf.signature_help, { desc = "LSP: Signature Help" })
+
+-- Jump
+set("n", "<leader>jj", vim.lsp.buf.definition, { desc = "LSP: Definition" })
+set("n", "<leader>jr", vim.lsp.buf.references, { desc = "LSP: References" })
+set("n", "<leader>js", vim.lsp.buf.signature_help, { desc = "LSP: Signature" })
+set("n", "<leader>jt", vim.lsp.buf.type_definition, { desc = "LSP: Type Definition" })
+set("n", "<leader>ji", vim.lsp.buf.implementation, { desc = "LSP: Implementation" })
 
 -- Toggles
-set("n", "<leader>tl", "<Cmd>Telescope filetypes<CR>", { desc = "Toggle: Language" })
-set("n", "<leader>tc", "<Cmd>Telescope colorscheme<CR>", { desc = "Toggle: Color scheme" })
-set("n", "<leader>ts", "<Cmd>LspInfo<CR>", { desc = "Toggle: LSP diagnostics" })
+set("n", "<leader>ts", vim.diagnostic.open_float, { desc = "LSP: Show Diagnostics" })
+
+-- Run
+set("n", "<leader>rf", function()
+  vim.lsp.buf.format({ async = true })
+end, { desc = "LSP: Format Buffer" })
+set("v", "<leader>rf", function()
+  vim.lsp.buf.format({ async = true })
+end, { desc = "LSP: Format Selection" })
 
 -- Window
 set("n", "<leader>w", "<C-W>", { desc = "Window" })

@@ -51,3 +51,5 @@ vim.opt.undofile = true
 -- Highlight trailing whitespace
 vim.api.nvim_set_hl(0, "ExtraWhitespace", { bg = "red" })
 vim.fn.matchadd("ExtraWhitespace", [[\s\+\%#\@<!$]])
+
+vim.diagnostic.config({ virtual_text = true })
