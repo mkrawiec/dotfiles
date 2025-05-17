@@ -1,7 +1,7 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" },
     event = "VeryLazy",
     config = function()
       local telescope = require("telescope")
@@ -30,6 +30,9 @@ return {
       })
 
       set("n", "<leader><leader>", builtin.commands, { desc = "Search: Commands" })
+
+      -- Git
+      set("n", "<leader>gc", builtin.git_branches, { desc = "Git: Checkout" })
 
       -- Buffer
       set("n", "<leader>bb", builtin.buffers, { desc = "Buffer: Choose" })

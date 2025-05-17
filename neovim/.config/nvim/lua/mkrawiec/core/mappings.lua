@@ -60,6 +60,7 @@ set("n", "<leader>sc", "<Cmd>nohlsearch<CR>", { desc = "Search: Clear highlight"
 set("n", "<leader>ii", vim.lsp.buf.code_action, { desc = "LSP: Code Action" })
 set("n", "<leader>ir", vim.lsp.buf.rename, { desc = "LSP: Rename" })
 set("n", "<leader>ih", vim.lsp.buf.hover, { desc = "LSP: Hover" })
+set("n", "<leader>id", vim.diagnostic.open_float, { desc = "LSP: Show Diagnostics" })
 set("n", "<leader>is", vim.lsp.buf.signature_help, { desc = "LSP: Signature Help" })
 
 -- Jump
@@ -70,7 +71,7 @@ set("n", "<leader>jt", vim.lsp.buf.type_definition, { desc = "LSP: Type Definiti
 set("n", "<leader>ji", vim.lsp.buf.implementation, { desc = "LSP: Implementation" })
 
 -- Toggles
-set("n", "<leader>ts", vim.diagnostic.open_float, { desc = "LSP: Show Diagnostics" })
+set("n", "<leader>ts", "<Cmd>LspInfo<CR>", { desc = "LSP: Show Server Info" })
 
 -- Run
 set("n", "<leader>rf", function()
@@ -83,6 +84,7 @@ end, { desc = "LSP: Format Selection" })
 -- Window
 set("n", "<leader>w", "<C-W>", { desc = "Window" })
 set("n", "<leader>wt", "<Cmd>vsplit | terminal<CR>", { desc = "Terminal: Split vertically" })
+set("n", "<leader>wp", "<Cmd>lclose | pclose | cclose<CR>", { desc = "Widnow: Close popups" })
 set("n", "<leader>w+", "<Cmd>resize +5<CR>", { desc = "Window: Increase height" })
 set("n", "<leader>w-", "<Cmd>resize -5<CR>", { desc = "Window: Decrease height" })
 set("n", "<leader>w>", "<Cmd>vertical resize +10<CR>", { desc = "Window: Increase width" })
