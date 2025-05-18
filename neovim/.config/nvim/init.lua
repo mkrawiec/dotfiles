@@ -15,6 +15,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("mkrawiec.plugins", {
+  defaults = {
+    lazy = true,
+  },
   performance = {
     rtp = {
       disabled_plugins = {

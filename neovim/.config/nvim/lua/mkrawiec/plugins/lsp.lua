@@ -1,9 +1,11 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    event = "VeryLazy",
   },
   {
     "williamboman/mason.nvim",
+    cmd = { "Mason", "MasonInstall", "MasonUpdate" },
     config = true,
   },
   {
