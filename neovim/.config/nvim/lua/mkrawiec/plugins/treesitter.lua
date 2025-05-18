@@ -3,7 +3,7 @@ return {
   build = ":TSUpdate",
   config = function()
     require("nvim-treesitter.configs").setup({
-      ensure_installed = { "typescript", "python", "lua", "vim", "vimdoc", "terraform" },
+      auto_install = true,
       highlight = {
         enable = true,
         disable = { "help" },
@@ -13,6 +13,12 @@ return {
       },
       incremental_selection = {
         enable = true,
+        keymaps = {
+          init_selection = "<leader>v",
+          node_incremental = "grn",
+          scope_incremental = "grc",
+          node_decremental = "grm",
+        },
       },
     })
   end,
