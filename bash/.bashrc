@@ -1,32 +1,30 @@
 # Set default editor
 export EDITOR='nvim'
 
-# Ensure SHELL is set
-export SHELL=/usr/bin/bash
-
 # Add local binaries to PATH
-export PATH=~/bin:~/.local/bin:$PATH
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
-# Use en_US locale
-export LC_ALL=en_US.UTF8
+# Use en_US locale with UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
-# Forgive spelling errors in cd
+# Forgive spelling errors in 'cd' paths
 shopt -s cdspell
 
 # Enable recursive glob with **
 shopt -s globstar
 
-# Avoid duplicates in history
+# Avoid duplicates and erase older duplicates in history
 HISTCONTROL="erasedups:ignoreboth"
 
-# Ignore some commands in history
+# Ignore common trivial commands in history
 HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
 
-# Increase history size
+# Expand history capacity
 HISTSIZE=500000
 HISTFILESIZE=100000
 
-# Trim long pwd in prompt
+# Trim long paths in prompt
 PROMPT_DIRTRIM=2
 
 if [ -d ~/.bashrc.d ]; then

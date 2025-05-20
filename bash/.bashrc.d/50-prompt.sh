@@ -33,7 +33,7 @@ prompt()
   else
     echo -n "\n$LBLUE\w"
   fi
-  if [ -f /usr/lib/git-core/git-sh-prompt ]; then
+  if declare -F __git_ps1 >/dev/null; then
     echo -n '$(__git_ps1 "$LWHITE on $LPURPLE$CHAR_GIT_BRANCH %s$RESET")'
   fi
   echo -n "\n "
