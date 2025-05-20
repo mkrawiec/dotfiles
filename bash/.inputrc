@@ -15,21 +15,29 @@ set enable-bracketed-paste on
 # Reduce wait time for mappings
 set keyseq-timeout 50
 
+# Allow the command prompt to wrap to the next line
+set horizontal-scroll-mode off
+
+# Enable 8-bit input
+set meta-flag on
+set input-meta on
+set convert-meta off
+set output-meta on
+
 #
 # Look & Feel
 #
 
 # Enable colors
 set colored-stats on
-
-# Add filetype suffix
 set visible-stats on
-
-# Mark symlinked directories
-set mark-symlinked-directories On
-
-# Color the common prefix
+set mark-symlinked-directories on
 set colored-completion-prefix on
+
+# Highlight active region (Readline ≥ 8.1)
+set enable-active-region on
+set active-region-start-color "\e[38;5;39m"
+set active-region-end-color "\e[0m"
 
 #
 # Completion
@@ -49,6 +57,12 @@ set menu-complete-display-prefix on
 
 # Match case-insensitive
 set completion-ignore-case on
+
+# Treat hyphens and underscores as equivalent
+set completion-map-case on
+
+# Increase threshold for completion query
+set completion-query-items 1000
 
 #
 # Mappings
