@@ -12,25 +12,19 @@ return {
     local set = vim.keymap.set
 
     telescope.setup({
-      defaults = {
-        file_ignore_patterns = {
-          "node_modules",
-          ".git",
-          "package%-lock%.json", -- escape '-' in Lua patterns
-        },
-      },
       pickers = {
         find_files = {
           hidden = true,
         },
         grep_string = {
-          additional_args = { "--hidden" },
+          additional_args = { "--hidden", "--glob", "!.git/*" },
         },
         live_grep = {
-          additional_args = { "--hidden" },
+          additional_args = { "--hidden", "--glob", "!.git/*" },
         },
       },
     })
+
     telescope.load_extension("fzf")
 
     set("n", "<leader><leader>", builtin.commands, { desc = "Search: Commands" })
