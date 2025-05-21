@@ -85,17 +85,25 @@ set("v", "<leader>rf", function()
 end, { desc = "LSP: Format Selection" })
 
 -- Window
-set("n", "<leader>w+", "<Cmd>resize +5<CR>", { desc = "Window: Increase height" })
-set("n", "<leader>w-", "<Cmd>resize -5<CR>", { desc = "Window: Decrease height" })
-set("n", "<leader>w<", "<Cmd>vertical resize -10<CR>", { desc = "Window: Decrease width" })
-set("n", "<leader>w>", "<Cmd>vertical resize +10<CR>", { desc = "Window: Increase width" })
-set("n", "<leader>wr", "<Cmd>wincmd r<CR>", { desc = "Window: Rotate splits" })
-set("n", "<leader>wg", utils.set_golden_ratio, { desc = "Window: Golden ratio size" })
 set("n", "<leader>wc", "<Cmd>close<CR>", { desc = "Window: Close" })
 set("n", "<leader>we", "<Cmd>wincmd =<CR>", { desc = "Window: Equalize" })
+set("n", "<leader>wg", utils.set_golden_ratio, { desc = "Window: Golden ratio size" })
 set("n", "<leader>wo", "<Cmd>only<CR>", { desc = "Window: Close other windows" })
 set("n", "<leader>wp", "<Cmd>lclose | pclose | cclose<CR>", { desc = "Widnow: Close popups" })
 set("n", "<leader>ws", "<Cmd>split<CR>", { desc = "Window: Split below" })
-set("n", "<leader>wt", "<Cmd>vsplit | terminal<CR>", { desc = "Terminal: Split right" })
+set("n", "<leader>wts", "<Cmd>split | terminal<CR>", { desc = "Terminal: Split down" })
+set("n", "<leader>wtv", "<Cmd>vsplit | terminal<CR>", { desc = "Terminal: Split right" })
 set("n", "<leader>wv", "<Cmd>vsplit<CR>", { desc = "Window: Split right" })
 set("n", "<leader>wz", "<Cmd>tab split<CR>", { desc = "Window: Zoom (maximize current window in tab)" })
+
+-- Window moving
+set('n', '<leader>wH', '<C-w>H', { desc = 'Window: Move to far left' })
+set('n', '<leader>wJ', '<C-w>J', { desc = 'Window: Move to very bottom' })
+set('n', '<leader>wK', '<C-w>K', { desc = 'Window: Move to very top' })
+set('n', '<leader>wL', '<C-w>L', { desc = 'Window: Move to far right' })
+
+-- Window resize
+set('n', '<leader><', '<C-w><', { desc = 'Window: Decrease width (repeatable)' })
+set('n', '<leader>>', '<C-w>>', { desc = 'Window: Increase width (repeatable)' })
+set('n', '<leader>-', '<C-w>-', { desc = 'Window: Decrease height (repeatable)' })
+set('n', '<leader>+', '<C-w>+', { desc = 'Window: Increase height (repeatable)' })
