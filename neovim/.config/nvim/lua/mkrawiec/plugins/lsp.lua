@@ -1,20 +1,24 @@
 return {
-  {
+  "mason-org/mason-lspconfig.nvim",
+  event = { "BufReadPre", "BufNewFile" },
+  dependencies = {
+    { "mason-org/mason.nvim", opts = {} },
     "neovim/nvim-lspconfig",
-    event = "VeryLazy",
   },
-  {
-    "williamboman/mason.nvim",
-    cmd = { "Mason", "MasonInstall", "MasonUpdate" },
-    config = true,
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "pyright", "ts_ls" },
-      })
-    end,
+  opts = {
+    ensure_installed = {
+      "pyright",
+      "ruff",
+      "ts_ls",
+      "bashls",
+      "terraformls",
+      "yamlls",
+      "dockerls",
+      "jsonls",
+      "marksman",
+      "lua_ls",
+      "html",
+      "cssls",
+    },
   },
 }

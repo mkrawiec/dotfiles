@@ -38,25 +38,13 @@ vim.api.nvim_create_autocmd("TermOpen", {
   desc = "Disable line numbers in terminal",
 })
 
-vim.api.nvim_create_autocmd("LspAttach", {
-  group = group,
-  callback = function(ev)
-    vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
-    vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, { buffer = ev.buf })
-  end,
-  desc = "Add manual signature help triggers",
-})
-
-vim.api.nvim_create_autocmd("InsertCharPre", {
+vim.api.nvim_create_autocmd({ "TermOpen", "BufEnter" }, {
   group = group,
   pattern = "*",
   callback = function()
-    local char = vim.v.char
-    if char == "(" or char == "," then
-      vim.defer_fn(function()
-        vim.lsp.buf.signature_help()
-      end, 0)
+    if vim.bo.buftype == "terminal" then
+      vim.cmd("startinsert")
     end
   end,
-  desc = "Automatically open signature help after completion",
+  desc = "Automatically enter terminal mode",
 })

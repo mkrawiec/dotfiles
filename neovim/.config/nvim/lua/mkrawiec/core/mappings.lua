@@ -19,18 +19,17 @@ set("n", "j", "v:count == 0 ? 'gj' : 'j'", { noremap = true, expr = true, silent
 -- Esc to normal mode (only in terminal mode)
 set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Terminal: Normal mode" })
 
+-- LSP
 set("n", "[d", vim.diagnostic.goto_prev, { desc = "LSP: Previous Diagnostic" })
 set("n", "]d", vim.diagnostic.goto_next, { desc = "LSP: Next Diagnostic" })
-
--- Ctrl-h/j/k/l to move between splits from terminal mode
-set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], { desc = "Terminal: Go left" })
-set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], { desc = "Terminal: Go down" })
-set("t", "<C-k>", [[<Cmd>wincmd k<CR>]], { desc = "Terminal: Go up" })
-set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], { desc = "Terminal: Go right" })
+set("i", "<C-k>", vim.lsp.buf.signature_help, { noremap = true, silent = true })
 
 -- ===========================
 -- Leader key mappings with desc
 -- ===========================
+
+-- Root
+set('n', "<leader>'", ":vsplit | vertical resize 30 | terminal<CR>", { desc = "Open side terminal" })
 
 -- Buffer
 set("n", "<leader>bD", "<Cmd>%bd|e #<CR>", { desc = "Buffer: Close others" })
@@ -53,9 +52,11 @@ end, { desc = "Config: Edit plugins" })
 set("n", "<leader>feR", utils.reload_config, { desc = "Config: Reload config" })
 
 -- Git
-set("n", "<leader>gg", "<Cmd>vertical G<CR>", { desc = "Git: Status" })
 set("n", "<leader>gb", "<Cmd>G blame<CR>", { desc = "Git: Blame" })
 set("n", "<leader>gd", "<Cmd>Gdiff<CR>", { desc = "Git: Diff" })
+set("n", "<leader>gg", "<Cmd>vertical G<CR>", { desc = "Git: Status" })
+set("n", "<leader>gl", "<Cmd>G pp<CR>", { desc = "Git: Pull" })
+set("n", "<leader>gp", ":G push<space>", { desc = "Git: Push" })
 
 -- Search
 set("n", "<leader>sc", "<Cmd>nohlsearch<CR>", { desc = "Search: Clear highlight" })
@@ -97,13 +98,7 @@ set("n", "<leader>wv", "<Cmd>vsplit<CR>", { desc = "Window: Split right" })
 set("n", "<leader>wz", "<Cmd>tab split<CR>", { desc = "Window: Zoom (maximize current window in tab)" })
 
 -- Window moving
-set('n', '<leader>wH', '<C-w>H', { desc = 'Window: Move to far left' })
-set('n', '<leader>wJ', '<C-w>J', { desc = 'Window: Move to very bottom' })
-set('n', '<leader>wK', '<C-w>K', { desc = 'Window: Move to very top' })
-set('n', '<leader>wL', '<C-w>L', { desc = 'Window: Move to far right' })
-
--- Window resize
-set('n', '<leader><', '<C-w><', { desc = 'Window: Decrease width (repeatable)' })
-set('n', '<leader>>', '<C-w>>', { desc = 'Window: Increase width (repeatable)' })
-set('n', '<leader>-', '<C-w>-', { desc = 'Window: Decrease height (repeatable)' })
-set('n', '<leader>+', '<C-w>+', { desc = 'Window: Increase height (repeatable)' })
+set("n", "<leader>wH", "<C-w>H", { desc = "Window: Move to far left" })
+set("n", "<leader>wJ", "<C-w>J", { desc = "Window: Move to very bottom" })
+set("n", "<leader>wK", "<C-w>K", { desc = "Window: Move to very top" })
+set("n", "<leader>wL", "<C-w>L", { desc = "Window: Move to far right" })
