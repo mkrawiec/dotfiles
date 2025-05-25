@@ -51,13 +51,6 @@ set("n", "<leader>fep", function()
 end, { desc = "Config: Edit plugins" })
 set("n", "<leader>feR", utils.reload_config, { desc = "Config: Reload config" })
 
--- Git
-set("n", "<leader>gb", "<Cmd>G blame<CR>", { desc = "Git: Blame" })
-set("n", "<leader>gd", "<Cmd>Gdiff<CR>", { desc = "Git: Diff" })
-set("n", "<leader>gg", "<Cmd>vertical G<CR>", { desc = "Git: Status" })
-set("n", "<leader>gl", "<Cmd>G pp<CR>", { desc = "Git: Pull" })
-set("n", "<leader>gp", ":G push<space>", { desc = "Git: Push" })
-
 -- Search
 set("n", "<leader>sc", "<Cmd>nohlsearch<CR>", { desc = "Search: Clear highlight" })
 

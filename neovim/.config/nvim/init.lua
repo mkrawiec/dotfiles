@@ -18,6 +18,7 @@ require("lazy").setup("mkrawiec.plugins", {
   defaults = {
     lazy = true,
   },
+  change_detection = { notify = false },
   performance = {
     rtp = {
       disabled_plugins = {

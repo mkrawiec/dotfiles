@@ -5,48 +5,45 @@ return {
     "nvim-tree/nvim-web-devicons",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
   },
-  event = "VeryLazy",
-  config = function()
-    local telescope = require("telescope")
-    local builtin = require("telescope.builtin")
-    local set = vim.keymap.set
-
-    telescope.setup({
-      pickers = {
-        find_files = {
-          hidden = true,
-        },
-        grep_string = {
-          additional_args = { "--hidden", "--glob", "!.git/*" },
-        },
-        live_grep = {
-          additional_args = { "--hidden", "--glob", "!.git/*" },
-        },
+  opts = {
+    pickers = {
+      find_files = {
+        hidden = true,
       },
-    })
-
-    telescope.load_extension("fzf")
-
-    set("n", "<leader><leader>", builtin.commands, { desc = "Search: Commands" })
+      grep_string = {
+        additional_args = { "--hidden", "--glob", "!.git/*" },
+      },
+      live_grep = {
+        additional_args = { "--hidden", "--glob", "!.git/*" },
+      },
+    },
+  },
+  keys = {
+    { "<leader><leader>", "<Cmd>Telescope commands<CR>", desc = "Search: Commands" },
 
     -- Git
-    set("n", "<leader>gc", builtin.git_branches, { desc = "Git: Checkout" })
+    { "<leader>gc", "<Cmd>Telescope git_branches<CR>", desc = "Git: Checkout" },
 
     -- Buffer
-    set("n", "<leader>bb", builtin.buffers, { desc = "Buffer: Choose" })
+    { "<leader>bb", "<Cmd>Telescope buffers<CR>", desc = "Buffer: Choose" },
 
     -- File
-    set("n", "<leader>ff", builtin.find_files, { desc = "File: Choose" })
-    set("n", "<leader>fr", builtin.oldfiles, { desc = "File: Recent Files" })
+    { "<leader>ff", "<Cmd>Telescope find_files<CR>", desc = "File: Choose" },
+    { "<leader>fr", "<Cmd>Telescope oldfiles<CR>", desc = "File: Recent Files" },
 
     -- Search
-    set("n", "<leader>ss", builtin.lsp_workspace_symbols, { desc = "Search: Symbols" })
-    set("n", "<leader>sa", builtin.live_grep, { desc = "Search: Grep" })
-    set("n", "<leader>sw", builtin.grep_string, { desc = "Search: Word Under Cursor" })
-    set("n", "<leader>sh", builtin.help_tags, { desc = "Search: Help tags" })
+    -- { "<leader>ss", "<Cmd>Telescope lsp_workspace_symbols<CR>", desc = "Search: Symbols" },
+    { "<leader>sa", "<Cmd>Telescope live_grep<CR>", desc = "Search: Grep" },
+    { "<leader>sw", "<Cmd>Telescope grep_string<CR>", desc = "Search: Word Under Cursor" },
+    { "<leader>sh", "<Cmd>Telescope help_tags<CR>", desc = "Search: Help tags" },
 
     -- Toggles
-    set("n", "<leader>tl", builtin.filetypes, { desc = "Toggle: Language" })
-    set("n", "<leader>tc", builtin.colorscheme, { desc = "Toggle: Color scheme" })
+    { "<leader>tl", "<Cmd>Telescope filetypes<CR>", desc = "Toggle: Language" },
+    { "<leader>tc", "<Cmd>Telescope colorscheme<CR>", desc = "Toggle: Color scheme" },
+  },
+  config = function(_, opts)
+    local telescope = require("telescope")
+    telescope.setup(opts)
+    telescope.load_extension("fzf")
   end,
 }
