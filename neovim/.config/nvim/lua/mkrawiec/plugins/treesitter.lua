@@ -16,9 +16,9 @@ return {
       enable = true,
       keymaps = {
         init_selection = "<leader>v",
-        node_incremental = "grn",
-        scope_incremental = "grc",
-        node_decremental = "grm",
+        node_incremental = "<leader>vi",
+        scope_incremental = "<leader>va",
+        node_decremental = "<leader>vd",
       },
     },
   },
