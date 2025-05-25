@@ -29,7 +29,7 @@ set("i", "<C-k>", vim.lsp.buf.signature_help, { noremap = true, silent = true })
 -- ===========================
 
 -- Root
-set('n', "<leader>'", ":vsplit | vertical resize 30 | terminal<CR>", { desc = "Open side terminal" })
+set("n", "<leader>'", ":vsplit | vertical resize 30 | terminal<CR>", { desc = "Terminal: Open to side" })
 
 -- Buffer
 set("n", "<leader>bD", "<Cmd>%bd|e #<CR>", { desc = "Buffer: Close others" })
@@ -55,17 +55,15 @@ set("n", "<leader>feR", utils.reload_config, { desc = "Config: Reload config" })
 set("n", "<leader>sc", "<Cmd>nohlsearch<CR>", { desc = "Search: Clear highlight" })
 
 -- Interact
-set("n", "<leader>ii", vim.lsp.buf.code_action, { desc = "LSP: Code Action" })
-set("n", "<leader>ir", vim.lsp.buf.rename, { desc = "LSP: Rename" })
-set("n", "<leader>ih", vim.lsp.buf.hover, { desc = "LSP: Hover" })
-set("n", "<leader>id", vim.diagnostic.open_float, { desc = "LSP: Show Diagnostics" })
-set("n", "<leader>is", vim.lsp.buf.signature_help, { desc = "LSP: Signature Help" })
+set("n", "<leader>ii", vim.lsp.buf.code_action, { desc = "Interact: Code Action" })
+set("n", "<leader>ir", vim.lsp.buf.rename, { desc = "Interact: Rename" })
+set("n", "<leader>ie", vim.diagnostic.open_float, { desc = "Interact: Show Diagnostics" })
 
 -- Jump
-set("n", "<leader>jj", vim.lsp.buf.definition, { desc = "LSP: Definition" })
-set("n", "<leader>jr", vim.lsp.buf.references, { desc = "LSP: References" })
-set("n", "<leader>jt", vim.lsp.buf.type_definition, { desc = "LSP: Type Definition" })
-set("n", "<leader>ji", vim.lsp.buf.implementation, { desc = "LSP: Implementation" })
+set("n", "<leader>jj", vim.lsp.buf.definition, { desc = "Jump: Definition" })
+set("n", "<leader>jr", vim.lsp.buf.references, { desc = "Jump: References" })
+set("n", "<leader>jt", vim.lsp.buf.type_definition, { desc = "Jump: Type Definition" })
+set("n", "<leader>ji", vim.lsp.buf.implementation, { desc = "Jump: Implementation" })
 
 -- Toggles
 set("n", "<leader>ts", "<Cmd>LspInfo<CR>", { desc = "LSP: Show Server Info" })
@@ -73,10 +71,10 @@ set("n", "<leader>ts", "<Cmd>LspInfo<CR>", { desc = "LSP: Show Server Info" })
 -- Run
 set("n", "<leader>rf", function()
   vim.lsp.buf.format({ async = true })
-end, { desc = "LSP: Format Buffer" })
+end, { desc = "Run: Format Buffer" })
 set("v", "<leader>rf", function()
   vim.lsp.buf.format({ async = true })
-end, { desc = "LSP: Format Selection" })
+end, { desc = "Run: Format Selection" })
 
 -- Window
 set("n", "<leader>wc", "<Cmd>close<CR>", { desc = "Window: Close" })

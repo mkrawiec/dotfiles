@@ -15,10 +15,38 @@ return {
   },
   keys = {
     -- Terminal navigation
-    { "<C-h>", function() require("tmux").move_left() end, mode = "t", desc = "Tmux: Move Left" },
-    { "<C-j>", function() require("tmux").move_bottom() end, mode = "t", desc = "Tmux: Move Down" },
-    { "<C-k>", function() require("tmux").move_top() end, mode = "t", desc = "Tmux: Move Up" },
-    { "<C-l>", function() require("tmux").move_right() end, mode = "t", desc = "Tmux: Move Right" },
+    {
+      "<C-h>",
+      function()
+        require("tmux").move_left()
+      end,
+      mode = "t",
+      desc = "Tmux: Move Left",
+    },
+    {
+      "<C-j>",
+      function()
+        require("tmux").move_bottom()
+      end,
+      mode = "t",
+      desc = "Tmux: Move Down",
+    },
+    {
+      "<C-k>",
+      function()
+        require("tmux").move_top()
+      end,
+      mode = "t",
+      desc = "Tmux: Move Up",
+    },
+    {
+      "<C-l>",
+      function()
+        require("tmux").move_right()
+      end,
+      mode = "t",
+      desc = "Tmux: Move Right",
+    },
 
     -- Needed for lazy loading
     { "<C-h>" },
