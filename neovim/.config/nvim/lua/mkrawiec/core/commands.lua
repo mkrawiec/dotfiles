@@ -8,6 +8,18 @@ vim.api.nvim_create_user_command(
   { nargs = 1, desc = "Edit this file with different extension" }
 )
 
+vim.api.nvim_create_user_command("Qsub", function(opts)
+  local from, to = opts.args:match("^(.-)/(.-)$")
+  if not from or not to then
+    print("Usage: Qsub search/replace")
+    return
+  end
+  vim.cmd(string.format("cfdo %%s/%s/%s/g | update", from, to))
+end, {
+  nargs = 1,
+  desc = "Run search & replace across quickfix entries",
+})
+
 vim.api.nvim_create_user_command("StripWhitespace", "%s/\\s\\+$//", { desc = "Strip trailing whitespace" })
 
 --
