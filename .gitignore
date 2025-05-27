@@ -1,15 +1,6 @@
 neovim/.config/nvim/autoload/plug.vim*
 neovim/.config/nvim/spell/
 
-vscode/.config/Code/User/settings.json
-vscode/.config/Code/User/*/
-!vscode/.config/Code/User/whichkey/
-!vscode/.config/Code/User/snippets/
-vscode/.var/app/com.vscodium.codium
-!vscode/.var/app/com.vscodium.codium/product.json
-vscode/.vscode/extensions/*
-!vscode/.vscode/extensions/mkrawiec*
-
 .directory
 *.py[cod]
 
@@ -18,3 +9,6 @@ vscode/.vscode/extensions/*
 
 # OSX stuff
 *.DS_Store
+
+# Work config
+bash/.bashrc.d/00-host_work.sh

@@ -36,6 +36,3 @@ fi
 # Evaluate custom dircolors
 eval `dircolors ~/.dircolors`
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-eval "$(mise activate bash)"

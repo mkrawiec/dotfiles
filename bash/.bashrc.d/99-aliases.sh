@@ -16,8 +16,7 @@ alias fifh='fif .'
 
 # Git
 alias g='git'
-if [ -f /usr/share/bash-completion/completions/git ]; then
-    source /usr/share/bash-completion/completions/git
+if declare -F __git_complete >/dev/null; then
     __git_complete g __git_main
 fi
 alias gcd='cd `git rev-parse --show-toplevel`'
