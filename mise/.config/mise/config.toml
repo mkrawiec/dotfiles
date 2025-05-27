@@ -4,6 +4,7 @@ python = "3.13"
 terraform = "latest"
 neovim = "latest"
 uv = "latest"
+stylua = "latest"
 
 [settings]
 env_file = ".env"
