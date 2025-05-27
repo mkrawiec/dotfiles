@@ -1,10 +1,33 @@
 # dotfiles
 
-## Installation
+Minimal, cross-platform dotfiles for a fast, distraction-free terminal environment. Actively used on Debian and macOS.
 
-Installation process relies on [GNU Stow](https://www.gnu.org/software/stow/) for symlink creation, make sure you have it on your system before running the script.
+## Design Principles
+
+This setup avoids:
+
+- Heavy shell frameworks
+- Cosmetic UI tweaks
+- Plugin overuse (when simple config suffices)
+- Unnecessary dependencies
+
+It favors:
+
+- Readable configuration
+- Fast startup and low overhead
+- Neovim leader key mappings (inspired by [Spacemacs](https://www.spacemacs.org))
+- YAGNI as a rule
+
+## Setup
+
+Requires [GNU Stow](https://www.gnu.org/software/stow/).
 
 ```bash
-git clone https://github.com/mkrawiec/dotfiles ~/dotfiles
-~/dotfiles/install.sh neovim tmux bash #or other presets
+git clone https://github.com/mkrawiec/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+stow neovim tmux bash   # specify desired modules
 ```
+
+## License
+
+[MIT](LICENSE)
