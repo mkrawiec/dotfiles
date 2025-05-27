@@ -1,6 +1,14 @@
 [tools]
-neovim = "0.11"
 node = "22"
+python = "3.13"
+terraform = "latest"
+neovim = "latest"
+uv = "latest"
 
 [settings]
+env_file = ".env"
+experimental = true
 idiomatic_version_file_enable_tools = ["python"]
+
+[settings.python]
+uv_venv_auto = true
