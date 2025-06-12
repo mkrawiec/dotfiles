@@ -9,6 +9,7 @@ return {
     ensure_installed = {
       "pyright",
       "ruff",
+      "debugpy",
       "ts_ls",
       "bashls",
       "terraformls",
