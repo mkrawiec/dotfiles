@@ -20,6 +20,7 @@ vim.opt.expandtab = true
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.completeopt = { "menuone", "preinsert", "fuzzy", "popup", "noinsert", "nosort" }
+vim.opt.indentkeys:remove { "o", "O" } -- do not autoindent on newline
 
 -- Performance
 vim.opt.updatetime = 250
