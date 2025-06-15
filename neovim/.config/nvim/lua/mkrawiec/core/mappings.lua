@@ -28,9 +28,6 @@ set("i", "<C-k>", vim.lsp.buf.signature_help, { noremap = true, silent = true })
 -- Leader key mappings with desc
 -- ===========================
 
--- Root
-set("n", "<leader>'", ":vsplit | vertical resize 30 | terminal<CR>", { desc = "Terminal: Open to side" })
-
 -- Buffer
 set("n", "<leader>bD", "<Cmd>%bd|e #<CR>", { desc = "Buffer: Close others" })
 set("n", "<leader>bd", "<Cmd>bp|bd #<CR>", { desc = "Buffer: Close" })
