@@ -4,7 +4,6 @@ return {
   event = "VeryLazy",
   opts = {
     extensions = {
-      "avante",
       "quickfix",
       "fugitive",
     },
