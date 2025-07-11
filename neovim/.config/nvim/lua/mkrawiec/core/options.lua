@@ -56,4 +56,4 @@ vim.api.nvim_set_hl(0, "ExtraWhitespace", { bg = "red" })
 vim.fn.matchadd("ExtraWhitespace", [[\s\+\%#\@<!$]])
 
 -- Diagnostic virtual lines
-vim.diagnostic.config({ virtual_lines = true })
+vim.diagnostic.config({ virtual_lines = { current_line = true } })

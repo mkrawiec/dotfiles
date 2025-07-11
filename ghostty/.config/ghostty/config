@@ -4,6 +4,7 @@ term = xterm-256color
 window-decoration = false
 font-size = 13
 macos-option-as-alt = left
+adjust-cell-height = "10%"
 shell-integration-features = no-cursor
 cursor-color = "#626880"
 cursor-text = "#c6d0f5"
