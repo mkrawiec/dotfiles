@@ -55,5 +55,5 @@ vim.opt.undofile = true
 vim.api.nvim_set_hl(0, "ExtraWhitespace", { bg = "red" })
 vim.fn.matchadd("ExtraWhitespace", [[\s\+\%#\@<!$]])
 
--- Diagnostic virtual text on current line only
-vim.diagnostic.config({ virtual_text = { current_line = true } })
+-- Diagnostic virtual lines
+vim.diagnostic.config({ virtual_lines = true })

@@ -63,7 +63,10 @@ set("n", "<leader>jt", vim.lsp.buf.type_definition, { desc = "Jump: Type Definit
 set("n", "<leader>ji", vim.lsp.buf.implementation, { desc = "Jump: Implementation" })
 
 -- Toggles
-set("n", "<leader>ts", "<Cmd>LspInfo<CR>", { desc = "LSP: Show Server Info" })
+set("n", "<leader>ts", "<Cmd>LspInfo<CR>", { desc = "Debug: LSP" })
+set("n", "<leader>td", function()
+  vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+end, { desc = "Toggle: LSP Diagnostics" })
 
 -- Run
 set("n", "<leader>rf", function()
