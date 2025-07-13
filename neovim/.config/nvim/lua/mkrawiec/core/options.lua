@@ -14,6 +14,7 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 vim.opt.virtualedit = "onemore"
 vim.opt.breakindent = true
+vim.opt.signcolumn = "yes:1"
 
 -- Editing
 vim.opt.expandtab = true
@@ -54,6 +55,20 @@ vim.opt.undofile = true
 -- Highlight trailing whitespace
 vim.api.nvim_set_hl(0, "ExtraWhitespace", { bg = "red" })
 vim.fn.matchadd("ExtraWhitespace", [[\s\+\%#\@<!$]])
-
--- Diagnostic virtual lines
-vim.diagnostic.config({ virtual_lines = { current_line = true } })
+vim.diagnostic.config({
+  float = {
+    source = true,
+  },
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = "󰅚 ",
+      [vim.diagnostic.severity.WARN] = "󰀪 ",
+      [vim.diagnostic.severity.INFO] = "󰋽 ",
+      [vim.diagnostic.severity.HINT] = "󰌶 ",
+    },
+    numhl = {
+      [vim.diagnostic.severity.ERROR] = "ErrorMsg",
+      [vim.diagnostic.severity.WARN] = "WarningMsg",
+    },
+  },
+})
