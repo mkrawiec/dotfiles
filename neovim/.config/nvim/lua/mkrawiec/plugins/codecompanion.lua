@@ -1,5 +1,5 @@
 local defaultStrategy = {
-  adapter = "openai",
+  adapter = "gemini_cli",
 }
 
 return {
@@ -17,6 +17,17 @@ return {
       chat = defaultStrategy,
       inline = defaultStrategy,
       cmd = defaultStrategy,
+    },
+    adapters = {
+      acp = {
+        gemini_cli = function()
+          return require("codecompanion.adapters").extend("gemini_cli", {
+            defaults = {
+              auth_method = "vertex-ai",
+            },
+          })
+        end,
+      },
     },
   },
   dependencies = {

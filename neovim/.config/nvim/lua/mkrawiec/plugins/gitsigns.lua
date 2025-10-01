@@ -7,6 +7,8 @@ return {
     { "<leader>gu", "<Cmd>Gitsigns reset_hunk<CR>", desc = "Git: Reset Hunk", mode = "n" },
     { "<leader>gS", "<Cmd>Gitsigns stage_buffer<CR>", desc = "Git: Stage Buffer", mode = "n" },
     { "<leader>gR", "<Cmd>Gitsigns reset_buffer<CR>", desc = "Git: Reset Buffer", mode = "n" },
+    { "]c", "<Cmd>Gitsigns next_hunk<CR>", desc = "Git: Next Change", mode = "n" },
+    { "[c", "<Cmd>Gitsigns prev_hunk<CR>", desc = "Git: Prev Change", mode = "n" },
     {
       "<leader>gs",
       function()

@@ -44,7 +44,7 @@ return {
     { "<leader>ss", "<Cmd>FzfLua lsp_workspace_symbols<CR>", desc = "Search: Workspace Symbols" },
     { "<leader>sa", "<Cmd>FzfLua live_grep<CR>", desc = "Search: Grep (Live)" },
     { "<leader>sw", "<Cmd>FzfLua grep_cword<CR>", desc = "Search: Word Under Cursor" },
-    { "<leader>sv", "<Cmd>FzfLua grep_visual<CR>", desc = "Search: Visual Selection" },
+    { "<leader>sv", "<Cmd>FzfLua grep_visual<CR>", desc = "Search: Visual Selection", mode = "v" },
     { "<leader>sh", "<Cmd>FzfLua help_tags<CR>", desc = "Search: Help Tags" },
 
     -- Toggles

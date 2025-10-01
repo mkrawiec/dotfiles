@@ -8,10 +8,6 @@ set("v", ">", ">gv", { noremap = true, silent = true })
 -- More consistent 'Y'
 set("n", "Y", "y$", { noremap = true, silent = true })
 
--- Replace search term under cursor, dot repeats the change
-set("n", "c*", "*Ncgn", { noremap = true, silent = true })
-set("n", "c#", "#NcgN", { noremap = true, silent = true })
-
 -- Move visual lines when no count
 set("n", "k", "v:count == 0 ? 'gk' : 'k'", { noremap = true, expr = true, silent = true })
 set("n", "j", "v:count == 0 ? 'gj' : 'j'", { noremap = true, expr = true, silent = true })
@@ -39,6 +35,7 @@ set("n", "<leader>bP", "ggVGp", { desc = "Buffer: Paste" })
 set("n", "<leader>fs", "<Cmd>w<CR>", { desc = "File: Save this buffer" })
 set("n", "<leader>fS", "<Cmd>wa<CR>", { desc = "File: Save all buffers" })
 set("n", "<leader>fx", ":ExtEdit<space>", { desc = "File: Edit with different extension" })
+set("n", "<leader>fy", ":let @+ = expand('%:p')<CR>", { desc = "File: Yank file path to clipboard" })
 set("n", "<leader>fed", "<Cmd>edit $MYVIMRC<CR>", { desc = "Config: Edit root" })
 set("n", "<leader>fek", function()
   utils.open_config_file("core/mappings.lua")
@@ -50,6 +47,8 @@ set("n", "<leader>feR", utils.reload_config, { desc = "Config: Reload config" })
 
 -- Search
 set("n", "<leader>sc", "<Cmd>nohlsearch<CR>", { desc = "Search: Clear highlight" })
+set("n", "<leader>sr", "*Ncgn", { desc = "Search: Replace search pattern forward" })
+set("n", "<leader>sR", "#NcgN", { desc = "Search: Replace search pattern backward" })
 
 -- Interact
 set("n", "<leader>ii", vim.lsp.buf.code_action, { desc = "Interact: Code Action" })
