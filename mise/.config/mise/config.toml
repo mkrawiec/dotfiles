@@ -2,9 +2,11 @@
 node = "22"
 python = "3.13"
 terraform = "latest"
-neovim = "latest"
 uv = "latest"
 stylua = "latest"
+opencode = "latest"
+neovim = "latest"
+tree-sitter = "latest"
 
 [settings]
 env_file = ".env"

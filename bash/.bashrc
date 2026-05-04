@@ -4,9 +4,11 @@ export EDITOR='nvim'
 # Add local binaries to PATH
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
-# Use en_US locale with UTF-8
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+# Use en_US locale in interactive terminal sessions
+if [[ $- == *i* ]]; then
+    export LANG=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8
+fi
 
 # Forgive spelling errors in 'cd' paths
 shopt -s cdspell

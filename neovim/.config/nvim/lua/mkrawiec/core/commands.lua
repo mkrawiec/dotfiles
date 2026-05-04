@@ -8,7 +8,7 @@ vim.api.nvim_create_user_command(
   { nargs = 1, desc = "Edit this file with different extension" }
 )
 
-vim.api.nvim_create_user_command("StripWhitespace", "%s/\\s\\+$//", { desc = "Strip trailing whitespace" })
+vim.api.nvim_create_user_command("StripWhitespace", "%s/\\s\\+$//e", { desc = "Strip trailing whitespace" })
 
 --
 -- Auto commands

@@ -17,8 +17,6 @@ return {
     config = function()
       vim.fn.sign_define("DapBreakpoint", { text = "󰝥", texthl = "DiagnosticError" })
       vim.fn.sign_define("DapStopped", { text = "", texthl = "DiagnosticInfo" })
-
-      require("dap.ext.vscode").load_launchjs()
     end,
   },
   {

@@ -35,4 +35,4 @@ require("lazy").setup("mkrawiec.plugins", {
   },
 })
 
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("catppuccin-nvim")

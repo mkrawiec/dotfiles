@@ -9,7 +9,7 @@ return {
     ensure_installed = {
       "pyright",
       "ruff",
-      "ts_ls",
+      "vtsls",
       "bashls",
       "terraformls",
       "yamlls",
